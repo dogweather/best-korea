@@ -28,8 +28,8 @@
     [super viewDidLoad];
     
     //configuration
-    self.title = @"Advanced RSS Reader";
-    feedURL = [NSURL URLWithString:@"http://feeds.feedburner.com/TouchCodeMagazine"];
+    self.title = @"News";
+    feedURL = [NSURL URLWithString:@"https://news.google.com/news/feeds?hl=en&gl=us&q=north+korea&um=1&ie=UTF-8&output=rss"];
     
     //add refresh control to the table view
     refreshControl = [[UIRefreshControl alloc] init];
@@ -46,7 +46,7 @@
     [self.tableView addSubview: refreshControl];
     
     //add the header
-    self.tableView.tableHeaderView = [[TableHeaderView alloc] initWithText:@"fetching rss feed"];
+//    self.tableView.tableHeaderView = [[TableHeaderView alloc] initWithText:@"fetching rss feed"];
     
     [self refreshFeed];
 }

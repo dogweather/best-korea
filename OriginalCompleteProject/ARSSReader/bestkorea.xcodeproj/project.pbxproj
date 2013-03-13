@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0ED816F09B7700C91B32 /* app-icon.png */; };
+		54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */; };
+		54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */; };
 		9C1806B1163E848100A02D94 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AA163E848100A02D94 /* Icon-72.png */; };
 		9C1806B2163E848100A02D94 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AB163E848100A02D94 /* Icon-Small-50.png */; };
 		9C1806B3163E848100A02D94 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AC163E848100A02D94 /* Icon-Small.png */; };
@@ -14,14 +17,11 @@
 		9C1806B5163E848100A02D94 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AE163E848100A02D94 /* Icon.png */; };
 		9C1806B6163E848100A02D94 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AF163E848100A02D94 /* Icon@2x.png */; };
 		9C1806B7163E848100A02D94 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806B0163E848100A02D94 /* iTunesArtwork */; };
-		9C1806BC163E848D00A02D94 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806B9163E848D00A02D94 /* Default.png */; };
-		9C1806BD163E848D00A02D94 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806BA163E848D00A02D94 /* Default@2x.png */; };
 		9C1806C0163E84AB00A02D94 /* arss_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806BF163E84AB00A02D94 /* arss_header.png */; };
 		9C1806C7163E84B200A02D94 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806C3163E84B200A02D94 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C1806C8163E84B200A02D94 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806C6163E84B200A02D94 /* RXMLElement.m */; };
 		9C1806CA163E852F00A02D94 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1806C9163E852F00A02D94 /* libxml2.dylib */; };
 		9C1806CC163E853B00A02D94 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1806CB163E853B00A02D94 /* libz.dylib */; };
-		9C1806CE163E868400A02D94 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806CD163E868400A02D94 /* Default-568h@2x.png */; };
 		9C1806D1163E86CF00A02D94 /* TableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806D0163E86CF00A02D94 /* TableHeaderView.m */; };
 		9C1806D4163E874900A02D94 /* RSSLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806D3163E874900A02D94 /* RSSLoader.m */; };
 		9C1806D8163E879900A02D94 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806D7163E879900A02D94 /* RSSItem.m */; };
@@ -37,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54CB0ED816F09B7700C91B32 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-nonretina.png"; sourceTree = "<group>"; };
+		54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9C1806AA163E848100A02D94 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		9C1806AB163E848100A02D94 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		9C1806AC163E848100A02D94 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -60,14 +63,14 @@
 		9C1806D3163E874900A02D94 /* RSSLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSLoader.m; path = ARSSReader/RSSLoader.m; sourceTree = "<group>"; };
 		9C1806D6163E879900A02D94 /* RSSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RSSItem.h; path = ARSSReader/RSSItem.h; sourceTree = "<group>"; };
 		9C1806D7163E879900A02D94 /* RSSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RSSItem.m; path = ARSSReader/RSSItem.m; sourceTree = "<group>"; };
-		9C947B97163E835500842C2F /* ARSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C947B97163E835500842C2F /* bestkorea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bestkorea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C947B9B163E835500842C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C947B9D163E835500842C2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C947B9F163E835500842C2F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		9C947BA3163E835500842C2F /* ARSSReader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARSSReader-Info.plist"; sourceTree = "<group>"; };
+		9C947BA3163E835500842C2F /* bestkorea-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bestkorea-Info.plist"; sourceTree = "<group>"; };
 		9C947BA5163E835500842C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C947BA7163E835500842C2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C947BA9163E835500842C2F /* ARSSReader-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARSSReader-Prefix.pch"; sourceTree = "<group>"; };
+		9C947BA9163E835500842C2F /* bestkorea-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bestkorea-Prefix.pch"; sourceTree = "<group>"; };
 		9C947BAA163E835500842C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C947BAB163E835500842C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9C947BB4163E835500842C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -137,6 +140,9 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
+				54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */,
+				54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */,
+				54CB0ED816F09B7700C91B32 /* app-icon.png */,
 				9C1806D5163E875300A02D94 /* ReaderClasses */,
 				9C1806BE163E849B00A02D94 /* Assets */,
 				9C947BA1163E835500842C2F /* ARSSReader */,
@@ -148,7 +154,7 @@
 		9C947B98163E835500842C2F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C947B97163E835500842C2F /* ARSSReader.app */,
+				9C947B97163E835500842C2F /* bestkorea.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,10 +193,10 @@
 				9C1806B9163E848D00A02D94 /* Default.png */,
 				9C1806BA163E848D00A02D94 /* Default@2x.png */,
 				9C947BC1163E844B00842C2F /* Icons */,
-				9C947BA3163E835500842C2F /* ARSSReader-Info.plist */,
+				9C947BA3163E835500842C2F /* bestkorea-Info.plist */,
 				9C947BA4163E835500842C2F /* InfoPlist.strings */,
 				9C947BA7163E835500842C2F /* main.m */,
-				9C947BA9163E835500842C2F /* ARSSReader-Prefix.pch */,
+				9C947BA9163E835500842C2F /* bestkorea-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -212,9 +218,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C947B96163E835500842C2F /* ARSSReader */ = {
+		9C947B96163E835500842C2F /* bestkorea */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C947BBE163E835500842C2F /* Build configuration list for PBXNativeTarget "ARSSReader" */;
+			buildConfigurationList = 9C947BBE163E835500842C2F /* Build configuration list for PBXNativeTarget "bestkorea" */;
 			buildPhases = (
 				9C947B93163E835500842C2F /* Sources */,
 				9C947B94163E835500842C2F /* Frameworks */,
@@ -224,9 +230,9 @@
 			);
 			dependencies = (
 			);
-			name = ARSSReader;
+			name = bestkorea;
 			productName = ARSSReader;
-			productReference = 9C947B97163E835500842C2F /* ARSSReader.app */;
+			productReference = 9C947B97163E835500842C2F /* bestkorea.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -236,9 +242,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = "Underplot ltd.";
+				ORGANIZATIONNAME = Srsly.co;
 			};
-			buildConfigurationList = 9C947B91163E835500842C2F /* Build configuration list for PBXProject "ARSSReader" */;
+			buildConfigurationList = 9C947B91163E835500842C2F /* Build configuration list for PBXProject "bestkorea" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -250,7 +256,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C947B96163E835500842C2F /* ARSSReader */,
+				9C947B96163E835500842C2F /* bestkorea */,
 			);
 		};
 /* End PBXProject section */
@@ -269,10 +275,10 @@
 				9C1806B5163E848100A02D94 /* Icon.png in Resources */,
 				9C1806B6163E848100A02D94 /* Icon@2x.png in Resources */,
 				9C1806B7163E848100A02D94 /* iTunesArtwork in Resources */,
-				9C1806BC163E848D00A02D94 /* Default.png in Resources */,
-				9C1806BD163E848D00A02D94 /* Default@2x.png in Resources */,
 				9C1806C0163E84AB00A02D94 /* arss_header.png in Resources */,
-				9C1806CE163E868400A02D94 /* Default-568h@2x.png in Resources */,
+				54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */,
+				54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */,
+				54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +376,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ARSSReader/ARSSReader-Prefix.pch";
+				GCC_PREFIX_HEADER = "ARSSReader/bestkorea-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INFOPLIST_FILE = "ARSSReader/ARSSReader-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ARSSReader/bestkorea-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = bestkorea;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -382,10 +390,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ARSSReader/ARSSReader-Prefix.pch";
+				GCC_PREFIX_HEADER = "ARSSReader/bestkorea-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INFOPLIST_FILE = "ARSSReader/ARSSReader-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "ARSSReader/bestkorea-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = bestkorea;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -393,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C947B91163E835500842C2F /* Build configuration list for PBXProject "ARSSReader" */ = {
+		9C947B91163E835500842C2F /* Build configuration list for PBXProject "bestkorea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C947BBC163E835500842C2F /* Debug */,
@@ -402,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C947BBE163E835500842C2F /* Build configuration list for PBXNativeTarget "ARSSReader" */ = {
+		9C947BBE163E835500842C2F /* Build configuration list for PBXNativeTarget "bestkorea" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C947BBF163E835500842C2F /* Debug */,

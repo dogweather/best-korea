@@ -29,6 +29,8 @@
     
     //configuration
     self.title = @"News";
+    self.icon_index = 1;
+    
     feedURL = [NSURL URLWithString:@"https://news.google.com/news/feeds?hl=en&gl=us&q=north+korea&um=1&ie=UTF-8&output=rss"];
     
     //add refresh control to the table view
@@ -90,34 +92,23 @@
     return _objects.count;
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    NSString *placeholder_icon = [NSString stringWithFormat:@"icon%d.png", self.icon_index];
+    
     RSSItem *object = _objects[indexPath.row];
-//    cell.textLabel.attributedText = object.cellMessage;
-//    cell.textLabel.numberOfLines = 0;
-    cell.textLabel.text = object.title;
-//    cell.textLabel.numberOfLines = 2;
-    cell.detailTextLabel.text = object.publication;
-//    cell.imageView.image = [UIImage imageNamed:@"MyReallyCoolImage.png"];
-
+    cell.textLabel.text         = object.title;
+    cell.detailTextLabel.text   = object.publication;
+    cell.imageView.image        = [UIImage imageNamed:placeholder_icon];
+    self.icon_index++;
+    if (self.icon_index > ICON_COUNT) {
+        self.icon_index = 1;
+    }
     return cell;
 }
 
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    RSSItem *item = [_objects objectAtIndex:indexPath.row];
-//    NSAttributedString *content = item.cellMessage;
-//    
-//    // TODO: Refactor this cell height algorithm.
-//    CGFloat width = 200;
-//    CGRect cellMessageRect = [content boundingRectWithSize:CGSizeMake(width, 10000) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
-//    CGSize size = cellMessageRect.size;
-//
-//    NSLog(@"Got size: %@", NSStringFromCGSize(size));
-//    return size.height;
-//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

@@ -10,6 +10,10 @@
 		54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0ED816F09B7700C91B32 /* app-icon.png */; };
 		54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */; };
 		54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */; };
+		54F80D7D16F32961001DC004 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7C16F32961001DC004 /* icon1.png */; };
+		54F80D7F16F32AB0001DC004 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7E16F32AB0001DC004 /* icon2.png */; };
+		54F80D8116F32E03001DC004 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D8016F32E03001DC004 /* icon3.png */; };
+		54F80D8416F330ED001DC004 /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D8216F330ED001DC004 /* icon4.png */; };
 		9C1806B1163E848100A02D94 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AA163E848100A02D94 /* Icon-72.png */; };
 		9C1806B2163E848100A02D94 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AB163E848100A02D94 /* Icon-Small-50.png */; };
 		9C1806B3163E848100A02D94 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1806AC163E848100A02D94 /* Icon-Small.png */; };
@@ -40,6 +44,10 @@
 		54CB0ED816F09B7700C91B32 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-nonretina.png"; sourceTree = "<group>"; };
 		54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		54F80D7C16F32961001DC004 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		54F80D7E16F32AB0001DC004 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		54F80D8016F32E03001DC004 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		54F80D8216F330ED001DC004 /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
 		9C1806AA163E848100A02D94 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		9C1806AB163E848100A02D94 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
 		9C1806AC163E848100A02D94 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
@@ -96,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54F80D7B16F32961001DC004 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				54F80D8216F330ED001DC004 /* icon4.png */,
+				54F80D8016F32E03001DC004 /* icon3.png */,
+				54F80D7E16F32AB0001DC004 /* icon2.png */,
+				54F80D7C16F32961001DC004 /* icon1.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		9C1806BE163E849B00A02D94 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +159,7 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
+				54F80D7B16F32961001DC004 /* icons */,
 				54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */,
 				54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */,
 				54CB0ED816F09B7700C91B32 /* app-icon.png */,
@@ -279,6 +299,10 @@
 				54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */,
 				54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */,
 				54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */,
+				54F80D7D16F32961001DC004 /* icon1.png in Resources */,
+				54F80D7F16F32AB0001DC004 /* icon2.png in Resources */,
+				54F80D8116F32E03001DC004 /* icon3.png in Resources */,
+				54F80D8416F330ED001DC004 /* icon4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

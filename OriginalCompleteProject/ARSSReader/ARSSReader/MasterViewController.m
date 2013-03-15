@@ -38,7 +38,7 @@
                        action:@selector(refreshInvoked:forState:)
              forControlEvents:UIControlEventValueChanged];
     
-    NSString* fetchMessage = [NSString stringWithFormat:@"Fetching: %@",feedURL];
+    NSString* fetchMessage = [NSString stringWithFormat:@"Refresh"];
     
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:fetchMessage
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
@@ -103,9 +103,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RSSItem *item = [_objects objectAtIndex:indexPath.row];
-    CGRect cellMessageRect = [item.cellMessage boundingRectWithSize:CGSizeMake(200,10000)
-                                                            options:NSStringDrawingUsesLineFragmentOrigin
-                                                            context:nil];
+    NSAttributedString *content = item.cellMessage;
+    
+    // TODO: Refactor this cell height algorithm.
+    CGFloat width = 200;
+    CGRect cellMessageRect = [content boundingRectWithSize:CGSizeMake(width, 10000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
     return cellMessageRect.size.height;
 }
 

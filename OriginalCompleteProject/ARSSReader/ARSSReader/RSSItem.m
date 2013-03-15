@@ -13,35 +13,33 @@
 
 -(NSAttributedString*)cellMessage
 {
-    if (_cellMessage!=nil) return _cellMessage;
+    if (_cellMessage != nil) return _cellMessage;
     
     NSDictionary* boldStyle = @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica-Bold" size:16.0]};
-    NSDictionary* normalStyle = @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:16.0]};
+    NSDictionary* normalStyle = @{NSFontAttributeName: [UIFont fontWithName:@"Helvetica" size:14.0]};
     
-    NSMutableAttributedString* articleAbstract = [[NSMutableAttributedString alloc] initWithString:self.title];
-    
+  
+    // The article title
+    NSString* the_title = [[self.title componentsSeparatedByString:@" - "] objectAtIndex:0];
+    NSMutableAttributedString* articleAbstract = [[NSMutableAttributedString alloc] initWithString:the_title];
     [articleAbstract setAttributes:boldStyle
-                             range:NSMakeRange(0, self.title.length)];
-    
+                             range:NSMakeRange(0, the_title.length)];
+
     [articleAbstract appendAttributedString:
-     [[NSAttributedString alloc] initWithString:@"\n\n"]
+     [[NSAttributedString alloc] initWithString:@"\n"]
      ];
-    
-    int startIndex = [articleAbstract length];
-    
-    NSString* description = [NSString stringWithFormat:@"%@...", [self.description substringToIndex:100]];
-    description = [description gtm_stringByUnescapingFromHTML];
-    
+
+    // The publication name
+    NSString* publication = [[self.title componentsSeparatedByString:@" - "] lastObject];
     [articleAbstract appendAttributedString:
-     [[NSAttributedString alloc] initWithString: description]
+     [[NSAttributedString alloc] initWithString: publication]
      ];
     
     [articleAbstract setAttributes:normalStyle
-                             range:NSMakeRange(startIndex, articleAbstract.length - startIndex)];
+                             range:NSMakeRange(the_title.length + 1, publication.length)];
     
     _cellMessage = articleAbstract;
-    return _cellMessage;
-    
+    return _cellMessage;    
 }
 
 @end

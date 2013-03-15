@@ -20,23 +20,21 @@
     
   
     // The article title
-    NSString* the_title = [[self.title componentsSeparatedByString:@" - "] objectAtIndex:0];
-    NSMutableAttributedString* articleAbstract = [[NSMutableAttributedString alloc] initWithString:the_title];
+    NSMutableAttributedString* articleAbstract = [[NSMutableAttributedString alloc] initWithString:self.title];
     [articleAbstract setAttributes:boldStyle
-                             range:NSMakeRange(0, the_title.length)];
+                             range:NSMakeRange(0, self.title.length)];
 
     [articleAbstract appendAttributedString:
      [[NSAttributedString alloc] initWithString:@"\n"]
      ];
 
     // The publication name
-    NSString* publication = [[self.title componentsSeparatedByString:@" - "] lastObject];
     [articleAbstract appendAttributedString:
-     [[NSAttributedString alloc] initWithString: publication]
+     [[NSAttributedString alloc] initWithString: self.publication]
      ];
     
     [articleAbstract setAttributes:normalStyle
-                             range:NSMakeRange(the_title.length + 1, publication.length)];
+                             range:NSMakeRange(self.title.length + 1, self.publication.length)];
     
     _cellMessage = articleAbstract;
     return _cellMessage;    

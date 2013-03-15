@@ -11,7 +11,8 @@
 
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* description;
-@property (strong, nonatomic) NSURL* link;
+@property (strong, nonatomic) NSString* publication;
+@property (strong, nonatomic) NSURL*    link;
 @property (strong, nonatomic) NSAttributedString* cellMessage;
 
 @end

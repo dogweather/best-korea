@@ -95,21 +95,29 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     RSSItem *object = _objects[indexPath.row];
-    cell.textLabel.attributedText = object.cellMessage;
-    cell.textLabel.numberOfLines = 0;
+//    cell.textLabel.attributedText = object.cellMessage;
+//    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.text = object.title;
+//    cell.textLabel.numberOfLines = 2;
+    cell.detailTextLabel.text = object.publication;
+//    cell.imageView.image = [UIImage imageNamed:@"MyReallyCoolImage.png"];
+
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    RSSItem *item = [_objects objectAtIndex:indexPath.row];
-    NSAttributedString *content = item.cellMessage;
-    
-    // TODO: Refactor this cell height algorithm.
-    CGFloat width = 200;
-    CGRect cellMessageRect = [content boundingRectWithSize:CGSizeMake(width, 10000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
-    return cellMessageRect.size.height;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    RSSItem *item = [_objects objectAtIndex:indexPath.row];
+//    NSAttributedString *content = item.cellMessage;
+//    
+//    // TODO: Refactor this cell height algorithm.
+//    CGFloat width = 200;
+//    CGRect cellMessageRect = [content boundingRectWithSize:CGSizeMake(width, 10000) options:NSStringDrawingUsesLineFragmentOrigin context:nil];
+//    CGSize size = cellMessageRect.size;
+//
+//    NSLog(@"Got size: %@", NSStringFromCGSize(size));
+//    return size.height;
+//}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

@@ -63,20 +63,19 @@
 }
 
 
-
 - (BOOL)inAlternateReality {
     return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }
 
+
 - (void)enterAlternateReality {
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:YES forKey:PREF_ALTERNATE_REALITY];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:PREF_ALTERNATE_REALITY];
     // TODO: Adjust the app for the reality state.
 }
 
+
 - (void)leaveAlternateReality {
-    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setBool:NO forKey:PREF_ALTERNATE_REALITY];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:PREF_ALTERNATE_REALITY];
     // TODO: Adjust the app for the reality state.
 }
 

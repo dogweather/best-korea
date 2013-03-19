@@ -31,6 +31,8 @@
 		54D1CC6216F86FFD00691CEB /* television-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6016F86FFD00691CEB /* television-tabbar-icon.png */; };
 		54D1CC6316F86FFD00691CEB /* television-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6116F86FFD00691CEB /* television-tabbar-icon@2x.png */; };
 		54D1CC6616F875E000691CEB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC6516F875E000691CEB /* MainTabBarController.m */; };
+		54D1CC6A16F8FF7B00691CEB /* table-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */; };
+		54D1CC6B16F8FF7B00691CEB /* table-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */; };
 		54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */; };
 		54F80D7D16F32961001DC004 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7C16F32961001DC004 /* icon1.png */; };
 		54F80D7F16F32AB0001DC004 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7E16F32AB0001DC004 /* icon2.png */; };
@@ -89,6 +91,8 @@
 		54D1CC6416F875E000691CEB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		54D1CC6516F875E000691CEB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		54D1CC6716F884F400691CEB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon.png"; sourceTree = "<group>"; };
+		54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		54F80D7C16F32961001DC004 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		54F80D7E16F32AB0001DC004 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		54F80D7B16F32961001DC004 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */,
+				54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */,
 				54D1CC6016F86FFD00691CEB /* television-tabbar-icon.png */,
 				54D1CC6116F86FFD00691CEB /* television-tabbar-icon@2x.png */,
 				54D1CC5C16F8693500691CEB /* library-tabbar-icon.png */,
@@ -394,6 +400,8 @@
 				54D1CC5F16F8693500691CEB /* library-tabbar-icon@2x.png in Resources */,
 				54D1CC6216F86FFD00691CEB /* television-tabbar-icon.png in Resources */,
 				54D1CC6316F86FFD00691CEB /* television-tabbar-icon@2x.png in Resources */,
+				54D1CC6A16F8FF7B00691CEB /* table-tabbar-icon.png in Resources */,
+				54D1CC6B16F8FF7B00691CEB /* table-tabbar-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

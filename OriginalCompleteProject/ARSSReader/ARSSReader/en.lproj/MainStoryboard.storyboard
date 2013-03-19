@@ -9,7 +9,7 @@
         <scene sceneID="11">
             <objects>
                 <navigationController id="3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News" image="newspaper-tabbar-icon.png" id="hq4-ey-5Mt"/>
+                    <tabBarItem key="tabBarItem" title="News" image="table-tabbar-icon.png" id="hq4-ey-5Mt"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,8 +251,8 @@
         <image name="icon4.png" width="114" height="114"/>
         <image name="library-tabbar-icon.png" width="30" height="30"/>
         <image name="magazine-tabbar-icon.png" width="30" height="30"/>
-        <image name="newspaper-tabbar-icon.png" width="30" height="30"/>
         <image name="photos-tabbar-icon.png" width="30" height="30"/>
+        <image name="table-tabbar-icon.png" width="30" height="30"/>
         <image name="television-tabbar-icon.png" width="30" height="30"/>
     </resources>
     <classes>

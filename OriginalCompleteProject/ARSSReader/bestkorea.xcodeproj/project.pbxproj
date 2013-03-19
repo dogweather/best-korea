@@ -88,6 +88,7 @@
 		54D1CC6116F86FFD00691CEB /* television-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "television-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D1CC6416F875E000691CEB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		54D1CC6516F875E000691CEB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		54D1CC6716F884F400691CEB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		54F80D7C16F32961001DC004 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		54F80D7E16F32AB0001DC004 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
@@ -264,6 +265,7 @@
 				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
 				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
 				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
+				54D1CC6716F884F400691CEB /* Constants.h */,
 				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
 				9C947BB6163E835500842C2F /* MasterViewController.h */,
 				9C947BB7163E835500842C2F /* MasterViewController.m */,

@@ -7,6 +7,7 @@
 //
 
 #import "MainTabBarController.h"
+#import "Constants.h"
 
 @interface MainTabBarController ()
 
@@ -47,23 +48,36 @@
 }
 
 
-
+// Change our view of reality when the UI is about
+// to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
-        NSLog(@"About to rotate to PARTY MODE");
+        if ([self inAlternateReality] == YES) {
+            [self leaveAlternateReality];
+        }
     } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        NSLog(@"About to rotate to PARTY-POOPER MODE");
-    }
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    if (self.interfaceOrientation == UIInterfaceOrientationPortrait) {
-        NSLog(@"Finished rotating to PARTY MODE");
-    } else if (self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        NSLog(@"Finished rotating to PARTY-POOPER MODE");
+        if ([self inAlternateReality] == NO) {
+            [self enterAlternateReality];
+        }
     }
 }
 
 
+
+- (BOOL)inAlternateReality {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
+}
+
+- (void)enterAlternateReality {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:PREF_ALTERNATE_REALITY];
+    // TODO: Adjust the app for the reality state.
+}
+
+- (void)leaveAlternateReality {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:NO forKey:PREF_ALTERNATE_REALITY];
+    // TODO: Adjust the app for the reality state.
+}
 
 @end

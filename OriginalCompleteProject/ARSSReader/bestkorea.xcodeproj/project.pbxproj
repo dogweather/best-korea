@@ -30,6 +30,7 @@
 		54D1CC5F16F8693500691CEB /* library-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC5D16F8693500691CEB /* library-tabbar-icon@2x.png */; };
 		54D1CC6216F86FFD00691CEB /* television-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6016F86FFD00691CEB /* television-tabbar-icon.png */; };
 		54D1CC6316F86FFD00691CEB /* television-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6116F86FFD00691CEB /* television-tabbar-icon@2x.png */; };
+		54D1CC6616F875E000691CEB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC6516F875E000691CEB /* MainTabBarController.m */; };
 		54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */; };
 		54F80D7D16F32961001DC004 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7C16F32961001DC004 /* icon1.png */; };
 		54F80D7F16F32AB0001DC004 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7E16F32AB0001DC004 /* icon2.png */; };
@@ -85,6 +86,8 @@
 		54D1CC5D16F8693500691CEB /* library-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D1CC6016F86FFD00691CEB /* television-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "television-tabbar-icon.png"; sourceTree = "<group>"; };
 		54D1CC6116F86FFD00691CEB /* television-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "television-tabbar-icon@2x.png"; sourceTree = "<group>"; };
+		54D1CC6416F875E000691CEB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		54D1CC6516F875E000691CEB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		54F80D7C16F32961001DC004 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		54F80D7E16F32AB0001DC004 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				9C947BAA163E835500842C2F /* AppDelegate.h */,
 				9C947BAB163E835500842C2F /* AppDelegate.m */,
 				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
+				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
+				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
 				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
 				9C947BB6163E835500842C2F /* MasterViewController.h */,
 				9C947BB7163E835500842C2F /* MasterViewController.m */,
@@ -406,6 +411,7 @@
 				9C1806D1163E86CF00A02D94 /* TableHeaderView.m in Sources */,
 				9C1806D4163E874900A02D94 /* RSSLoader.m in Sources */,
 				9C1806D8163E879900A02D94 /* RSSItem.m in Sources */,
+				54D1CC6616F875E000691CEB /* MainTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

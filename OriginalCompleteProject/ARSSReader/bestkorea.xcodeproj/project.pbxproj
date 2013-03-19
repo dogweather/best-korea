@@ -10,6 +10,14 @@
 		54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0ED816F09B7700C91B32 /* app-icon.png */; };
 		54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */; };
 		54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */; };
+		54D1CC3D16F8425700691CEB /* reference-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC3C16F8425700691CEB /* reference-tabbar-icon@2x.png */; };
+		54D1CC4516F845B700691CEB /* faq-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC3E16F845B700691CEB /* faq-tabbar-icon.png */; };
+		54D1CC4616F845B700691CEB /* faq-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC3F16F845B700691CEB /* faq-tabbar-icon@2x.png */; };
+		54D1CC4716F845B700691CEB /* info-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC4016F845B700691CEB /* info-tabbar-icon.png */; };
+		54D1CC4816F845B700691CEB /* info-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC4116F845B700691CEB /* info-tabbar-icon@2x.png */; };
+		54D1CC4916F845B700691CEB /* reference-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC4216F845B700691CEB /* reference-tabbar-icon.png */; };
+		54D1CC4A16F845B700691CEB /* settings-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC4316F845B700691CEB /* settings-tabbar-icon.png */; };
+		54D1CC4B16F845B700691CEB /* settings-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC4416F845B700691CEB /* settings-tabbar-icon@2x.png */; };
 		54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */; };
 		54F80D7D16F32961001DC004 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7C16F32961001DC004 /* icon1.png */; };
 		54F80D7F16F32AB0001DC004 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F80D7E16F32AB0001DC004 /* icon2.png */; };
@@ -45,6 +53,14 @@
 		54CB0ED816F09B7700C91B32 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-nonretina.png"; sourceTree = "<group>"; };
 		54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		54D1CC3C16F8425700691CEB /* reference-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reference-tabbar-icon@2x.png"; sourceTree = "<group>"; };
+		54D1CC3E16F845B700691CEB /* faq-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faq-tabbar-icon.png"; sourceTree = "<group>"; };
+		54D1CC3F16F845B700691CEB /* faq-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "faq-tabbar-icon@2x.png"; sourceTree = "<group>"; };
+		54D1CC4016F845B700691CEB /* info-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-tabbar-icon.png"; sourceTree = "<group>"; };
+		54D1CC4116F845B700691CEB /* info-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-tabbar-icon@2x.png"; sourceTree = "<group>"; };
+		54D1CC4216F845B700691CEB /* reference-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reference-tabbar-icon.png"; sourceTree = "<group>"; };
+		54D1CC4316F845B700691CEB /* settings-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-tabbar-icon.png"; sourceTree = "<group>"; };
+		54D1CC4416F845B700691CEB /* settings-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		54F80D7C16F32961001DC004 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		54F80D7E16F32AB0001DC004 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
@@ -109,6 +125,14 @@
 		54F80D7B16F32961001DC004 /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				54D1CC3E16F845B700691CEB /* faq-tabbar-icon.png */,
+				54D1CC3F16F845B700691CEB /* faq-tabbar-icon@2x.png */,
+				54D1CC4016F845B700691CEB /* info-tabbar-icon.png */,
+				54D1CC4116F845B700691CEB /* info-tabbar-icon@2x.png */,
+				54D1CC4216F845B700691CEB /* reference-tabbar-icon.png */,
+				54D1CC4316F845B700691CEB /* settings-tabbar-icon.png */,
+				54D1CC4416F845B700691CEB /* settings-tabbar-icon@2x.png */,
+				54D1CC3C16F8425700691CEB /* reference-tabbar-icon@2x.png */,
 				54F80D8216F330ED001DC004 /* icon4.png */,
 				54F80D8016F32E03001DC004 /* icon3.png */,
 				54F80D7E16F32AB0001DC004 /* icon2.png */,
@@ -307,6 +331,14 @@
 				54F80D8116F32E03001DC004 /* icon3.png in Resources */,
 				54F80D8416F330ED001DC004 /* icon4.png in Resources */,
 				54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */,
+				54D1CC3D16F8425700691CEB /* reference-tabbar-icon@2x.png in Resources */,
+				54D1CC4516F845B700691CEB /* faq-tabbar-icon.png in Resources */,
+				54D1CC4616F845B700691CEB /* faq-tabbar-icon@2x.png in Resources */,
+				54D1CC4716F845B700691CEB /* info-tabbar-icon.png in Resources */,
+				54D1CC4816F845B700691CEB /* info-tabbar-icon@2x.png in Resources */,
+				54D1CC4916F845B700691CEB /* reference-tabbar-icon.png in Resources */,
+				54D1CC4A16F845B700691CEB /* settings-tabbar-icon.png in Resources */,
+				54D1CC4B16F845B700691CEB /* settings-tabbar-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

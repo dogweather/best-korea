@@ -88,12 +88,12 @@
 		54D1CC5D16F8693500691CEB /* library-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "library-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D1CC6016F86FFD00691CEB /* television-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "television-tabbar-icon.png"; sourceTree = "<group>"; };
 		54D1CC6116F86FFD00691CEB /* television-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "television-tabbar-icon@2x.png"; sourceTree = "<group>"; };
-		54D1CC6416F875E000691CEB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		54D1CC6516F875E000691CEB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
-		54D1CC6716F884F400691CEB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		54D1CC6416F875E000691CEB /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTabBarController.h; path = ARSSReader/MainTabBarController.h; sourceTree = "<group>"; };
+		54D1CC6516F875E000691CEB /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTabBarController.m; path = ARSSReader/MainTabBarController.m; sourceTree = "<group>"; };
+		54D1CC6716F884F400691CEB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ARSSReader/Constants.h; sourceTree = "<group>"; };
 		54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon.png"; sourceTree = "<group>"; };
 		54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon@2x.png"; sourceTree = "<group>"; };
-		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPadStoryboard.storyboard; path = ARSSReader/iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		54F80D7C16F32961001DC004 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
 		54F80D7E16F32AB0001DC004 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
 		54F80D8016F32E03001DC004 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
@@ -129,13 +129,13 @@
 		9C947BA5163E835500842C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C947BA7163E835500842C2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C947BA9163E835500842C2F /* bestkorea-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bestkorea-Prefix.pch"; sourceTree = "<group>"; };
-		9C947BAA163E835500842C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		9C947BAB163E835500842C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C947BAA163E835500842C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ARSSReader/AppDelegate.h; sourceTree = "<group>"; };
+		9C947BAB163E835500842C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ARSSReader/AppDelegate.m; sourceTree = "<group>"; };
 		9C947BB4163E835500842C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9C947BB6163E835500842C2F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		9C947BB7163E835500842C2F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		9C947BB9163E835500842C2F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		9C947BBA163E835500842C2F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		9C947BB6163E835500842C2F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = ARSSReader/MasterViewController.h; sourceTree = "<group>"; };
+		9C947BB7163E835500842C2F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = ARSSReader/MasterViewController.m; sourceTree = "<group>"; };
+		9C947BB9163E835500842C2F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ARSSReader/DetailViewController.h; sourceTree = "<group>"; };
+		9C947BBA163E835500842C2F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ARSSReader/DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +154,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540858F416FAC786003B9BB4 /* App Code */ = {
+			isa = PBXGroup;
+			children = (
+				9C947BAA163E835500842C2F /* AppDelegate.h */,
+				54D1CC6716F884F400691CEB /* Constants.h */,
+				9C947BB9163E835500842C2F /* DetailViewController.h */,
+				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
+				9C947BB6163E835500842C2F /* MasterViewController.h */,
+				9C947BAB163E835500842C2F /* AppDelegate.m */,
+				9C947BBA163E835500842C2F /* DetailViewController.m */,
+				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
+				9C947BB7163E835500842C2F /* MasterViewController.m */,
+				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
+				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
+			);
+			name = "App Code";
+			sourceTree = "<group>";
+		};
 		54F80D7B16F32961001DC004 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +208,11 @@
 		9C1806BE163E849B00A02D94 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */,
+				54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */,
+				54CB0ED816F09B7700C91B32 /* app-icon.png */,
+				9C947BA2163E835500842C2F /* Supporting Files */,
+				54F80D7B16F32961001DC004 /* icons */,
 				9C1806C1163E84B200A02D94 /* GTMNSString+HTML */,
 				9C1806C4163E84B200A02D94 /* RaptureXML */,
 				9C1806BF163E84AB00A02D94 /* arss_header.png */,
@@ -231,13 +254,9 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
-				54F80D7B16F32961001DC004 /* icons */,
-				54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */,
-				54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */,
-				54CB0ED816F09B7700C91B32 /* app-icon.png */,
-				9C1806D5163E875300A02D94 /* ReaderClasses */,
+				540858F416FAC786003B9BB4 /* App Code */,
 				9C1806BE163E849B00A02D94 /* Assets */,
-				9C947BA1163E835500842C2F /* ARSSReader */,
+				9C1806D5163E875300A02D94 /* ReaderClasses */,
 				9C947B9A163E835500842C2F /* Frameworks */,
 				9C947B98163E835500842C2F /* Products */,
 			);
@@ -263,25 +282,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C947BA1163E835500842C2F /* ARSSReader */ = {
-			isa = PBXGroup;
-			children = (
-				9C947BAA163E835500842C2F /* AppDelegate.h */,
-				9C947BAB163E835500842C2F /* AppDelegate.m */,
-				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
-				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
-				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
-				54D1CC6716F884F400691CEB /* Constants.h */,
-				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
-				9C947BB6163E835500842C2F /* MasterViewController.h */,
-				9C947BB7163E835500842C2F /* MasterViewController.m */,
-				9C947BB9163E835500842C2F /* DetailViewController.h */,
-				9C947BBA163E835500842C2F /* DetailViewController.m */,
-				9C947BA2163E835500842C2F /* Supporting Files */,
-			);
-			path = ARSSReader;
-			sourceTree = "<group>";
-		};
 		9C947BA2163E835500842C2F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +295,7 @@
 				9C947BA9163E835500842C2F /* bestkorea-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ARSSReader;
 			sourceTree = "<group>";
 		};
 		9C947BC1163E844B00842C2F /* Icons */ = {
@@ -442,6 +443,7 @@
 				9C947BB4163E835500842C2F /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			path = ARSSReader;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

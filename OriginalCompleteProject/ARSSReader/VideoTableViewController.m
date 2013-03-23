@@ -80,19 +80,23 @@
     cell.textLabel.text= video.title;
     cell.detailTextLabel.text = video.source;
    
-    NSLog(@"Loading an image");
-    NSURL *imageURL         = [NSURL URLWithString:video.imageUrl];
-//    NSData *imageData       = [NSData dataWithContentsOfURL:imageURL];
-//    cell.imageView.image    = [UIImage imageWithData:imageData];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    if (video.image == nil) {
+        NSLog(@"Loading an image: %@", video.imageUrl);
+        NSURL *imageURL         = [NSURL URLWithString:video.imageUrl];
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Update the UI
-            cell.imageView.image    = [UIImage imageWithData:imageData];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+            video.image = [UIImage imageWithData:imageData];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Update the UI
+                cell.imageView.image    = video.image;
+            });
         });
-    });
+    } else {
+        NSLog(@"Reading image from the cache");
+        cell.imageView.image = video.image;
+    }
     
     return cell;
 }

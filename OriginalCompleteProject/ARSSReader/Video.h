@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString* url;
 @property (strong, nonatomic) NSString* source;
 @property (strong, nonatomic) NSString* pubDate;
+@property (strong, nonatomic) UIImage*  image;
 
 -(NSString *) imageUrl;
 

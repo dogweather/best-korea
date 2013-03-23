@@ -21,9 +21,13 @@
     RSSItem* item = (RSSItem*)self.detailItem;
     self.title = item.title;
     webView.delegate = self;
-    NSURLRequest* articleRequest = [NSURLRequest requestWithURL: item.link];
     webView.backgroundColor = [UIColor clearColor];
-    [webView loadRequest: articleRequest];
+
+//    NSURLRequest* articleRequest = [NSURLRequest requestWithURL: item.link];
+//    [webView loadRequest: articleRequest];
+    
+    NSURLRequest * videoRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://bestkorea.srsly.co/media/video/hyeonseo_lee_my_escape_from_north_korea.html"]];
+    [webView loadRequest: videoRequest];
 }
 
 -(void)viewDidDisappear:(BOOL)animated

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
+		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
+		54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6616FD76A5005219B4 /* VideoDetailViewController.m */; };
+		54800B6A16FD86DB005219B4 /* hyeonseo-lee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54800B6816FD86DB005219B4 /* hyeonseo-lee.jpg */; };
+		54800B6B16FD86DB005219B4 /* my-escape-from-north-korea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54800B6916FD86DB005219B4 /* my-escape-from-north-korea.jpg */; };
 		54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0ED816F09B7700C91B32 /* app-icon.png */; };
 		54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */; };
 		54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */; };
@@ -65,6 +70,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
+		54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
+		54800B6216FD6DD8005219B4 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		54800B6316FD6DD8005219B4 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		54800B6516FD76A5005219B4 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
+		54800B6616FD76A5005219B4 /* VideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailViewController.m; sourceTree = "<group>"; };
+		54800B6816FD86DB005219B4 /* hyeonseo-lee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hyeonseo-lee.jpg"; sourceTree = "<group>"; };
+		54800B6916FD86DB005219B4 /* my-escape-from-north-korea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "my-escape-from-north-korea.jpg"; sourceTree = "<group>"; };
 		54CB0ED816F09B7700C91B32 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-nonretina.png"; sourceTree = "<group>"; };
 		54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -162,10 +175,16 @@
 				9C947BB9163E835500842C2F /* DetailViewController.h */,
 				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
 				9C947BB6163E835500842C2F /* MasterViewController.h */,
+				54800B6216FD6DD8005219B4 /* Video.h */,
+				54800B6516FD76A5005219B4 /* VideoDetailViewController.h */,
+				54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */,
 				9C947BAB163E835500842C2F /* AppDelegate.m */,
 				9C947BBA163E835500842C2F /* DetailViewController.m */,
 				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
 				9C947BB7163E835500842C2F /* MasterViewController.m */,
+				54800B6316FD6DD8005219B4 /* Video.m */,
+				54800B6616FD76A5005219B4 /* VideoDetailViewController.m */,
+				54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */,
 				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
 				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
 			);
@@ -208,6 +227,8 @@
 		9C1806BE163E849B00A02D94 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				54800B6816FD86DB005219B4 /* hyeonseo-lee.jpg */,
+				54800B6916FD86DB005219B4 /* my-escape-from-north-korea.jpg */,
 				54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */,
 				54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */,
 				54CB0ED816F09B7700C91B32 /* app-icon.png */,
@@ -403,6 +424,8 @@
 				54D1CC6316F86FFD00691CEB /* television-tabbar-icon@2x.png in Resources */,
 				54D1CC6A16F8FF7B00691CEB /* table-tabbar-icon.png in Resources */,
 				54D1CC6B16F8FF7B00691CEB /* table-tabbar-icon@2x.png in Resources */,
+				54800B6A16FD86DB005219B4 /* hyeonseo-lee.jpg in Resources */,
+				54800B6B16FD86DB005219B4 /* my-escape-from-north-korea.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +446,9 @@
 				9C1806D4163E874900A02D94 /* RSSLoader.m in Sources */,
 				9C1806D8163E879900A02D94 /* RSSItem.m in Sources */,
 				54D1CC6616F875E000691CEB /* MainTabBarController.m in Sources */,
+				54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */,
+				54800B6416FD6DD8005219B4 /* Video.m in Sources */,
+				54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

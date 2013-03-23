@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     //configuration
-    self.title = @"News";
+//    self.title = @"News";
     self.icon_index = 1;
     
     feedURL = [NSURL URLWithString:@"https://news.google.com/news/feeds?hl=en&gl=us&q=north+korea&um=1&ie=UTF-8&output=rss"];

@@ -90,7 +90,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Update the UI
-                cell.imageView.image    = video.image;
+                cell.imageView.image = video.image;
             });
         });
     } else {

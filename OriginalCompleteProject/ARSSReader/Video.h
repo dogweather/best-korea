@@ -13,5 +13,8 @@
 @property (strong, nonatomic) NSString* title;
 @property (strong, nonatomic) NSString* url;
 @property (strong, nonatomic) NSString* source;
+@property (strong, nonatomic) NSString* pubDate;
+
+-(NSString *) imageUrl;
 
 @end

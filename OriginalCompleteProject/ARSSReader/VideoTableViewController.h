@@ -10,6 +10,6 @@
 
 @interface VideoTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *videos;
+@property (nonatomic, strong) NSMutableArray *videos;
 
 @end

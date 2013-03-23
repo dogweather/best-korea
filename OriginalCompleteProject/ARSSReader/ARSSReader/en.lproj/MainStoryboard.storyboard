@@ -93,7 +93,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="My Escape From North Korea" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="157" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-qX-52X">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="My Escape From North Korea" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="197" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-qX-52X">
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,8 +103,8 @@
                                             <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="my-escape-from-north-korea.jpg" id="6XH-Ri-K3c">
-                                            <rect key="frame" x="0.0" y="0.0" width="99" height="74"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" image="videos-tabbar-icon@2x.png" id="6XH-Ri-K3c">
+                                            <rect key="frame" x="7" y="7" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -354,11 +354,11 @@
         <image name="icon4.png" width="114" height="114"/>
         <image name="library-tabbar-icon.png" width="30" height="30"/>
         <image name="magazine-tabbar-icon.png" width="30" height="30"/>
-        <image name="my-escape-from-north-korea.jpg" width="112" height="84"/>
         <image name="photos-tabbar-icon.png" width="30" height="30"/>
         <image name="table-tabbar-icon.png" width="30" height="30"/>
         <image name="television-tabbar-icon.png" width="30" height="30"/>
         <image name="videos-tabbar-icon.png" width="30" height="30"/>
+        <image name="videos-tabbar-icon@2x.png" width="60" height="60"/>
     </resources>
     <classes>
         <class className="DetailViewController" superclassName="UIViewController">

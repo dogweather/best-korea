@@ -10,4 +10,8 @@
 
 @implementation Video
 
+-(NSString *)imageUrl {
+    return [self.url stringByReplacingOccurrencesOfString:@".html" withString:@".jpg"];
+}
+
 @end

@@ -27,10 +27,7 @@
 {
     [super viewDidLoad];
     
-    //configuration
-//    self.title = @"News";
     self.icon_index = 1;
-    
     feedURL = [NSURL URLWithString:@"https://news.google.com/news/feeds?hl=en&gl=us&q=north+korea&um=1&ie=UTF-8&output=rss"];
     
     //add refresh control to the table view
@@ -44,12 +41,7 @@
     
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:fetchMessage
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
-    
     [self.tableView addSubview: refreshControl];
-    
-    //add the header
-//    self.tableView.tableHeaderView = [[TableHeaderView alloc] initWithText:@"fetching rss feed"];
-    
     [self refreshFeed];
 }
 

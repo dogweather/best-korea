@@ -18,17 +18,16 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    NSURLRequest* articleRequest;
     RSSItem* item = (RSSItem*)self.detailItem;
     self.title = item.title;
     webView.delegate = self;
     webView.backgroundColor = [UIColor clearColor];
 
-//    NSURLRequest* articleRequest = [NSURLRequest requestWithURL: item.link];
-//    [webView loadRequest: articleRequest];
-    
-    NSURLRequest * videoRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://bestkorea.srsly.co/media/video/hyeonseo_lee_my_escape_from_north_korea.html"]];
-    [webView loadRequest: videoRequest];
+    articleRequest = [NSURLRequest requestWithURL: item.link];
+    [webView loadRequest: articleRequest];    
 }
+
 
 -(void)viewDidDisappear:(BOOL)animated
 {
@@ -36,10 +35,12 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
 
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }
+
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {

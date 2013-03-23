@@ -18,7 +18,10 @@
     // Register the preference defaults early.
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
-    
+
+    // Default UI Appearance
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+
     return YES;
 }
 

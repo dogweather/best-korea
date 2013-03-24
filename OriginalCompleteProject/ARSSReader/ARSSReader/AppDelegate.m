@@ -45,13 +45,20 @@
 //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
     
     // Colors and fonts
-    UIColor * communistRed = [UIColor redColor];
+    UIColor * communistRed  = [UIColor colorWithRed:0.53f green:0.09f blue:0.06f alpha:0.0f];
+    UIFont * navbarFont     = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
     
     // Global
     [[UINavigationBar appearance] setTintColor: communistRed];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                     UITextAttributeFont: navbarFont
+     }];
     
     // This controller
     [controller.navigationController.navigationBar setTintColor: communistRed];
+    [controller.navigationController.navigationBar setTitleTextAttributes: @{
+                                                      UITextAttributeFont: navbarFont
+     }];
 }
 
 
@@ -60,13 +67,20 @@
 //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
     
     // Colors and fonts
-    UIColor * navBarTint = [UIColor blackColor];
-    
+    UIColor * navBarTint    = [UIColor blackColor];
+    UIFont * navbarFont     = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
+
     // Global
     [[UINavigationBar appearance] setTintColor: navBarTint];
+    [[UINavigationBar appearance] setTitleTextAttributes: @{
+                                     UITextAttributeFont: navbarFont
+     }];
     
     // This controller
     [controller.navigationController.navigationBar setTintColor: navBarTint];
+    [controller.navigationController.navigationBar setTitleTextAttributes: @{
+                                     UITextAttributeFont: navbarFont
+     }];
 }
 
 

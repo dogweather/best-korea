@@ -27,38 +27,30 @@
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
-//    // Dynamic appearance customization
-//    if ([self inAlternateReality]) {
-//        [self switchToAlternateLook];
-//    } else {
-//        [self switchToNormalLook];
-//    }
-    self.uiss.statusWindowEnabled = NO;
-    self.uiss.autoReloadEnabled = NO;
-
     return YES;
 }
 
 
 - (void) switchToAlternateLookFor: (UIViewController*) controller {
     NSLog(@"SwitchToAlternateLook");
+    UINavigationBar *navBar;
 //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
     
     // Colors and fonts
     UIColor * communistRed  = [UIColor colorWithRed:0.53f green:0.09f blue:0.06f alpha:0.0f];
-    UIFont * navbarFont     = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
+    UIFont * navbarFont     = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:20.0f];
     
     // Global
+    
     [[UINavigationBar appearance] setTintColor: communistRed];
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                      UITextAttributeFont: navbarFont
      }];
     
     // This controller
-    [controller.navigationController.navigationBar setTintColor: communistRed];
-    [controller.navigationController.navigationBar setTitleTextAttributes: @{
-                                                      UITextAttributeFont: navbarFont
-     }];
+    navBar = controller.navigationController.navigationBar;
+    [navBar setTintColor: communistRed];
+    [navBar setTitleTextAttributes: @{ UITextAttributeFont: navbarFont }];
     [controller.navigationController.navigationBar setNeedsLayout];
 }
 
@@ -83,7 +75,6 @@
                                      UITextAttributeFont: navbarFont
      }];
     [controller.navigationController.navigationBar setNeedsLayout];
-    
 }
 
 

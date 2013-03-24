@@ -36,9 +36,19 @@
 }
 
 
-- (void) toggleReality {
+- (void) toggleRealityFor: (UIViewController*) controller {
+    UIFont * navbarFont;
     [[NSUserDefaults standardUserDefaults] setBool:![self inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
     [self setLookAndFeel];
+    
+    // Refresh the current view's navigation bar
+    [self setMyTitle: controller.navigationItem];
+    if ([self inAlternateReality])
+        navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
+    else
+        navbarFont = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
+    [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
+    [controller.navigationController.navigationBar setNeedsLayout];
 }
 
 

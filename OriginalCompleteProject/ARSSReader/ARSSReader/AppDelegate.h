@@ -17,7 +17,7 @@
 @property (strong, nonatomic) UIWindow *window;
 - (void) setLookAndFeel;
 - (void) setMyTitle: (UINavigationItem*) navItem;
-- (void) toggleReality;
+- (void) toggleRealityFor: (UIViewController*) controller;
 - (BOOL) inAlternateReality;
 
 @end

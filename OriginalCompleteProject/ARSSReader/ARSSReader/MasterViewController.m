@@ -124,18 +124,8 @@
 
 - (IBAction)togglePartyMode:(UIBarButtonItem *)sender {
     NSLog(@"togglePartyMode");
-    UIFont * navbarFont;
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app toggleReality];
-
-    // Refresh the current view's navigation bar
-    [app setMyTitle:self.navigationItem];
-    if ([app inAlternateReality])
-        navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
-    else
-        navbarFont = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
-    [self.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
-    [self.navigationController.navigationBar setNeedsLayout];
+    [app toggleRealityFor: self];
 }
 
 @end

@@ -60,13 +60,13 @@
 // Change our view of reality when the UI is about
 // to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
-        NSLog(@"Leaving alternate reality.");
-        [self leaveAlternateReality];
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
-        NSLog(@"Changing to alternate reality.");
-        [self enterAlternateReality];
-    }
+//    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
+//        NSLog(@"Leaving alternate reality.");
+//        [self leaveAlternateReality];
+//    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
+//        NSLog(@"Changing to alternate reality.");
+//        [self enterAlternateReality];
+//    }
 }
 
 

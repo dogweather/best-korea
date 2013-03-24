@@ -7,12 +7,15 @@
 
 #import <UIKit/UIKit.h>
 
+#define NORMAL_STYLE    @"uiss"
+#define ALTERNATE_STYLE @"uiss-alternative"
+
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-- (void) setMyLookAndFeel: (UIViewController*) controller;
-- (void) setMyTitle: (UINavigationItem*) controller;
+- (void) setLookAndFeel;
+- (void) setMyTitle: (UINavigationItem*) navItem;
 
 @end

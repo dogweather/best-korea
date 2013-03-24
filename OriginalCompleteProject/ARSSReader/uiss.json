@@ -1,8 +1,17 @@
 {
+    "Variables": {
+        "highlightColor": "#1176df"
+    },
+    
     "UINavigationBar": {
         "tintColor": "black",
         "titleTextAttributes": {
             "font":["Georgia-Bold", 19]
         }
+    },
+    
+    "UITabBar": {
+        "tintColor": "black",
+        "selectedImageTintColor": "$highlightColor"
     }
 }

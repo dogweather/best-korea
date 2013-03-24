@@ -34,7 +34,6 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app setMyLookAndFeel:self];
     [app setMyTitle:self.navigationItem];
 }
 
@@ -83,18 +82,16 @@
 
 
 - (void)enterAlternateReality {
-    // Save the new state
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:PREF_ALTERNATE_REALITY];
-    // Tell the view to refresh
-    [self.selectedViewController viewWillAppear:YES];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app setLookAndFeel];
 }
 
 
 - (void)leaveAlternateReality {
-    // Save the new state
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:PREF_ALTERNATE_REALITY];
-    // Tell the view to refresh
-    [self.selectedViewController viewWillAppear:YES];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app setLookAndFeel];
 }
 
 @end

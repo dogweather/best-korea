@@ -23,58 +23,34 @@
 {
     NSDictionary *appDefaults;
     
-    // Register the preference defaults early
+    // Register the preference defaults
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+
+    // Initial L&F setup
+    NSString *style = [self inAlternateReality] ? ALTERNATE_STYLE : NORMAL_STYLE;
+    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
 
     return YES;
 }
 
 
-- (void) switchToAlternateLookFor: (UIViewController*) controller {
-    NSLog(@"SwitchToAlternateLook");
-    UINavigationBar *navBar;
-//    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
-    
-    // Colors and fonts
-    UIColor * communistRed  = [UIColor colorWithRed:0.53f green:0.09f blue:0.06f alpha:0.0f];
-    UIFont * navbarFont     = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:20.0f];
-    
-    // Global
-    
-    [[UINavigationBar appearance] setTintColor: communistRed];
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                     UITextAttributeFont: navbarFont
-     }];
-    
-    // This controller
-    navBar = controller.navigationController.navigationBar;
-    [navBar setTintColor: communistRed];
-    [navBar setTitleTextAttributes: @{ UITextAttributeFont: navbarFont }];
-    [controller.navigationController.navigationBar setNeedsLayout];
+- (void) switchToAlternateLook {
+    NSLog(@"switchToAlternateLook");
+    [self switchTo:ALTERNATE_STYLE];
 }
 
 
-- (void) switchToNormalLookFor: (UIViewController*) controller {
-    //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
-    NSLog(@"SwitchToNormalLook");
-    
-    // Colors and fonts
-    UIColor * navBarTint    = [UIColor blackColor];
-    UIFont * navbarFont     = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
+- (void) switchToNormalLook {
+    NSLog(@"switchToNormalLook");
+    [self switchTo:NORMAL_STYLE];
+}
 
-    // Global
-    [[UINavigationBar appearance] setTintColor: navBarTint];
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                     UITextAttributeFont: navbarFont
-     }];
-    
-    // This controller
-    [controller.navigationController.navigationBar setTintColor: navBarTint];
-    [controller.navigationController.navigationBar setTitleTextAttributes: @{
-                                     UITextAttributeFont: navbarFont
-     }];
-    [controller.navigationController.navigationBar setNeedsLayout];
+
+- (void) switchTo:(NSString*)style {
+    self.uiss.style.url = [NSURL fileURLWithPath:
+                           [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
+    [self.uiss reloadStyleAsynchronously];
 }
 
 
@@ -83,19 +59,19 @@
 }
 
 
-- (void) setMyLookAndFeel:(UIViewController *)controller {
+- (void) setLookAndFeel {
     if ([self inAlternateReality])
-        [self switchToAlternateLookFor: controller];
+        [self switchToAlternateLook];
     else
-        [self switchToNormalLookFor: controller];
+        [self switchToNormalLook];
 }
 
 
-- (void) setMyTitle:(UINavigationItem *)controller {
+- (void) setMyTitle:(UINavigationItem *)navItem {
     if ([self inAlternateReality])
-        controller.title = @"BEST KOREA";
+        navItem.title = @"BEST KOREA";
     else
-        controller.title = @"Best Korea";
+        navItem.title = @"Best Korea";
 }
 
 

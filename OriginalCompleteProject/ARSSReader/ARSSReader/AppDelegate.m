@@ -7,6 +7,14 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
+#import "UISS.h"
+
+@interface AppDelegate ()
+
+@property(nonatomic, strong) UISS *uiss;
+
+@end
+
 
 @implementation AppDelegate
 

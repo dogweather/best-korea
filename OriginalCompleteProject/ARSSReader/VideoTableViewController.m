@@ -9,6 +9,7 @@
 #import "VideoTableViewController.h"
 #import "VideoDetailViewController.h"
 #import "Video.h"
+#import "AppDelegate.h"
 
 @interface VideoTableViewController ()
 @end
@@ -21,6 +22,8 @@
 {
     [super viewDidLoad];
     self.videos = [self getVideos];
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app switchToAlternateLook];
 }
 
 

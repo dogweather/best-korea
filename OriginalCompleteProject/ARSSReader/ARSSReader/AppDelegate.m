@@ -28,18 +28,13 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
     // Dynamic appearance customization
-    
-    // The standard way:
-//    self.uiss = [UISS configureWithDefaultJSONFile];
-    
-    // Couldn't get this working:
-//    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative.json" ofType:@"txt"]];
-    
     if ([self inAlternateReality]) {
         [self switchToAlternateLook];
     } else {
         [self switchToNormalLook];
     }
+    self.uiss.statusWindowEnabled = NO;
+    self.uiss.autoReloadEnabled = NO;
 
     return YES;
 }
@@ -47,17 +42,13 @@
 
 - (void) switchToAlternateLook {
     NSLog(@"SwitchToAlternateLook");
-    self.uiss = [UISS configureWithURL:[NSURL URLWithString:@"http://bestkoreaapp.com/app-support/uiss-alternative.json"]];
-    self.uiss.statusWindowEnabled = NO;
-    self.uiss.autoReloadEnabled = NO;
+    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
 }
 
 
 - (void) switchToNormalLook {
     NSLog(@"SwitchToNormalLook");
-    self.uiss = [UISS configureWithURL:[NSURL URLWithString:@"http://bestkoreaapp.com/app-support/uiss.json"]];
-    self.uiss.statusWindowEnabled = NO;
-    self.uiss.autoReloadEnabled = NO;
+    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
 }
 
 

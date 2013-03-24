@@ -12,7 +12,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 - (void) setMyLookAndFeel: (UIViewController*) controller;
+- (void) setMyTitle: (UIViewController*) controller;
 
 @end

@@ -52,6 +52,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app setMyLookAndFeel:self];
+    [app setMyTitle:self];
 }
 
 

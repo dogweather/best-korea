@@ -13,6 +13,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 - (void) setMyLookAndFeel: (UIViewController*) controller;
-- (void) setMyTitle: (UIViewController*) controller;
+- (void) setMyTitle: (UINavigationItem*) controller;
 
 @end

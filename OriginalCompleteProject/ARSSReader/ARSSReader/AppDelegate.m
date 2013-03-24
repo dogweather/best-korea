@@ -35,10 +35,36 @@
     // Couldn't get this working:
 //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative.json" ofType:@"txt"]];
     
-    self.uiss = [UISS configureWithURL:[NSURL URLWithString:@"http://bestkoreaapp.com/app-support/uiss.json"]];
-    self.uiss.statusWindowEnabled = YES;
+    if ([self inAlternateReality]) {
+        [self switchToAlternateLook];
+    } else {
+        [self switchToNormalLook];
+    }
+
     return YES;
 }
+
+
+- (void) switchToAlternateLook {
+    NSLog(@"SwitchToAlternateLook");
+    self.uiss = [UISS configureWithURL:[NSURL URLWithString:@"http://bestkoreaapp.com/app-support/uiss-alternative.json"]];
+    self.uiss.statusWindowEnabled = NO;
+    self.uiss.autoReloadEnabled = NO;
+}
+
+
+- (void) switchToNormalLook {
+    NSLog(@"SwitchToNormalLook");
+    self.uiss = [UISS configureWithURL:[NSURL URLWithString:@"http://bestkoreaapp.com/app-support/uiss.json"]];
+    self.uiss.statusWindowEnabled = NO;
+    self.uiss.autoReloadEnabled = NO;
+}
+
+
+- (BOOL)inAlternateReality {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
+}
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -22,8 +22,9 @@ extern NSString *const UISSDidRefreshViewsNotification;
 @property(nonatomic, strong) UISSStyle *style;
 
 - (void)loadStyleSynchronously;
-
 - (void)reloadStyleAsynchronously;
+- (void)refresh;
+
 
 // code handler is called on main thread
 - (void)generateCodeForUserInterfaceIdiom:(UIUserInterfaceIdiom)userInterfaceIdiom

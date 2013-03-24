@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Srsly.co. All rights reserved.
 //
 
-#import "MainTabBarController.h"
 #import "Constants.h"
+#import "MainTabBarController.h"
+#import "AppDelegate.h"
 
 @interface MainTabBarController ()
 
@@ -50,13 +51,15 @@
 
 // Change our view of reality when the UI is about
 // to rotate.
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
-        if ([self inAlternateReality] == YES) {
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    if (self.interfaceOrientation == UIInterfaceOrientationPortrait) {
+        if ([self inAlternateReality]) {
+            NSLog(@"Changing to Party-Pooper Mode");
             [self leaveAlternateReality];
         }
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        if ([self inAlternateReality] == NO) {
+    } else if (self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        if (! [self inAlternateReality]) {
+            NSLog(@"Changing to Party Mode");
             [self enterAlternateReality];
         }
     }
@@ -64,19 +67,23 @@
 
 
 - (BOOL)inAlternateReality {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
+    BOOL result = [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
+    NSLog(@"inAlternateReality: %u", result);
+    return result;
 }
 
 
 - (void)enterAlternateReality {
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:PREF_ALTERNATE_REALITY];
-    // TODO: Adjust the app for the reality state.
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app switchToAlternateLook];
 }
 
 
 - (void)leaveAlternateReality {
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:PREF_ALTERNATE_REALITY];
-    // TODO: Adjust the app for the reality state.
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app switchToNormalLook];
 }
 
 @end

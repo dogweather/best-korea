@@ -16,37 +16,15 @@
 
 @implementation VideoTableViewController
 
-- (void)viewDidLoad
+
+- (void) viewDidLoad
 {
     [super viewDidLoad];
-    Video *video;
-    self.videos = [NSMutableArray arrayWithCapacity:2];
-
-    video = [[Video alloc] init];
-    video.title     = @"Dennis Rodman 'This Week' Interview";
-    video.source    = @"ABC News";
-    video.url       = @"http://BestKoreaApp.com/media/video/dennis-rodman-this-week-interview.html";
-    video.pubDate   = @"2013-03-03";
-    [self.videos addObject:video];
-
-    video = [[Video alloc] init];
-    video.title     = @"My Escape from North Korea";
-    video.source    = @"TED";
-    video.url       = @"http://BestKoreaApp.com/media/video/hyeonseo_lee_my_escape_from_north_korea.html";
-    video.pubDate   = @"2013-02";
-    [self.videos addObject:video];
-
-    video = [[Video alloc] init];
-    video.title     = @"Why the World Needs Charter Cities";
-    video.source    = @"TED";
-    video.url       = @"http://BestKoreaApp.com/media/video/paul-romer-why-the-world-needs-charter-cities.html";
-    video.pubDate   = @"2007-07";
-    [self.videos addObject:video];
-
+    self.videos = [self getVideos];
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
 {
     NSIndexPath *indexPath;
     VideoDetailViewController *detailViewController;
@@ -120,6 +98,45 @@
 
 
 
-
+// Return the list of Video objects that I should display.
+// This includes Videos retrieved from online indexes,
+// hardcoded values, as well as cached values.
+//
+// TODO: Refactor this into a library data access layer. It can be
+//       used across all the News apps.
+- (NSMutableArray *) getVideos {
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
+    Video *video;
+    
+    video = [[Video alloc] init];
+    video.title     = @"North Korea Threatens US Airbases in Japan";
+    video.source    = @"The Guardian";
+    video.url       = @"http://BestKoreaApp.com/media/video/guardian-nk-threatens-us-airbases.html";
+    video.pubDate   = @"2013-03-21";
+    [result addObject:video];
+    
+    video = [[Video alloc] init];
+    video.title     = @"Dennis Rodman 'This Week' Interview";
+    video.source    = @"ABC News";
+    video.url       = @"http://BestKoreaApp.com/media/video/dennis-rodman-this-week-interview.html";
+    video.pubDate   = @"2013-03-03";
+    [result addObject:video];
+    
+    video = [[Video alloc] init];
+    video.title     = @"My Escape from North Korea";
+    video.source    = @"TED";
+    video.url       = @"http://BestKoreaApp.com/media/video/hyeonseo_lee_my_escape_from_north_korea.html";
+    video.pubDate   = @"2013-02";
+    [result addObject:video];
+    
+    video = [[Video alloc] init];
+    video.title     = @"Why the World Needs Charter Cities";
+    video.source    = @"TED";
+    video.url       = @"http://BestKoreaApp.com/media/video/paul-romer-why-the-world-needs-charter-cities.html";
+    video.pubDate   = @"2007-07";
+    [result addObject:video];
+    
+    return result;
+}
 
 @end

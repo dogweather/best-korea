@@ -22,8 +22,12 @@
 {
     [super viewDidLoad];
     self.videos = [self getVideos];
+}
+
+
+- (void) viewWillAppear:(BOOL)animated {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app switchToAlternateLook];
+    [app checkMyLookAndFeel:self];
 }
 
 

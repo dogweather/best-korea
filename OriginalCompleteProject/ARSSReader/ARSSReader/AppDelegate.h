@@ -13,7 +13,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (void) switchToAlternateLook;
-- (void) switchToNormalLook;
+- (void) checkMyLookAndFeel: (UIViewController*) controller;
 
 @end

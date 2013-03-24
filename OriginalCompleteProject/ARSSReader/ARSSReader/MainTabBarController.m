@@ -51,15 +51,15 @@
 
 // Change our view of reality when the UI is about
 // to rotate.
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    if (self.interfaceOrientation == UIInterfaceOrientationPortrait) {
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
         if ([self inAlternateReality]) {
-            NSLog(@"Changing to Party-Pooper Mode");
+            NSLog(@"Leaving alternate reality.");
             [self leaveAlternateReality];
         }
-    } else if (self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
         if (! [self inAlternateReality]) {
-            NSLog(@"Changing to Party Mode");
+            NSLog(@"Changing to alternate reality.");
             [self enterAlternateReality];
         }
     }
@@ -68,22 +68,24 @@
 
 - (BOOL)inAlternateReality {
     BOOL result = [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
-    NSLog(@"inAlternateReality: %u", result);
+    NSLog(@"inAlternateReality? %u", result);
     return result;
 }
 
 
 - (void)enterAlternateReality {
+    // Save the new state
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:PREF_ALTERNATE_REALITY];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app switchToAlternateLook];
+    // Tell the view to refresh
+    [self.selectedViewController viewWillAppear:YES];
 }
 
 
 - (void)leaveAlternateReality {
+    // Save the new state
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:PREF_ALTERNATE_REALITY];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app switchToNormalLook];
+    // Tell the view to refresh
+    [self.selectedViewController viewWillAppear:YES];
 }
 
 @end

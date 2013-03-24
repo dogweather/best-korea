@@ -27,12 +27,12 @@
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
-    // Dynamic appearance customization
-    if ([self inAlternateReality]) {
-        [self switchToAlternateLook];
-    } else {
-        [self switchToNormalLook];
-    }
+//    // Dynamic appearance customization
+//    if ([self inAlternateReality]) {
+//        [self switchToAlternateLook];
+//    } else {
+//        [self switchToNormalLook];
+//    }
     self.uiss.statusWindowEnabled = NO;
     self.uiss.autoReloadEnabled = NO;
 
@@ -40,15 +40,22 @@
 }
 
 
-- (void) switchToAlternateLook {
+- (void) switchToAlternateLookFor: (UIViewController*) controller {
     NSLog(@"SwitchToAlternateLook");
-    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
+//    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
+    UIColor * communistRed = [UIColor redColor];
+//    [[UINavigationBar appearance] setTintColor: communistRed];
+    [controller.navigationController.navigationBar setTintColor: communistRed];
 }
 
 
-- (void) switchToNormalLook {
+- (void) switchToNormalLookFor: (UIViewController*) controller {
     NSLog(@"SwitchToNormalLook");
-    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
+//    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
+    UIColor * navBarTint = [UIColor blackColor];
+//    [[UINavigationBar appearance] setTintColor: navBarTint];
+    [controller.navigationController.navigationBar setTintColor: navBarTint];
+
 }
 
 
@@ -56,6 +63,13 @@
     return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }
 
+
+- (void) checkMyLookAndFeel:(UIViewController *)controller {
+    if ([self inAlternateReality])
+        [self switchToAlternateLookFor: controller];
+    else
+        [self switchToNormalLookFor: controller];
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

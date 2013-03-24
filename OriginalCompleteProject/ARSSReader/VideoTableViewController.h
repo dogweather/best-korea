@@ -11,5 +11,6 @@
 @interface VideoTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableArray *videos;
+- (IBAction)togglePartyMode:(id)sender;
 
 @end

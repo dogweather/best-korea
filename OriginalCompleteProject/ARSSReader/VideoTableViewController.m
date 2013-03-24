@@ -25,10 +25,11 @@
 }
 
 
-- (void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app setMyTitle:self.navigationItem];
 }
+
 
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
@@ -146,4 +147,9 @@
     return result;
 }
 
+- (IBAction)togglePartyMode:(id)sender {
+    NSLog(@"togglePartyMode");
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app toggleRealityFor: self];
+}
 @end

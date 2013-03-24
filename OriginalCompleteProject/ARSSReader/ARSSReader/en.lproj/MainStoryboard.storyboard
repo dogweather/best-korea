@@ -60,7 +60,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Best Korea" id="7bU-Oc-7SR"/>
+                    <navigationItem key="navigationItem" title="Best Korea" id="7bU-Oc-7SR">
+                        <barButtonItem key="leftBarButtonItem" title="Party" id="3yZ-qh-9wc">
+                            <connections>
+                                <action selector="togglePartyMode:" destination="z79-iz-SFG" id="mLw-Yg-I7W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNp-1a-7n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,7 +92,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Best Korea" id="6Wm-VG-577"/>
+                    <navigationItem key="navigationItem" title="Best Korea" id="6Wm-VG-577">
+                        <barButtonItem key="leftBarButtonItem" title="Party" id="fFi-s4-qO6">
+                            <connections>
+                                <action selector="togglePartyMode:" destination="tAc-aa-jeg" id="77Z-DH-KPs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j51-04-19n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

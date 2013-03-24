@@ -57,4 +57,9 @@
 }
 
 
+- (IBAction)togglePartyMode:(id)sender {
+    NSLog(@"togglePartyMode");
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app toggleRealityFor: self];
+}
 @end

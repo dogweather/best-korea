@@ -47,12 +47,12 @@
     [self refreshFeed];
 }
 
-
-
-- (void) viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app setMyTitle:self.navigationItem];
 }
+
+
 
 
 

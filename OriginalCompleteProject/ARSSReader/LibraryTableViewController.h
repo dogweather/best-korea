@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LibraryTableViewController : UITableViewController
+- (IBAction)togglePartyMode:(id)sender;
 
 @end

@@ -1,9 +1,10 @@
 {
     "Variables": {
-        "communistRed": "#89170F",
-        "communistGold": "#deac00"
+        "communistRed":     "#89170F",
+        "communistGold":    "#deac00"
     },
 
+    
     "UINavigationBar": {
         "tintColor": "$communistRed",
         "titleTextAttributes": {
@@ -12,7 +13,7 @@
     },
     
     "UITabBar": {
-        "tintColor": "$communistRed",
-        "selectedImageTintColor": "$communistGold"
+        "tintColor":                "$communistRed",
+        "selectedImageTintColor":   "$communistGold"
     }
 }

@@ -60,17 +60,17 @@
 // Change our view of reality when the UI is about
 // to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait) {
-        if ([self inAlternateReality]) {
-            NSLog(@"Leaving alternate reality.");
-            [self leaveAlternateReality];
-        }
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        if (! [self inAlternateReality]) {
-            NSLog(@"Changing to alternate reality.");
-            [self enterAlternateReality];
-        }
+    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
+        NSLog(@"Leaving alternate reality.");
+        [self leaveAlternateReality];
+    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
+        NSLog(@"Changing to alternate reality.");
+        [self enterAlternateReality];
     }
+}
+
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
 }
 
 
@@ -82,16 +82,20 @@
 
 
 - (void)enterAlternateReality {
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:PREF_ALTERNATE_REALITY];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app setLookAndFeel];
+    [self setAlternateReality:YES];
 }
 
 
 - (void)leaveAlternateReality {
-    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:PREF_ALTERNATE_REALITY];
+    [self setAlternateReality:NO];
+}
+
+
+- (void)setAlternateReality:(BOOL)option {
+    [[NSUserDefaults standardUserDefaults] setBool:option forKey:PREF_ALTERNATE_REALITY];
     AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     [app setLookAndFeel];
+    [self.selectedViewController viewWillAppear:YES];
 }
 
 @end

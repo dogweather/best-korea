@@ -22,16 +22,31 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSDictionary *appDefaults;
+    NSString *style;
     
     // Register the preference defaults
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
     // Initial L&F setup
-    NSString *style = [self inAlternateReality] ? ALTERNATE_STYLE : NORMAL_STYLE;
+    style = [self inAlternateReality] ? ALTERNATE_STYLE : NORMAL_STYLE;
     self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
 
     return YES;
+}
+
+
+- (void) toggleReality {
+    [[NSUserDefaults standardUserDefaults] setBool:![self inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
+    [self setLookAndFeel];
+}
+
+
+- (void) setLookAndFeel {
+    if ([self inAlternateReality])
+        [self switchToAlternateLook];
+    else
+        [self switchToNormalLook];
 }
 
 
@@ -59,20 +74,18 @@
 }
 
 
-- (void) setLookAndFeel {
-    if ([self inAlternateReality])
-        [self switchToAlternateLook];
-    else
-        [self switchToNormalLook];
-}
 
-
+// TODO: Refactor the text out to the app constants header.
 - (void) setMyTitle:(UINavigationItem *)navItem {
     if ([self inAlternateReality])
         navItem.title = @"BEST KOREA";
     else
         navItem.title = @"Best Korea";
 }
+
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

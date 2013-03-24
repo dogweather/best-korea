@@ -14,5 +14,6 @@
 @interface MasterViewController : UITableViewController
 
 @property int icon_index;
+- (IBAction)togglePartyMode:(UIBarButtonItem *)sender;
 
 @end

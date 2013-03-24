@@ -28,8 +28,15 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
     // Dynamic appearance customization
-    self.uiss = [UISS configureWithDefaultJSONFile];
-    self.uiss.statusWindowEnabled = NO;
+    
+    // The standard way:
+//    self.uiss = [UISS configureWithDefaultJSONFile];
+    
+    // Couldn't get this working:
+//    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative.json" ofType:@"txt"]];
+    
+    self.uiss = [UISS configureWithURL:[NSURL URLWithString:@"http://bestkoreaapp.com/app-support/uiss.json"]];
+    self.uiss.statusWindowEnabled = YES;
     return YES;
 }
 

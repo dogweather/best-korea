@@ -1,0 +1,13 @@
+{
+    "Variables": {
+        "communistRed": "#89170F"
+    },
+
+    "UINavigationBar": {
+        "tintColor": "$communistRed",
+        "titleTextAttributes": {
+            "font":["FuturaCondensed-Bold", 19]
+        }
+
+    }
+}

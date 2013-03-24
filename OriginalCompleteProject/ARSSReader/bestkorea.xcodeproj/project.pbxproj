@@ -10,6 +10,7 @@
 		54039CBC16FEAF0D00CAA71F /* uiss.json in Resources */ = {isa = PBXBuildFile; fileRef = 54039CBB16FEAF0D00CAA71F /* uiss.json */; };
 		54039CBE16FEB12400CAA71F /* uiss-alternative.json in Resources */ = {isa = PBXBuildFile; fileRef = 54039CBD16FEB12400CAA71F /* uiss-alternative.json */; };
 		5440DE1516FDD284007D2216 /* white-video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5440DE1416FDD284007D2216 /* white-video.jpg */; };
+		544D0FD816FEBF77008934E5 /* resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 544D0FD716FEBF77008934E5 /* resources.bundle */; };
 		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
 		54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6616FD76A5005219B4 /* VideoDetailViewController.m */; };
@@ -79,6 +80,7 @@
 		54039CBB16FEAF0D00CAA71F /* uiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uiss.json; sourceTree = "<group>"; };
 		54039CBD16FEB12400CAA71F /* uiss-alternative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uiss-alternative.json"; sourceTree = "<group>"; };
 		5440DE1416FDD284007D2216 /* white-video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-video.jpg"; sourceTree = "<group>"; };
+		544D0FD716FEBF77008934E5 /* resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resources.bundle; sourceTree = "<group>"; };
 		54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
 		54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
 		54800B6216FD6DD8005219B4 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
@@ -190,9 +192,9 @@
 				54800B6216FD6DD8005219B4 /* Video.h */,
 				54800B6516FD76A5005219B4 /* VideoDetailViewController.h */,
 				54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */,
-				9C947BAB163E835500842C2F /* AppDelegate.m */,
-				54039CBB16FEAF0D00CAA71F /* uiss.json */,
 				54039CBD16FEB12400CAA71F /* uiss-alternative.json */,
+				54039CBB16FEAF0D00CAA71F /* uiss.json */,
+				9C947BAB163E835500842C2F /* AppDelegate.m */,
 				9C947BBA163E835500842C2F /* DetailViewController.m */,
 				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
 				9C947BB7163E835500842C2F /* MasterViewController.m */,
@@ -291,6 +293,7 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
+				544D0FD716FEBF77008934E5 /* resources.bundle */,
 				540858F416FAC786003B9BB4 /* App Code */,
 				9C1806BE163E849B00A02D94 /* Assets */,
 				9C1806D5163E875300A02D94 /* ReaderClasses */,
@@ -449,6 +452,7 @@
 				5440DE1516FDD284007D2216 /* white-video.jpg in Resources */,
 				54039CBC16FEAF0D00CAA71F /* uiss.json in Resources */,
 				54039CBE16FEB12400CAA71F /* uiss-alternative.json in Resources */,
+				544D0FD816FEBF77008934E5 /* resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54039CBC16FEAF0D00CAA71F /* uiss.json in Resources */ = {isa = PBXBuildFile; fileRef = 54039CBB16FEAF0D00CAA71F /* uiss.json */; };
+		54039CBE16FEB12400CAA71F /* uiss-alternative.json in Resources */ = {isa = PBXBuildFile; fileRef = 54039CBD16FEB12400CAA71F /* uiss-alternative.json */; };
 		5440DE1516FDD284007D2216 /* white-video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5440DE1416FDD284007D2216 /* white-video.jpg */; };
 		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
@@ -74,6 +76,8 @@
 
 /* Begin PBXFileReference section */
 		47A4A39FE7B74C0DB10DB12A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		54039CBB16FEAF0D00CAA71F /* uiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uiss.json; sourceTree = "<group>"; };
+		54039CBD16FEB12400CAA71F /* uiss-alternative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uiss-alternative.json"; sourceTree = "<group>"; };
 		5440DE1416FDD284007D2216 /* white-video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-video.jpg"; sourceTree = "<group>"; };
 		54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
 		54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				54800B6516FD76A5005219B4 /* VideoDetailViewController.h */,
 				54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */,
 				9C947BAB163E835500842C2F /* AppDelegate.m */,
+				54039CBB16FEAF0D00CAA71F /* uiss.json */,
+				54039CBD16FEB12400CAA71F /* uiss-alternative.json */,
 				9C947BBA163E835500842C2F /* DetailViewController.m */,
 				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
 				9C947BB7163E835500842C2F /* MasterViewController.m */,
@@ -441,6 +447,8 @@
 				54800B6B16FD86DB005219B4 /* my-escape-from-north-korea.jpg in Resources */,
 				54800B6F16FDC759005219B4 /* hyeonseo_lee_my_escape_from_north_korea@2x.jpg in Resources */,
 				5440DE1516FDD284007D2216 /* white-video.jpg in Resources */,
+				54039CBC16FEAF0D00CAA71F /* uiss.json in Resources */,
+				54039CBE16FEB12400CAA71F /* uiss-alternative.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

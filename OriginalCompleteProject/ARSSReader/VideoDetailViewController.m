@@ -7,6 +7,7 @@
 //
 
 #import "VideoDetailViewController.h"
+#import "AppDelegate.h"
 
 @interface VideoDetailViewController () <UIWebViewDelegate>
 {
@@ -24,6 +25,13 @@
         self.prevUrl = self.url;
     }
 }
+
+
+- (void) viewWillAppear:(BOOL)animated {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app setMyLookAndFeel:self];
+}
+
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

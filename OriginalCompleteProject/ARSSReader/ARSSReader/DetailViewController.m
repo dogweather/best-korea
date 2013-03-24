@@ -6,6 +6,7 @@
 //
 
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 #import "RSSItem.h"
 
 @interface DetailViewController () <UIWebViewDelegate>
@@ -27,6 +28,14 @@
     articleRequest = [NSURLRequest requestWithURL: item.link];
     [webView loadRequest: articleRequest];    
 }
+
+
+
+- (void) viewWillAppear:(BOOL)animated {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app setMyLookAndFeel:self];
+}
+
 
 
 -(void)viewDidDisappear:(BOOL)animated

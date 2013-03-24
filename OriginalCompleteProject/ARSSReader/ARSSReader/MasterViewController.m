@@ -7,6 +7,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "AppDelegate.h"
 
 #import "TableHeaderView.h"
 
@@ -20,6 +21,7 @@
     UIRefreshControl* refreshControl;
 }
 @end
+
 
 @implementation MasterViewController
 
@@ -44,6 +46,15 @@
     [self.tableView addSubview: refreshControl];
     [self refreshFeed];
 }
+
+
+
+- (void) viewWillAppear:(BOOL)animated {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app setMyLookAndFeel:self];
+}
+
+
 
 -(void) refreshInvoked:(id)sender forState:(UIControlState)state
 {

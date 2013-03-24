@@ -43,8 +43,14 @@
 - (void) switchToAlternateLookFor: (UIViewController*) controller {
     NSLog(@"SwitchToAlternateLook");
 //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss-alternative" ofType:@"json"]];
+    
+    // Colors and fonts
     UIColor * communistRed = [UIColor redColor];
-//    [[UINavigationBar appearance] setTintColor: communistRed];
+    
+    // Global
+    [[UINavigationBar appearance] setTintColor: communistRed];
+    
+    // This controller
     [controller.navigationController.navigationBar setTintColor: communistRed];
 }
 
@@ -52,10 +58,15 @@
 - (void) switchToNormalLookFor: (UIViewController*) controller {
     NSLog(@"SwitchToNormalLook");
 //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
+    
+    // Colors and fonts
     UIColor * navBarTint = [UIColor blackColor];
-//    [[UINavigationBar appearance] setTintColor: navBarTint];
+    
+    // Global
+    [[UINavigationBar appearance] setTintColor: navBarTint];
+    
+    // This controller
     [controller.navigationController.navigationBar setTintColor: navBarTint];
-
 }
 
 
@@ -64,7 +75,7 @@
 }
 
 
-- (void) checkMyLookAndFeel:(UIViewController *)controller {
+- (void) setMyLookAndFeel:(UIViewController *)controller {
     if ([self inAlternateReality])
         [self switchToAlternateLookFor: controller];
     else

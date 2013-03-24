@@ -31,6 +31,14 @@
 	// Do any additional setup after loading the view.
 }
 
+
+- (void) viewWillAppear:(BOOL)animated {
+    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app setMyLookAndFeel:self];
+}
+
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

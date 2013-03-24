@@ -91,7 +91,7 @@
 }
 
 
-- (void) setMyTitle:(UIViewController *)controller {
+- (void) setMyTitle:(UINavigationItem *)controller {
     if ([self inAlternateReality])
         controller.title = @"BEST KOREA";
     else

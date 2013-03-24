@@ -59,12 +59,13 @@
     [controller.navigationController.navigationBar setTitleTextAttributes: @{
                                                       UITextAttributeFont: navbarFont
      }];
+    [controller.navigationController.navigationBar setNeedsLayout];
 }
 
 
 - (void) switchToNormalLookFor: (UIViewController*) controller {
+    //    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
     NSLog(@"SwitchToNormalLook");
-//    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:@"uiss" ofType:@"json"]];
     
     // Colors and fonts
     UIColor * navBarTint    = [UIColor blackColor];
@@ -81,6 +82,8 @@
     [controller.navigationController.navigationBar setTitleTextAttributes: @{
                                      UITextAttributeFont: navbarFont
      }];
+    [controller.navigationController.navigationBar setNeedsLayout];
+    
 }
 
 

@@ -21,62 +21,6 @@
             </objects>
             <point key="canvasLocation" x="-7" y="75"/>
         </scene>
-        <!--Table View Controller - Library-->
-        <scene sceneID="ebH-Nm-Pfn">
-            <objects>
-                <tableViewController id="0xP-CB-5yN" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DJg-1K-gXs">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="libraryCell" id="f2t-SM-E8L">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="0xP-CB-5yN" id="fsq-Df-zLx"/>
-                            <outlet property="delegate" destination="0xP-CB-5yN" id="EnM-rs-jjd"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Library" image="library-tabbar-icon.png" id="M93-j6-xSG"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FAh-nD-DxI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7" y="2954"/>
-        </scene>
-        <!--View Controller - Video Test-->
-        <scene sceneID="2as-Y2-b8X">
-            <objects>
-                <viewController id="q8q-mT-JbE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FwQ-Pe-QtJ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mod-Xz-LWK">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Mod-Xz-LWK" firstAttribute="trailing" secondItem="FwQ-Pe-QtJ" secondAttribute="trailing" type="default" id="AeV-Cl-pte"/>
-                            <constraint firstItem="Mod-Xz-LWK" firstAttribute="leading" secondItem="FwQ-Pe-QtJ" secondAttribute="leading" type="default" id="UEK-KI-F9H"/>
-                            <constraint firstItem="Mod-Xz-LWK" firstAttribute="bottom" secondItem="FwQ-Pe-QtJ" secondAttribute="bottom" type="default" id="hxp-hz-pmb"/>
-                            <constraint firstItem="Mod-Xz-LWK" firstAttribute="top" secondItem="FwQ-Pe-QtJ" secondAttribute="top" type="default" id="pvd-Kc-aS6"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Video Test" image="videos-tabbar-icon.png" id="47a-eB-oQ9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fpw-Wa-9gU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="405" y="2954"/>
-        </scene>
         <!--Video Table View Controller - Best Korea-->
         <scene sceneID="PPP-1O-w2t">
             <objects>
@@ -121,6 +65,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNp-1a-7n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="802"/>
+        </scene>
+        <!--Library Table View Controller - Best Korea-->
+        <scene sceneID="UTu-Xf-PqX">
+            <objects>
+                <tableViewController id="tAc-aa-jeg" customClass="LibraryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MJD-D8-FTw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bpY-1r-fqQ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Best Korea" id="6Wm-VG-577"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j51-04-19n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474" y="1516"/>
+        </scene>
+        <!--Navigation Controller - Library-->
+        <scene sceneID="TdZ-VK-IPX">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="qXO-ch-oXR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="library-tabbar-icon.png" id="bqF-RV-thv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sA6-cM-ZOs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tAc-aa-jeg" kind="relationship" relationship="rootViewController" id="UNM-sQ-H07"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yV5-p7-3hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7" y="1516"/>
         </scene>
         <!--Video Detail View Controller-->
         <scene sceneID="D3l-m1-dDd">
@@ -168,21 +154,6 @@
             </objects>
             <point key="canvasLocation" x="-7" y="802"/>
         </scene>
-        <!--View Controller - Photos-->
-        <scene sceneID="TVF-QM-y55">
-            <objects>
-                <viewController id="Wbg-8y-kQJ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dnU-wB-2e1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Photos" image="photos-tabbar-icon.png" id="mMR-r9-Nzj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fko-4V-DQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7" y="1512"/>
-        </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="HBB-hR-2rO">
             <objects>
@@ -196,10 +167,7 @@
                     <connections>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="2dc-kt-KFa"/>
                         <segue destination="CHh-DO-pI8" kind="relationship" relationship="viewControllers" id="wrZ-Eu-MxK"/>
-                        <segue destination="AWv-um-UPx" kind="relationship" relationship="viewControllers" id="rf6-s3-YW0"/>
-                        <segue destination="Wbg-8y-kQJ" kind="relationship" relationship="viewControllers" id="j0C-dr-SBR"/>
-                        <segue destination="0xP-CB-5yN" kind="relationship" relationship="viewControllers" id="2Ed-Hl-HUn"/>
-                        <segue destination="q8q-mT-JbE" kind="relationship" relationship="viewControllers" id="Hxi-3X-XRB"/>
+                        <segue destination="qXO-ch-oXR" kind="relationship" relationship="viewControllers" id="S7l-BC-6NI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ozB-dz-5ej" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -289,104 +257,14 @@
             </objects>
             <point key="canvasLocation" x="955" y="75"/>
         </scene>
-        <!--Table View Controller - Best Korea-->
-        <scene sceneID="QzR-Fs-UgO">
-            <objects>
-                <tableViewController id="5cz-TB-0Hb" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CW3-ms-PjQ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="blog_cell" id="F06-De-oxe">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Best Korea" id="G2u-Sa-NKr"/>
-                    <connections>
-                        <segue destination="jMx-rb-Bsg" kind="push" identifier="showBlogDetail" id="syw-A3-ORo"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P1F-vM-9xd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="474" y="2208"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pGn-pG-bev">
-            <objects>
-                <viewController id="jMx-rb-Bsg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8G3-UA-ncH">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ccx-Oi-Gmw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v1F-BV-tTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="955" y="2208"/>
-        </scene>
-        <!--Navigation Controller - Blogs-->
-        <scene sceneID="IQV-jC-uwt">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="AWv-um-UPx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Blogs" image="magazine-tabbar-icon.png" id="I9T-l1-dmx"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r2c-7Y-s41">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="5cz-TB-0Hb" kind="relationship" relationship="rootViewController" id="h15-fd-8C5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hJn-gT-4uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-7" y="2208"/>
-        </scene>
     </scenes>
     <resources>
         <image name="icon4.png" width="114" height="114"/>
         <image name="library-tabbar-icon.png" width="30" height="30"/>
-        <image name="magazine-tabbar-icon.png" width="30" height="30"/>
-        <image name="photos-tabbar-icon.png" width="30" height="30"/>
         <image name="table-tabbar-icon.png" width="30" height="30"/>
         <image name="television-tabbar-icon.png" width="30" height="30"/>
-        <image name="videos-tabbar-icon.png" width="30" height="30"/>
         <image name="white-video.jpg" width="244" height="183"/>
     </resources>
-    <classes>
-        <class className="DetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="MainTabBarController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainTabBarController.h"/>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="VideoDetailViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoDetailViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="VideoTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoTableViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -39,7 +39,7 @@
                        action:@selector(refreshInvoked:forState:)
              forControlEvents:UIControlEventValueChanged];
     
-    NSString* fetchMessage = [NSString stringWithFormat:@"Refresh"];
+    NSString* fetchMessage = @"Refresh";
     
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:fetchMessage
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
@@ -47,9 +47,11 @@
     [self refreshFeed];
 }
 
+
 - (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"MasterViewController.viewWillAppear");
     [super viewWillAppear:animated];
-    [App setMyTitle:self.navigationItem];
+    [App setTitle:self.navigationItem andFont:self];
 }
 
 

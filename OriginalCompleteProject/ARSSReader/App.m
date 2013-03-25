@@ -24,6 +24,11 @@
 }
 
 
++ (void) setTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
+    [[self app] setTitle:navItem andFont:controller];
+}
+
+
 + (AppDelegate *) app {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }

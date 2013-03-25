@@ -94,6 +94,19 @@
 }
 
 
+// Call this from a view controller's will appear method.
+- (void) setTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
+    UIFont *navbarFont;
+    
+    [self setMyTitle:navItem];
+    
+    if ([self inAlternateReality])
+        navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
+    else
+        navbarFont = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
+    [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
+    [controller.navigationController.navigationBar setNeedsDisplay];
+}
 
 
 

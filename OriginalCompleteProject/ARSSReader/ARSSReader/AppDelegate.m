@@ -37,18 +37,14 @@
 
 
 - (void) toggleRealityFor: (UIViewController*) controller {
-    UIFont * navbarFont;
+    // Toggle the saved value
     [[NSUserDefaults standardUserDefaults] setBool:![self inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
+    
+    // Change the app's look & feel
     [self setLookAndFeel];
     
-    // Refresh the current view's navigation bar
-    [self _setMyTitle: controller.navigationItem];
-    if ([self inAlternateReality])
-        navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
-    else
-        navbarFont = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
-    [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
-    [controller.navigationController.navigationBar setNeedsLayout];
+    // Apply the hack-fix
+    [self setMyTitle:controller.navigationItem andFont:controller];
 }
 
 
@@ -86,7 +82,7 @@
 
 
 // TODO: Refactor the text out to the app constants header.
-- (void) _setMyTitle:(UINavigationItem *)navItem {
+- (void) setTitleOf:(UINavigationItem *)navItem {
     if ([self inAlternateReality])
         navItem.title = @"BEST KOREA";
     else
@@ -98,12 +94,12 @@
 - (void) setMyTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
     UIFont *navbarFont;
     
-    [self _setMyTitle:navItem];
+    [self setTitleOf:navItem];
     
     if ([self inAlternateReality])
         navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
     else
-        navbarFont = [UIFont fontWithName:@"Georgia-Bold" size:18.0f];
+        navbarFont = [UIFont fontWithName:@"Optima-ExtraBlack" size:18.0f];
     [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
     [controller.navigationController.navigationBar setNeedsDisplay];
 }

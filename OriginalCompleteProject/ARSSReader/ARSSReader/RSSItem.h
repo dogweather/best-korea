@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString* publication;
 @property (strong, nonatomic) NSURL*    link;
 @property (strong, nonatomic) NSString* imageUrl;
+@property (strong, nonatomic) UIImage*  image;
 @property (strong, nonatomic) NSAttributedString* cellMessage;
 
 @end

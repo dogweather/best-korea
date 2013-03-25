@@ -104,15 +104,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSString *placeholder_icon = [NSString stringWithFormat:@"icon%d.png", self.icon_index];
     
-    RSSItem *object = _objects[indexPath.row];
-    cell.textLabel.text         = object.title;
-    cell.detailTextLabel.text   = object.publication;
-    cell.imageView.image        = [UIImage imageNamed:placeholder_icon];
-    self.icon_index++;
-    if (self.icon_index > ICON_COUNT) {
-        self.icon_index = 1;
+    RSSItem *rss = _objects[indexPath.row];
+    cell.textLabel.text       = rss.title;
+    cell.detailTextLabel.text = rss.publication;
+    
+    NSString *url = rss.imageUrl;
+    if (url == nil) {
+        cell.imageView.image = nil;
+        return cell;
+    }
+    
+    if (rss.image == nil) {
+        NSLog(@"Loading an image: %@", url);
+        NSURL *imageURL = [NSURL URLWithString:url];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+            rss.image = [UIImage imageWithData:imageData];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                // Update the UI
+                cell.imageView.image = rss.image;
+            });
+        });
+    } else {
+        NSLog(@"Reading image from the cache");
+        cell.imageView.image = rss.image;
     }
     return cell;
 }
@@ -126,6 +144,7 @@
         [[segue destinationViewController] setDetailItem:object];
     }
 }
+
 
 - (IBAction)togglePartyMode:(id)sender {
     [App toggleRealityFor:self];

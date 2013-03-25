@@ -56,6 +56,7 @@
     NSArray *nodes  = [parser searchWithXPathQuery:xpath];
     if ([nodes count] == 1) {
         result = [[nodes objectAtIndex:0] objectForKey:@"src"];
+        result = [@"https:" stringByAppendingString:result];
     }
     
     NSLog(@"Found image url: %@",result);

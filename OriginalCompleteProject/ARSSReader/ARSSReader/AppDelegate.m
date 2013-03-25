@@ -41,9 +41,22 @@
     [[NSUserDefaults standardUserDefaults] setBool:![self inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
     
     // Change the app's look & feel
-    [self setLookAndFeel];
-    
     // Apply the hack-fix
+    [self setLookAndFeel];
+    [self setMyTitle:controller.navigationItem andFont:controller];
+}
+
+
+- (void) setAlternateRealityTo:(BOOL)alternate for:(UIViewController*)controller {
+    // Do nothing if we're already there.
+    if (alternate == [self isAlternateReality])
+        return;
+    
+    [[NSUserDefaults standardUserDefaults] setBool:alternate forKey:PREF_ALTERNATE_REALITY];
+    
+    // Change the app's look & feel
+    // Apply the hack-fix
+    [self setLookAndFeel];
     [self setMyTitle:controller.navigationItem andFont:controller];
 }
 
@@ -78,6 +91,8 @@
 - (BOOL)inAlternateReality {
     return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }
+
+- (BOOL)isAlternateReality { return [self inAlternateReality]; };
 
 
 

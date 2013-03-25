@@ -8,7 +8,8 @@
 
 #import "Constants.h"
 #import "MainTabBarController.h"
-#import "AppDelegate.h"
+#import "MasterViewController.h"
+#import "App.h"
 
 @interface MainTabBarController ()
 
@@ -53,15 +54,13 @@
 
 // Change our view of reality when the UI is about
 // to rotate.
-//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-//    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
-//        NSLog(@"Leaving alternate reality.");
-//        [self leaveAlternateReality];
-//    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
-//        NSLog(@"Changing to alternate reality.");
-//        [self enterAlternateReality];
-//    }
-//}
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
+        [self leaveAlternateReality];
+    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
+        [self enterAlternateReality];
+    }
+}
 
 //
 //-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
@@ -76,20 +75,20 @@
 
 
 - (void)enterAlternateReality {
+    NSLog(@"Changing to alternate reality.");
     [self setAlternateReality:YES];
 }
 
 
 - (void)leaveAlternateReality {
+    NSLog(@"Leaving alternate reality.");
     [self setAlternateReality:NO];
 }
 
 
 - (void)setAlternateReality:(BOOL)option {
-    [[NSUserDefaults standardUserDefaults] setBool:option forKey:PREF_ALTERNATE_REALITY];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app setLookAndFeel];
-    [self.selectedViewController viewWillAppear:YES];
+    NSLog(@"setAlternateReality: %u", option);
+    [[App app] setAlternateRealityTo:option for:[self selectedViewController]];
 }
 
 @end

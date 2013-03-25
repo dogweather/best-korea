@@ -236,7 +236,7 @@
                     <navigationItem key="navigationItem" title="Best Korea" id="36">
                         <barButtonItem key="leftBarButtonItem" title="Party" id="KCm-e8-S1M">
                             <connections>
-                                <action selector="togglePartyMode:" destination="12" id="EQS-Sh-pd9"/>
+                                <action selector="togglePartyMode:" destination="12" id="9XM-XT-keo"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

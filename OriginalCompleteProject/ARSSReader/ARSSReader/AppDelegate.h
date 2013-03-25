@@ -15,9 +15,11 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 - (void) setLookAndFeel;
 - (void) setMyTitle: (UINavigationItem*)navItem andFont: (UIViewController*)controller;
 - (void) toggleRealityFor: (UIViewController*) controller;
 - (BOOL) inAlternateReality;
+- (void) setAlternateRealityTo:(BOOL)alternate for:(UIViewController*)controller;
 
 @end

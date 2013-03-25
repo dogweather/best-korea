@@ -124,9 +124,8 @@
     }
 }
 
-- (IBAction)togglePartyMode:(UIBarButtonItem *)sender {
+- (IBAction)togglePartyMode:(id)sender {
     NSLog(@"togglePartyMode");
-    [App toggleRealityFor: self];
+    [App toggleRealityFor:self];
 }
-
 @end

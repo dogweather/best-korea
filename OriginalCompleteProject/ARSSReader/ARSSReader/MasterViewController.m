@@ -8,11 +8,14 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "App.h"
+#import "Constants.h"
 
 #import "TableHeaderView.h"
 
 #import "RSSLoader.h"
 #import "RSSItem.h"
+#import "TFHpple.h"
+
 
 @interface MasterViewController ()
 {
@@ -30,7 +33,7 @@
     [super viewDidLoad];
     
     self.icon_index = 1;
-    feedURL = [NSURL URLWithString:@"https://news.google.com/news/feeds?hl=en&gl=us&q=north+korea&um=1&ie=UTF-8&output=rss"];
+    feedURL = [NSURL URLWithString:REALITY_NEWS_FEED];
     
     //add refresh control to the table view
     refreshControl = [[UIRefreshControl alloc] init];
@@ -49,7 +52,6 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    NSLog(@"MasterViewController.viewWillAppear");
     [super viewWillAppear:animated];
     [App setMyTitle:self.navigationItem andFont:self];
 }
@@ -65,8 +67,9 @@
 
 -(void)refreshFeed
 {
-    RSSLoader* rss = [[RSSLoader alloc] init];
-    [rss fetchRssWithURL:feedURL
+    RSSLoader* rssLoader = [[RSSLoader alloc] init];
+    
+    [rssLoader fetchRssWithURL:feedURL
                 complete:^(NSString *title, NSArray *results) {
 
                     //completed fetching the RSS
@@ -125,7 +128,6 @@
 }
 
 - (IBAction)togglePartyMode:(id)sender {
-    NSLog(@"togglePartyMode");
     [App toggleRealityFor:self];
 }
 @end

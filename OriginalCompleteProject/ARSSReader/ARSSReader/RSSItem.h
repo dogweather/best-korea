@@ -10,9 +10,9 @@
 @interface RSSItem : NSObject
 
 @property (strong, nonatomic) NSString* title;
-@property (strong, nonatomic) NSString* description;
 @property (strong, nonatomic) NSString* publication;
 @property (strong, nonatomic) NSURL*    link;
+@property (strong, nonatomic) NSString* imageUrl;
 @property (strong, nonatomic) NSAttributedString* cellMessage;
 
 @end

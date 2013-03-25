@@ -9,7 +9,7 @@
 #import "VideoTableViewController.h"
 #import "VideoDetailViewController.h"
 #import "Video.h"
-#import "AppDelegate.h"
+#import "App.h"
 
 @interface VideoTableViewController ()
 @end
@@ -26,8 +26,8 @@
 
 
 - (void)viewWillAppear:(BOOL)animated {
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app setMyTitle:self.navigationItem];
+    [super viewWillAppear:animated];
+    [App setMyTitle:self.navigationItem];
 }
 
 
@@ -147,9 +147,10 @@
     return result;
 }
 
+
 - (IBAction)togglePartyMode:(id)sender {
     NSLog(@"togglePartyMode");
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app toggleRealityFor: self];
+    [App toggleRealityFor: self];
 }
+
 @end

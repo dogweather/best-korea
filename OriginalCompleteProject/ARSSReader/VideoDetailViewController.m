@@ -19,6 +19,7 @@
 @implementation VideoDetailViewController
 
 -(void)viewDidAppear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     if (self.url != self.prevUrl) {
         NSURLRequest * videoRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: self.url]];
         [webView loadRequest: videoRequest];
@@ -28,7 +29,7 @@
 
 
 - (void) viewWillAppear:(BOOL)animated {
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [super viewWillAppear:animated];
 }
 
 

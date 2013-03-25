@@ -10,6 +10,7 @@
 		5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5416D23716FF047300576320 /* LibraryTableViewController.m */; };
 		5440DE1516FDD284007D2216 /* white-video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5440DE1416FDD284007D2216 /* white-video.jpg */; };
 		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
+		5461A05E16FFDBEF0015D5AC /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 5461A05D16FFDBEF0015D5AC /* App.m */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
 		54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6616FD76A5005219B4 /* VideoDetailViewController.m */; };
 		54800B6A16FD86DB005219B4 /* hyeonseo-lee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54800B6816FD86DB005219B4 /* hyeonseo-lee.jpg */; };
@@ -82,6 +83,8 @@
 		5440DE1416FDD284007D2216 /* white-video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-video.jpg"; sourceTree = "<group>"; };
 		54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
 		54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
+		5461A05C16FFDBEF0015D5AC /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		5461A05D16FFDBEF0015D5AC /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		54800B6216FD6DD8005219B4 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		54800B6316FD6DD8005219B4 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		54800B6516FD76A5005219B4 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 		540858F416FAC786003B9BB4 /* App Code */ = {
 			isa = PBXGroup;
 			children = (
+				5461A05C16FFDBEF0015D5AC /* App.h */,
 				9C947BAA163E835500842C2F /* AppDelegate.h */,
 				54D1CC6716F884F400691CEB /* Constants.h */,
 				9C947BB9163E835500842C2F /* DetailViewController.h */,
@@ -194,6 +198,7 @@
 				54800B6216FD6DD8005219B4 /* Video.h */,
 				54800B6516FD76A5005219B4 /* VideoDetailViewController.h */,
 				54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */,
+				5461A05D16FFDBEF0015D5AC /* App.m */,
 				9C947BAB163E835500842C2F /* AppDelegate.m */,
 				9C947BBA163E835500842C2F /* DetailViewController.m */,
 				5416D23716FF047300576320 /* LibraryTableViewController.m */,
@@ -495,6 +500,7 @@
 				54800B6416FD6DD8005219B4 /* Video.m in Sources */,
 				54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */,
 				5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */,
+				5461A05E16FFDBEF0015D5AC /* App.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

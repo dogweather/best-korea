@@ -19,6 +19,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
     NSURLRequest* articleRequest;
     RSSItem* item = (RSSItem*)self.detailItem;
     self.title = item.title;
@@ -30,15 +31,9 @@
 }
 
 
-
-- (void) viewWillAppear:(BOOL)animated {
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-}
-
-
-
 -(void)viewDidDisappear:(BOOL)animated
 {
+    [super viewDidDisappear:animated];
     webView.delegate = nil;
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 }

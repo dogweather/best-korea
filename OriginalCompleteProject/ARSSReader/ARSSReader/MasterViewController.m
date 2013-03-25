@@ -7,7 +7,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import "AppDelegate.h"
+#import "App.h"
 
 #import "TableHeaderView.h"
 
@@ -48,8 +48,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app setMyTitle:self.navigationItem];
+    [super viewWillAppear:animated];
+    [App setMyTitle:self.navigationItem];
 }
 
 
@@ -124,8 +124,7 @@
 
 - (IBAction)togglePartyMode:(UIBarButtonItem *)sender {
     NSLog(@"togglePartyMode");
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app toggleRealityFor: self];
+    [App toggleRealityFor: self];
 }
 
 @end

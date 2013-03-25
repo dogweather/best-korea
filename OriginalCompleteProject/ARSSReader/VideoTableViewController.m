@@ -28,7 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [App setTitle:self.navigationItem andFont:self];
+    [App setMyTitle:self.navigationItem andFont:self];
 }
 
 

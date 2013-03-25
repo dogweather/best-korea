@@ -51,7 +51,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     NSLog(@"MasterViewController.viewWillAppear");
     [super viewWillAppear:animated];
-    [App setTitle:self.navigationItem andFont:self];
+    [App setMyTitle:self.navigationItem andFont:self];
 }
 
 

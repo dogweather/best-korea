@@ -19,13 +19,8 @@
 }
 
 
-+ (void) setMyTitle: (UINavigationItem*) navItem {
-    [[self app] setMyTitle:navItem];
-}
-
-
-+ (void) setTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
-    [[self app] setTitle:navItem andFont:controller];
++ (void) setMyTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
+    [[self app] setMyTitle:navItem andFont:controller];
 }
 
 

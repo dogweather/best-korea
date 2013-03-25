@@ -33,14 +33,6 @@
 }
 
 
-- (void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app setMyTitle:self.navigationItem];
-}
-
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

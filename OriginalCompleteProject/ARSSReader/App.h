@@ -12,8 +12,7 @@
 @interface App : NSObject
 
 + (void) toggleRealityFor: (UIViewController *) controller;
-+ (void) setMyTitle: (UINavigationItem*) navItem;
-+ (void) setTitle: (UINavigationItem*) navItem andFont: (UIViewController *)controller;
++ (void) setMyTitle:(UINavigationItem*)navItem andFont:(UIViewController *)controller;
 + (AppDelegate*) app;
 
 @end

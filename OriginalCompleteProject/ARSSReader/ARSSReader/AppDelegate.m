@@ -42,7 +42,7 @@
     [self setLookAndFeel];
     
     // Refresh the current view's navigation bar
-    [self setMyTitle: controller.navigationItem];
+    [self _setMyTitle: controller.navigationItem];
     if ([self inAlternateReality])
         navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
     else
@@ -86,7 +86,7 @@
 
 
 // TODO: Refactor the text out to the app constants header.
-- (void) setMyTitle:(UINavigationItem *)navItem {
+- (void) _setMyTitle:(UINavigationItem *)navItem {
     if ([self inAlternateReality])
         navItem.title = @"BEST KOREA";
     else
@@ -95,10 +95,10 @@
 
 
 // Call this from a view controller's will appear method.
-- (void) setTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
+- (void) setMyTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
     UIFont *navbarFont;
     
-    [self setMyTitle:navItem];
+    [self _setMyTitle:navItem];
     
     if ([self inAlternateReality])
         navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];

@@ -9,9 +9,6 @@
 #import "LibraryTableViewController.h"
 #import "App.h"
 
-@interface LibraryTableViewController ()
-
-@end
 
 @implementation LibraryTableViewController
 
@@ -24,8 +21,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [App setTitle:self.navigationItem andFont:self];
+    [App setMyTitle:self.navigationItem andFont:self];
 }
 
 

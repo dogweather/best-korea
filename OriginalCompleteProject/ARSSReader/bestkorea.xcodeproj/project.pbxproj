@@ -16,6 +16,9 @@
 		54800B6A16FD86DB005219B4 /* hyeonseo-lee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54800B6816FD86DB005219B4 /* hyeonseo-lee.jpg */; };
 		54800B6B16FD86DB005219B4 /* my-escape-from-north-korea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54800B6916FD86DB005219B4 /* my-escape-from-north-korea.jpg */; };
 		54800B6F16FDC759005219B4 /* hyeonseo_lee_my_escape_from_north_korea@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54800B6E16FDC758005219B4 /* hyeonseo_lee_my_escape_from_north_korea@2x.jpg */; };
+		54A3A00316FFFDF500E8B908 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A39FFE16FFFDF500E8B908 /* TFHpple.m */; };
+		54A3A00416FFFDF500E8B908 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00016FFFDF500E8B908 /* TFHppleElement.m */; };
+		54A3A00516FFFDF500E8B908 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00216FFFDF500E8B908 /* XPathQuery.m */; };
 		54CB0ED916F09B7700C91B32 /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0ED816F09B7700C91B32 /* app-icon.png */; };
 		54CB0EDB16F09C0500C91B32 /* app-icon-nonretina.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */; };
 		54CB0EDD16F09C9D00C91B32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */; };
@@ -92,6 +95,12 @@
 		54800B6816FD86DB005219B4 /* hyeonseo-lee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hyeonseo-lee.jpg"; sourceTree = "<group>"; };
 		54800B6916FD86DB005219B4 /* my-escape-from-north-korea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "my-escape-from-north-korea.jpg"; sourceTree = "<group>"; };
 		54800B6E16FDC758005219B4 /* hyeonseo_lee_my_escape_from_north_korea@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "hyeonseo_lee_my_escape_from_north_korea@2x.jpg"; sourceTree = "<group>"; };
+		54A39FFD16FFFDF500E8B908 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		54A39FFE16FFFDF500E8B908 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		54A39FFF16FFFDF500E8B908 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		54A3A00016FFFDF500E8B908 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		54A3A00116FFFDF500E8B908 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		54A3A00216FFFDF500E8B908 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		54CB0ED816F09B7700C91B32 /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon-nonretina.png"; sourceTree = "<group>"; };
 		54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -213,6 +222,27 @@
 			name = "App Code";
 			sourceTree = "<group>";
 		};
+		54A39FF916FFFC5300E8B908 /* HTMLParsing */ = {
+			isa = PBXGroup;
+			children = (
+				54A39FFC16FFFD9C00E8B908 /* hpple */,
+			);
+			name = HTMLParsing;
+			sourceTree = "<group>";
+		};
+		54A39FFC16FFFD9C00E8B908 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				54A39FFD16FFFDF500E8B908 /* TFHpple.h */,
+				54A39FFE16FFFDF500E8B908 /* TFHpple.m */,
+				54A39FFF16FFFDF500E8B908 /* TFHppleElement.h */,
+				54A3A00016FFFDF500E8B908 /* TFHppleElement.m */,
+				54A3A00116FFFDF500E8B908 /* XPathQuery.h */,
+				54A3A00216FFFDF500E8B908 /* XPathQuery.m */,
+			);
+			name = hpple;
+			sourceTree = "<group>";
+		};
 		54F80D7B16F32961001DC004 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +331,7 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
+				54A39FF916FFFC5300E8B908 /* HTMLParsing */,
 				540858F416FAC786003B9BB4 /* App Code */,
 				9C1806BE163E849B00A02D94 /* Assets */,
 				9C1806D5163E875300A02D94 /* ReaderClasses */,
@@ -501,6 +532,9 @@
 				54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */,
 				5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */,
 				5461A05E16FFDBEF0015D5AC /* App.m in Sources */,
+				54A3A00316FFFDF500E8B908 /* TFHpple.m in Sources */,
+				54A3A00416FFFDF500E8B908 /* TFHppleElement.m in Sources */,
+				54A3A00516FFFDF500E8B908 /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

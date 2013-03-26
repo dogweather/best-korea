@@ -77,7 +77,6 @@
                         [refreshControl endRefreshing];
                     });
                 }];
-
 }
 
 
@@ -102,30 +101,46 @@
     RSSItem *rss = _objects[indexPath.row];
     cell.textLabel.text       = rss.title;
     cell.detailTextLabel.text = rss.publication;
-    
-    NSString *url = rss.imageUrl;
-    if (url == nil) {
-        cell.imageView.image = nil;
+    if (rss.image != nil) {
+        NSLog(@"Reading image from the cache");
+        cell.imageView.image = rss.image;
         return cell;
     }
     
-    if (rss.image == nil) {
-        NSLog(@"Loading an image: %@", url);
-        NSURL *imageURL = [NSURL URLWithString:url];
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-            rss.image = [UIImage imageWithData:imageData];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // Update the UI
-                cell.imageView.image = rss.image;
-            });
-        });
-    } else {
-        NSLog(@"Reading image from the cache");
-        cell.imageView.image = rss.image;
+    
+    NSString *url = rss.imageUrl;
+    
+    // No image url in the RSS? Then either
+    // * Leave blank (Reality), or
+    // * Put in a placeholder (Alternate Reality)
+    if (url == nil) {
+        if ([App inAlternateReality]) {
+            NSString *placeholder_icon = [NSString stringWithFormat:@"icon%d.png", self.icon_index];
+            cell.imageView.image = [UIImage imageNamed:placeholder_icon];
+            self.icon_index++;
+            if (self.icon_index > ICON_COUNT) {
+                self.icon_index = 1;
+            }
+        } else {
+            cell.imageView.image = nil;
+        }
+        return cell;
     }
+    
+    // Load the image from the network:
+    // It wasn't cached, and we do have a url.
+    NSLog(@"Loading an image: %@", url);
+    NSURL *imageURL = [NSURL URLWithString:url];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        rss.image = [UIImage imageWithData:imageData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update the UI
+            cell.imageView.image = rss.image;
+        });
+    });
     return cell;
 }
 

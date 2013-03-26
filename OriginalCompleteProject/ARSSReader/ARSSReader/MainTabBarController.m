@@ -98,7 +98,7 @@
     rotationAnimation.cumulative = YES;
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
-    group.duration = 2;
+    group.duration = 1.5;
     group.repeatCount = 1;
     group.autoreverses = YES;
     group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];

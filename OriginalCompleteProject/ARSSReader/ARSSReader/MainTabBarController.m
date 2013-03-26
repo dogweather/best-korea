@@ -14,25 +14,15 @@
 #import "App.h"
 
 @interface MainTabBarController ()
+
 @property UIView *blackView;
 @property UIView *spinner;
+
 @end
 
+
+
 @implementation MainTabBarController
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 // Allow all rotations. Necessary to override these:
@@ -91,10 +81,9 @@
     if (self.spinner == nil) {
         self.spinner = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"spinner.png"]];
         self.spinner.center = self.view.center;
+        self.spinner.alpha = 0;
+        [self.blackView addSubview:self.spinner];
     }
-    self.spinner.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
-    self.spinner.alpha = 0;
-    [self.blackView addSubview:self.spinner];
 
     CABasicAnimation *makeBiggerAnim=[CABasicAnimation animationWithKeyPath:@"transform.scale"];
     makeBiggerAnim.fromValue=[NSNumber numberWithDouble:0.05];
@@ -105,7 +94,7 @@
     fadeAnim.toValue=[NSNumber numberWithDouble:1.0];
     
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * 3.0 * 3.0 ];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ ];
     rotationAnimation.cumulative = YES;
     
     CAAnimationGroup *group = [CAAnimationGroup animation];

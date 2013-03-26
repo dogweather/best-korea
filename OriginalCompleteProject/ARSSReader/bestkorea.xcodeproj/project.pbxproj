@@ -10,6 +10,7 @@
 		5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5416D23716FF047300576320 /* LibraryTableViewController.m */; };
 		5440DE1516FDD284007D2216 /* white-video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5440DE1416FDD284007D2216 /* white-video.jpg */; };
 		544C2AD41701BE2C0095E7B0 /* spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C2AD31701BE2C0095E7B0 /* spinner.png */; };
+		544C2AD61701C44D0095E7B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 544C2AD51701C44D0095E7B0 /* QuartzCore.framework */; };
 		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
 		5461A05E16FFDBEF0015D5AC /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 5461A05D16FFDBEF0015D5AC /* App.m */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
@@ -89,6 +90,7 @@
 		5416D23716FF047300576320 /* LibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTableViewController.m; sourceTree = "<group>"; };
 		5440DE1416FDD284007D2216 /* white-video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-video.jpg"; sourceTree = "<group>"; };
 		544C2AD31701BE2C0095E7B0 /* spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner.png; sourceTree = "<group>"; };
+		544C2AD51701C44D0095E7B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
 		54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
 		5461A05C16FFDBEF0015D5AC /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544C2AD61701C44D0095E7B0 /* QuartzCore.framework in Frameworks */,
 				9C1806CC163E853B00A02D94 /* libz.dylib in Frameworks */,
 				9C1806CA163E852F00A02D94 /* libxml2.dylib in Frameworks */,
 				9C947B9C163E835500842C2F /* UIKit.framework in Frameworks */,
@@ -384,6 +387,7 @@
 			children = (
 				9C1806CB163E853B00A02D94 /* libz.dylib */,
 				9C1806C9163E852F00A02D94 /* libxml2.dylib */,
+				544C2AD51701C44D0095E7B0 /* QuartzCore.framework */,
 				9C947B9B163E835500842C2F /* UIKit.framework */,
 				9C947B9D163E835500842C2F /* Foundation.framework */,
 				9C947B9F163E835500842C2F /* CoreGraphics.framework */,

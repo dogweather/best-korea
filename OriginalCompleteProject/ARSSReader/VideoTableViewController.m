@@ -152,7 +152,12 @@
     Video *v;
     
     if ([App inAlternateReality]) {
-        // No videos yet!
+        v = [[Video alloc] init];
+        v.title     = @"Life in the People's Paradise of DPRK";
+        v.source    = @"DPRK";
+        v.url       = @"http://BestKoreaApp.com/media/video/peoples-paradise.html";
+        v.pubDate   = @"2010-10";
+        [result addObject:v];
     } else {
         v = [[Video alloc] init];
         v.title     = @"North Korea Threatens US Airbases in Japan";

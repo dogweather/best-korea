@@ -30,7 +30,7 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
     // Initial L&F setup
-    style = [App inAlternateReality] ? ALTERNATE_STYLE : NORMAL_STYLE;
+    style = [App inAlternateReality] ? ALTERNATE_STYLE_FILE : NORMAL_STYLE_FILE;
     self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
 
     return YES;
@@ -53,47 +53,30 @@
     if (alternate == [App inAlternateReality])
         return;
     
+    // Save the preference.
     [[NSUserDefaults standardUserDefaults] setBool:alternate forKey:PREF_ALTERNATE_REALITY];
     
-    // Change the app's look & feel
-    // Apply the hack-fix
+    // Change the app's look & feel.
+    // Apply the hack-fix.
     [self setLookAndFeel];
     [self setMyTitle:controller.navigationItem andFont:controller];
 }
 
 
 - (void) setLookAndFeel {
-    if ([App inAlternateReality])
-        [self switchToAlternateLook];
-    else
-        [self switchToNormalLook];
-}
-
-
-- (void) switchToAlternateLook {
-    [self switchTo:ALTERNATE_STYLE];
-}
-
-
-- (void) switchToNormalLook {
-    [self switchTo:NORMAL_STYLE];
-}
-
-
-- (void) switchTo:(NSString*)style {
+    NSString *file = [App inAlternateReality] ? ALTERNATE_STYLE_FILE : NORMAL_STYLE_FILE;
     self.uiss.style.url = [NSURL fileURLWithPath:
-                           [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
+                           [[NSBundle mainBundle] pathForResource:file ofType:@"json"]];
     [self.uiss reloadStyleAsynchronously];
 }
-
 
 
 // TODO: Refactor the text out to the app constants header.
 - (void) setTitleOf:(UINavigationItem *)navItem {
     if ([App inAlternateReality])
-        navItem.title = @"BEST KOREA";
+        navItem.title = ALTERNATE_APP_NAME;
     else
-        navItem.title = @"Best Korea";
+        navItem.title = REALITY_APP_NAME;
 }
 
 
@@ -104,9 +87,9 @@
     [self setTitleOf:navItem];
     
     if ([App inAlternateReality])
-        navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
+        navbarFont = [UIFont fontWithName:ALTERNATE_NAVBAR_FONT size:18.0f];
     else
-        navbarFont = [UIFont fontWithName:@"Optima-ExtraBlack" size:18.0f];
+        navbarFont = [UIFont fontWithName:REALITY_NAVBAR_FONT size:18.0f];
     [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
     [controller.navigationController.navigationBar setNeedsDisplay];
 }

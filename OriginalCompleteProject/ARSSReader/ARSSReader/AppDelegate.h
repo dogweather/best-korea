@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define NORMAL_STYLE    @"uiss"
-#define ALTERNATE_STYLE @"uiss-alternative"
+#define NORMAL_STYLE_FILE    @"uiss"
+#define ALTERNATE_STYLE_FILE @"uiss-alternative"
 
 
 

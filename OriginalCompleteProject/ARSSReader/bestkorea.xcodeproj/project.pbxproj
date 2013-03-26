@@ -55,6 +55,9 @@
 		54D1CC6A16F8FF7B00691CEB /* table-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */; };
 		54D1CC6B16F8FF7B00691CEB /* table-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */; };
 		54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */; };
+		54E6E7741701E1C300A9EF42 /* square-placeholder-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E6E7711701E1C300A9EF42 /* square-placeholder-8.jpg */; };
+		54E6E7751701E1C300A9EF42 /* square-placeholder-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E6E7721701E1C300A9EF42 /* square-placeholder-9.jpg */; };
+		54E6E7761701E1C300A9EF42 /* square-placeholder-10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E6E7731701E1C300A9EF42 /* square-placeholder-10.jpg */; };
 		54E87FBA16FEDA1200C95CB3 /* uiss-alternative.json in Resources */ = {isa = PBXBuildFile; fileRef = 54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */; };
 		54E87FBB16FEDA1200C95CB3 /* uiss.json in Resources */ = {isa = PBXBuildFile; fileRef = 54E87FB916FEDA1200C95CB3 /* uiss.json */; };
 		70972021CF204F3988862416 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CF130996C44927A3427CC5 /* libPods.a */; };
@@ -145,6 +148,9 @@
 		54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon.png"; sourceTree = "<group>"; };
 		54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPadStoryboard.storyboard; path = ARSSReader/iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		54E6E7711701E1C300A9EF42 /* square-placeholder-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-8.jpg"; sourceTree = "<group>"; };
+		54E6E7721701E1C300A9EF42 /* square-placeholder-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-9.jpg"; sourceTree = "<group>"; };
+		54E6E7731701E1C300A9EF42 /* square-placeholder-10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-10.jpg"; sourceTree = "<group>"; };
 		54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uiss-alternative.json"; sourceTree = "<group>"; };
 		54E87FB916FEDA1200C95CB3 /* uiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uiss.json; sourceTree = "<group>"; };
 		86CF130996C44927A3427CC5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +251,9 @@
 				5483D0731701745500142234 /* square-placeholder-5.jpg */,
 				5483D0741701745500142234 /* square-placeholder-6.jpg */,
 				5483D0751701745500142234 /* square-placeholder-7.jpg */,
+				54E6E7711701E1C300A9EF42 /* square-placeholder-8.jpg */,
+				54E6E7721701E1C300A9EF42 /* square-placeholder-9.jpg */,
+				54E6E7731701E1C300A9EF42 /* square-placeholder-10.jpg */,
 			);
 			name = "Alternate Placeholder";
 			sourceTree = "<group>";
@@ -528,6 +537,9 @@
 				5483D07B1701745500142234 /* square-placeholder-6.jpg in Resources */,
 				5483D07C1701745500142234 /* square-placeholder-7.jpg in Resources */,
 				544C2AD41701BE2C0095E7B0 /* spinner.png in Resources */,
+				54E6E7741701E1C300A9EF42 /* square-placeholder-8.jpg in Resources */,
+				54E6E7751701E1C300A9EF42 /* square-placeholder-9.jpg in Resources */,
+				54E6E7761701E1C300A9EF42 /* square-placeholder-10.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

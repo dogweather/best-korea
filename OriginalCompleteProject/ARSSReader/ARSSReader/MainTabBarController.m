@@ -66,7 +66,7 @@
 
 - (void) fadeOut {
     if (self.blackView == nil)
-        self.blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+        self.blackView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.blackView.alpha = 0;
     [self.blackView setBackgroundColor:[UIColor blackColor]];
     [self.view.superview addSubview:self.blackView];

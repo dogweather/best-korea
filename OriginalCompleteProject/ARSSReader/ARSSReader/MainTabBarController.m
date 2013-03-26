@@ -94,14 +94,14 @@
     fadeAnim.toValue=[NSNumber numberWithDouble:1.0];
     
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ ];
+    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * 9];
     rotationAnimation.cumulative = YES;
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
-    group.duration = 1.5;
+    group.duration = 2;
     group.repeatCount = 1;
     group.autoreverses = YES;
-    group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     group.animations = @[makeBiggerAnim, rotationAnimation, fadeAnim];
     group.delegate = self;
     [self.spinner.layer addAnimation:group forKey:@"allMyAnimations"];

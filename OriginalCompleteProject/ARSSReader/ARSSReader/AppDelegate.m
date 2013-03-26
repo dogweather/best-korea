@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "App.h"
 #import "Constants.h"
 #import "UISS.h"
 
@@ -29,7 +30,7 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
     // Initial L&F setup
-    style = [self inAlternateReality] ? ALTERNATE_STYLE : NORMAL_STYLE;
+    style = [App inAlternateReality] ? ALTERNATE_STYLE : NORMAL_STYLE;
     self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
 
     return YES;
@@ -38,7 +39,7 @@
 
 - (void) toggleRealityFor: (UIViewController*) controller {
     // Toggle the saved value
-    [[NSUserDefaults standardUserDefaults] setBool:![self inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
+    [[NSUserDefaults standardUserDefaults] setBool:![App inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
     
     // Change the app's look & feel
     // Apply the hack-fix
@@ -49,7 +50,7 @@
 
 - (void) setAlternateRealityTo:(BOOL)alternate for:(UIViewController*)controller {
     // Do nothing if we're already there.
-    if (alternate == [self isAlternateReality])
+    if (alternate == [App inAlternateReality])
         return;
     
     [[NSUserDefaults standardUserDefaults] setBool:alternate forKey:PREF_ALTERNATE_REALITY];
@@ -62,7 +63,7 @@
 
 
 - (void) setLookAndFeel {
-    if ([self inAlternateReality])
+    if ([App inAlternateReality])
         [self switchToAlternateLook];
     else
         [self switchToNormalLook];
@@ -70,13 +71,11 @@
 
 
 - (void) switchToAlternateLook {
-    NSLog(@"switchToAlternateLook");
     [self switchTo:ALTERNATE_STYLE];
 }
 
 
 - (void) switchToNormalLook {
-    NSLog(@"switchToNormalLook");
     [self switchTo:NORMAL_STYLE];
 }
 
@@ -88,17 +87,10 @@
 }
 
 
-- (BOOL)inAlternateReality {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
-}
-
-- (BOOL)isAlternateReality { return [self inAlternateReality]; };
-
-
 
 // TODO: Refactor the text out to the app constants header.
 - (void) setTitleOf:(UINavigationItem *)navItem {
-    if ([self inAlternateReality])
+    if ([App inAlternateReality])
         navItem.title = @"BEST KOREA";
     else
         navItem.title = @"Best Korea";
@@ -111,15 +103,13 @@
     
     [self setTitleOf:navItem];
     
-    if ([self inAlternateReality])
+    if ([App inAlternateReality])
         navbarFont = [UIFont fontWithName:@"Futura-CondensedExtraBold" size:18.0f];
     else
         navbarFont = [UIFont fontWithName:@"Optima-ExtraBlack" size:18.0f];
     [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
     [controller.navigationController.navigationBar setNeedsDisplay];
 }
-
-
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

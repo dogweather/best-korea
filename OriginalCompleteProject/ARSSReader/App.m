@@ -10,8 +10,13 @@
 //
 
 #import "App.h"
+#import "Constants.h"
 
 @implementation App
+
++(BOOL)inAlternateReality {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
+}
 
 
 + (void) toggleRealityFor: (UIViewController *) controller {

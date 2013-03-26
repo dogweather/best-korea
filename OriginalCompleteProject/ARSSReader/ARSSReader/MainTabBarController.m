@@ -43,13 +43,29 @@
 }
 
 
-// Possibly change our view of reality when the UI 
-// is about to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) {
-        [self setAlternateReality:NO];
+        self.view.alpha = 0;
     } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality]) {
+        self.view.alpha = 0;
+    }
+}
+
+
+- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortrait)
+        && [App inAlternateReality]) {
+        [self setAlternateReality:NO];
+    } else if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)
+               && ! [App inAlternateReality]) {
         [self setAlternateReality:YES];
+    }
+    
+    if (self.view.alpha == 0) {
+        [UIView beginAnimations:@"fade in" context:nil];
+        [UIView setAnimationDuration:2.0];
+        self.view.alpha = 1;
+        [UIView commitAnimations];
     }
 }
 

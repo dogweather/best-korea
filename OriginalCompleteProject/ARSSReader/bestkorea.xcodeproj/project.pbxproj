@@ -211,6 +211,7 @@
 				5416D23616FF047300576320 /* LibraryTableViewController.h */,
 				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
 				9C947BB6163E835500842C2F /* MasterViewController.h */,
+				5483D07D1701776C00142234 /* RealityUpdateListener.h */,
 				54800B6216FD6DD8005219B4 /* Video.h */,
 				54800B6516FD76A5005219B4 /* VideoDetailViewController.h */,
 				54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */,
@@ -225,7 +226,6 @@
 				54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */,
 				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
 				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
-				5483D07D1701776C00142234 /* RealityUpdateListener.h */,
 			);
 			name = "App Code";
 			sourceTree = "<group>";

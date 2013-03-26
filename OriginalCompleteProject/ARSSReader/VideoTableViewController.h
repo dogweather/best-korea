@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RealityUpdateListener.h"
 
-@interface VideoTableViewController : UITableViewController
+@interface VideoTableViewController : UITableViewController <RealityUpdateListener>
 
 @property (nonatomic, strong) NSMutableArray *videos;
 - (IBAction)togglePartyMode:(id)sender;

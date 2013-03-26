@@ -120,35 +120,39 @@
 //       used across all the News apps.
 - (NSMutableArray *) getVideos {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
-    Video *video;
+    Video *v;
     
-    video = [[Video alloc] init];
-    video.title     = @"North Korea Threatens US Airbases in Japan";
-    video.source    = @"The Guardian";
-    video.url       = @"http://BestKoreaApp.com/media/video/guardian-nk-threatens-us-airbases.html";
-    video.pubDate   = @"2013-03-21";
-    [result addObject:video];
-    
-    video = [[Video alloc] init];
-    video.title     = @"Dennis Rodman 'This Week' Interview";
-    video.source    = @"ABC News";
-    video.url       = @"http://BestKoreaApp.com/media/video/dennis-rodman-this-week-interview.html";
-    video.pubDate   = @"2013-03-03";
-    [result addObject:video];
-    
-    video = [[Video alloc] init];
-    video.title     = @"My Escape from North Korea";
-    video.source    = @"TED";
-    video.url       = @"http://BestKoreaApp.com/media/video/hyeonseo_lee_my_escape_from_north_korea.html";
-    video.pubDate   = @"2013-02";
-    [result addObject:video];
-    
-    video = [[Video alloc] init];
-    video.title     = @"Why the World Needs Charter Cities";
-    video.source    = @"TED";
-    video.url       = @"http://BestKoreaApp.com/media/video/paul-romer-why-the-world-needs-charter-cities.html";
-    video.pubDate   = @"2007-07";
-    [result addObject:video];
+    if ([App inAlternateReality]) {
+        // No videos yet!
+    } else {
+        v = [[Video alloc] init];
+        v.title     = @"North Korea Threatens US Airbases in Japan";
+        v.source    = @"The Guardian";
+        v.url       = @"http://BestKoreaApp.com/media/video/guardian-nk-threatens-us-airbases.html";
+        v.pubDate   = @"2013-03-21";
+        [result addObject:v];
+        
+        v = [[Video alloc] init];
+        v.title     = @"Dennis Rodman 'This Week' Interview";
+        v.source    = @"ABC News";
+        v.url       = @"http://BestKoreaApp.com/media/video/dennis-rodman-this-week-interview.html";
+        v.pubDate   = @"2013-03-03";
+        [result addObject:v];
+        
+        v = [[Video alloc] init];
+        v.title     = @"My Escape from North Korea";
+        v.source    = @"TED";
+        v.url       = @"http://BestKoreaApp.com/media/video/hyeonseo_lee_my_escape_from_north_korea.html";
+        v.pubDate   = @"2013-02";
+        [result addObject:v];
+        
+        v = [[Video alloc] init];
+        v.title     = @"Why the World Needs Charter Cities";
+        v.source    = @"TED";
+        v.url       = @"http://BestKoreaApp.com/media/video/paul-romer-why-the-world-needs-charter-cities.html";
+        v.pubDate   = @"2007-07";
+        [result addObject:v];
+    }
     
     return result;
 }

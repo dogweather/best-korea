@@ -46,16 +46,11 @@
 // Change our view of reality when the UI is about
 // to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
+    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) {
         [self setAlternateReality:NO];
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
+    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality]) {
         [self setAlternateReality:YES];
     }
-}
-
-
-- (BOOL)inAlternateReality {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }
 
 

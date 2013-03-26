@@ -60,14 +60,15 @@
     // 1. Tell the app to make the change.
     [[App app] setAlternateRealityTo:option for:[self selectedViewController]];
     
-    // 2. Notify the current view to update itself.
-    [self tellViewToUpdateReality];
+    // 2. Tell the tabs to update their contents.
+    for (id v in self.viewControllers) {
+        [self sendUpdateMessageTo:v];
+    }
 }
 
 
-- (void) tellViewToUpdateReality {
+- (void) sendUpdateMessageTo:(UIViewController *)currentView {
     UIViewController <RealityUpdateListener> *listener;
-    UIViewController *currentView = self.selectedViewController;
     
     // Is this a navigation controller?
     if ([currentView isKindOfClass:[UINavigationController class]]) {

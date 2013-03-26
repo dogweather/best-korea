@@ -163,4 +163,10 @@
     [App toggleRealityFor: self];
 }
 
+
+- (void) updateForNewReality {
+    // TODO: implement.
+}
+
+
 @end

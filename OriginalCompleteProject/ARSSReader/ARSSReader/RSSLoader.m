@@ -21,6 +21,7 @@
     dispatch_async(kBgQueue, ^{
         
         // Work in the background
+        NSLog(@"Fetching RSS from %@",url);
         RXMLElement *rss   = [RXMLElement elementFromURL: url];
         RXMLElement* title = [[rss child:@"channel"] child:@"title"];
         NSArray* items     = [[rss child:@"channel"] children:@"item"];
@@ -47,6 +48,7 @@
 
 // Parse Google's proprietary RSS Description element, which is HTML.
 // Retrieve the contained image url if any.
+// Return nil if no image url is found.
 -(NSString*) imageUrlFromGoogleDescription:(NSString*)description {
     NSString * result = nil;
     NSString * xpath  = @"//table/tr/td/font/a/img";  // Last checked 2013-03-24
@@ -59,7 +61,6 @@
         result = [@"https:" stringByAppendingString:result];
     }
     
-    NSLog(@"Found image url: %@",result);
     return result;
 }
 

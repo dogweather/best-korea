@@ -70,6 +70,7 @@
                     //completed fetching the RSS
                     dispatch_async(dispatch_get_main_queue(), ^{
                         
+                        NSLog(@"  Received the result from %@",feedURL);
                         _objects = results;
                         [self.tableView reloadData];
                         
@@ -118,7 +119,7 @@
             NSString *placeholder_icon = [NSString stringWithFormat:@"icon%d.png", self.icon_index];
             cell.imageView.image = [UIImage imageNamed:placeholder_icon];
             self.icon_index++;
-            if (self.icon_index > ICON_COUNT) {
+            if (self.icon_index > ALTERNATE_PLACEHOLDER_ICONS) {
                 self.icon_index = 1;
             }
         } else {

@@ -21,6 +21,8 @@
 #define ALTERNATE_NEWS_FEED     @"http://www.workers.org/tag/dprk/feed/"
 #define ALTERNATE_NAVBAR_FONT   @"Futura-CondensedExtraBold"
 
+#define ALTERNATE_PLACEHOLDER_ICONS 2
+
 
 // General News App Configuration
 #define PREF_ALTERNATE_REALITY  @"AlternateReality"

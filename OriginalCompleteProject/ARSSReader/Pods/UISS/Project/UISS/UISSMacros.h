@@ -7,7 +7,7 @@
 
 #ifndef UISS_DEBUG
 #if DEBUG
-#define UISS_DEBUG 1
+#define UISS_DEBUG 0 // Disabled UISS Debug
 #endif
 #endif
 

@@ -22,4 +22,5 @@
 - (BOOL) inAlternateReality;
 - (void) setAlternateRealityTo:(BOOL)alternate for:(UIViewController*)controller;
 
+
 @end

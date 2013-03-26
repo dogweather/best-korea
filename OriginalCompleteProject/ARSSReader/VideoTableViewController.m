@@ -10,19 +10,50 @@
 #import "VideoDetailViewController.h"
 #import "Video.h"
 #import "App.h"
+#import "Constants.h"
 
 @interface VideoTableViewController ()
+    @property NSMutableArray    *videos;
+    @property NSURL             *feedURL;
+    @property UIRefreshControl  *refreshControl;
 @end
 
 
 @implementation VideoTableViewController
 
-
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+
+    // Set up the refresh control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                       action:@selector(refreshInvoked:forState:)
+             forControlEvents:UIControlEventValueChanged];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
+                                                                     attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
+    [self.tableView addSubview:self.refreshControl];
+
+    self.feedURL = [NSURL URLWithString:[App inAlternateReality] ? @"TODO" : @"TODO"];
     self.videos = [self getVideos];
 }
+
+
+-(void) refreshInvoked:(id)sender forState:(UIControlState)state
+{
+    [self refreshFeed];
+}
+
+- (void) refreshFeed {
+    // Reload the videos. Normally, this will be
+    // done in a separate thread.
+    // [self.tableView reloadData];
+
+    // Stop the refresh control
+    [self.refreshControl endRefreshing];
+
+}
+
 
 
 - (void)viewWillAppear:(BOOL)animated
@@ -30,7 +61,6 @@
     [super viewWillAppear:animated];
     [App setMyTitle:self.navigationItem andFont:self];
 }
-
 
 
 - (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender

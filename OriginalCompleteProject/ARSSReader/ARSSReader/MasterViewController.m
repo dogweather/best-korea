@@ -116,7 +116,7 @@
     // * Put in a placeholder (Alternate Reality)
     if (url == nil) {
         if ([App inAlternateReality]) {
-            NSString *placeholder_icon = [NSString stringWithFormat:@"icon%d.png", self.icon_index];
+            NSString *placeholder_icon = [NSString stringWithFormat:@"square-placeholder-%d.jpg", self.icon_index];
             cell.imageView.image = [UIImage imageNamed:placeholder_icon];
             self.icon_index++;
             if (self.icon_index > ALTERNATE_PLACEHOLDER_ICONS) {

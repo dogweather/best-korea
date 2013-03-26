@@ -13,6 +13,7 @@
 
 @interface MainTabBarController ()
 @property UIView *blackView;
+@property UIView *spinner;
 @end
 
 @implementation MainTabBarController
@@ -79,11 +80,24 @@
 
 
 - (void) fadeIn {
-    [UIView beginAnimations:@"fadeIn" context:NULL];
-    [UIView setAnimationDuration:2];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    self.blackView.alpha = 0;
+//    [UIView beginAnimations:@"fadeIn" context:NULL];
+//    [UIView setAnimationDuration:2];
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//    self.blackView.alpha = 0;
+//    [UIView commitAnimations];
+    if (self.spinner == nil)
+        self.spinner = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"spinner.png"]];
+    self.spinner.transform = CGAffineTransformMakeScale(0.1f, 0.1f);
+    [self.blackView addSubview:self.spinner];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:3];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    
+    self.spinner.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+    
     [UIView commitAnimations];
+
 }
 
 

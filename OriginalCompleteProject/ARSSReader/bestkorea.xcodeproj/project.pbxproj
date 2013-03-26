@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5416D23716FF047300576320 /* LibraryTableViewController.m */; };
 		5440DE1516FDD284007D2216 /* white-video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5440DE1416FDD284007D2216 /* white-video.jpg */; };
+		544C2AD41701BE2C0095E7B0 /* spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = 544C2AD31701BE2C0095E7B0 /* spinner.png */; };
 		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
 		5461A05E16FFDBEF0015D5AC /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 5461A05D16FFDBEF0015D5AC /* App.m */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
@@ -87,6 +88,7 @@
 		5416D23616FF047300576320 /* LibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryTableViewController.h; sourceTree = "<group>"; };
 		5416D23716FF047300576320 /* LibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTableViewController.m; sourceTree = "<group>"; };
 		5440DE1416FDD284007D2216 /* white-video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-video.jpg"; sourceTree = "<group>"; };
+		544C2AD31701BE2C0095E7B0 /* spinner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinner.png; sourceTree = "<group>"; };
 		54565DE616FB19C9007F3CF9 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
 		54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
 		5461A05C16FFDBEF0015D5AC /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 		9C1806BE163E849B00A02D94 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				544C2AD31701BE2C0095E7B0 /* spinner.png */,
 				54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */,
 				54E87FB916FEDA1200C95CB3 /* uiss.json */,
 				5440DE1416FDD284007D2216 /* white-video.jpg */,
@@ -520,6 +523,7 @@
 				5483D07A1701745500142234 /* square-placeholder-5.jpg in Resources */,
 				5483D07B1701745500142234 /* square-placeholder-6.jpg in Resources */,
 				5483D07C1701745500142234 /* square-placeholder-7.jpg in Resources */,
+				544C2AD41701BE2C0095E7B0 /* spinner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

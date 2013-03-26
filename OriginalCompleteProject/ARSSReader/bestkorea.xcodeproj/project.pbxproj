@@ -105,6 +105,7 @@
 		5483D0731701745500142234 /* square-placeholder-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-5.jpg"; sourceTree = "<group>"; };
 		5483D0741701745500142234 /* square-placeholder-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-6.jpg"; sourceTree = "<group>"; };
 		5483D0751701745500142234 /* square-placeholder-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-7.jpg"; sourceTree = "<group>"; };
+		5483D07D1701776C00142234 /* RealityUpdateListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealityUpdateListener.h; sourceTree = "<group>"; };
 		54A39FFD16FFFDF500E8B908 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		54A39FFE16FFFDF500E8B908 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		54A39FFF16FFFDF500E8B908 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -224,6 +225,7 @@
 				54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */,
 				54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */,
 				9C947BB3163E835500842C2F /* MainStoryboard.storyboard */,
+				5483D07D1701776C00142234 /* RealityUpdateListener.h */,
 			);
 			name = "App Code";
 			sourceTree = "<group>";

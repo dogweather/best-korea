@@ -75,20 +75,40 @@
 
 
 - (void)enterAlternateReality {
-    NSLog(@"Changing to alternate reality.");
     [self setAlternateReality:YES];
 }
 
 
 - (void)leaveAlternateReality {
-    NSLog(@"Leaving alternate reality.");
     [self setAlternateReality:NO];
 }
 
 
 - (void)setAlternateReality:(BOOL)option {
-    NSLog(@"setAlternateReality: %u", option);
+    NSLog(@"setAlternateReality to: %u", option);
+    UIViewController <RealityUpdateListener> *listener;
+    
+    // Tell the app to make the change
     [[App app] setAlternateRealityTo:option for:[self selectedViewController]];
+    
+    // Figure out which view to notify
+    UIViewController *currentView = self.selectedViewController;
+    // Is this a navigation controller?
+    if ([currentView isKindOfClass:[UINavigationController class]]) {
+        NSLog(@"Urp, this is a nav controller. Reset it and go to the root view.");
+        // Go back to the root/top, and use the root as the listener.
+        [(UINavigationController *)currentView popToRootViewControllerAnimated:YES];
+        currentView = [(UINavigationController *)currentView topViewController];
+    }
+
+    // Try to notify the current view controller
+    NSLog(@"Trying to notify the view...");
+    if ([currentView conformsToProtocol:@protocol(RealityUpdateListener)]) {
+        listener = (UIViewController <RealityUpdateListener> *) currentView;
+        [listener updateForNewReality];
+    } else {
+        NSLog(@"It's not a listener: %@", currentView);
+    }
 }
 
 @end

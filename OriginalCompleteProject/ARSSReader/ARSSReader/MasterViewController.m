@@ -157,6 +157,7 @@
 
 
 - (void)updateForNewReality {
+    NSLog(@"Update for new reality received by MasterViewController");
     feedURL = [NSURL URLWithString:
                [App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     

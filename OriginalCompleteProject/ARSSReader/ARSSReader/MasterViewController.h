@@ -6,14 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#define ICON_COUNT 4
-
+#import "RealityUpdateListener.h"
 
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <RealityUpdateListener>
 
 @property int icon_index;
+
 - (IBAction)togglePartyMode:(id)sender;
 
 @end

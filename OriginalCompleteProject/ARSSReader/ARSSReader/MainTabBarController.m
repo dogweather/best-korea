@@ -12,7 +12,7 @@
 #import "App.h"
 
 @interface MainTabBarController ()
-
+@property UIView *blackView;
 @end
 
 @implementation MainTabBarController
@@ -65,17 +65,26 @@
 
 
 - (void) fadeOut {
-    self.view.alpha = 0;
+    if (self.blackView == nil)
+        self.blackView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.blackView.alpha = 0;
+    [self.blackView setBackgroundColor:[UIColor blackColor]];
+    [self.view.superview addSubview:self.blackView];
+    [UIView beginAnimations:@"fadeOut" context:NULL];
+    [UIView setAnimationDuration:0.25];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    self.blackView.alpha = 1.0;
+    [UIView commitAnimations];
 }
 
 
 - (void) fadeIn {
-    if (self.view.alpha == 0) {
-        [UIView beginAnimations:@"fade in" context:nil];
-        [UIView setAnimationDuration:2.0];
-        self.view.alpha = 1;
-        [UIView commitAnimations];
-    }
+    [UIView beginAnimations:@"fadeIn" context:NULL];
+    [UIView setAnimationDuration:2];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    self.blackView.alpha = 0;
+    [UIView commitAnimations];
+//    [self.blackView removeFromSuperview];
 }
 
 

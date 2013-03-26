@@ -84,7 +84,6 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     self.blackView.alpha = 0;
     [UIView commitAnimations];
-//    [self.blackView removeFromSuperview];
 }
 
 

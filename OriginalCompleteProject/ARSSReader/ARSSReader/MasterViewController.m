@@ -13,6 +13,7 @@
 #import "RSSLoader.h"
 #import "RSSItem.h"
 #import "TFHpple.h"
+#import "MBProgressHUD.h"
 
 
 @interface MasterViewController ()
@@ -30,7 +31,7 @@
 {
     [super viewDidLoad];
     
-    // Set up the refresh control
+    // Refresh control
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self
                        action:@selector(refreshInvoked:forState:)
@@ -39,7 +40,7 @@
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
     [self.tableView addSubview:refreshControl];
 
-    // Set up the news feed
+    // News feed
     self.icon_index = 1;
     feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     [self refreshFeed];
@@ -62,6 +63,7 @@
 
 -(void)refreshFeed
 {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     RSSLoader* rssLoader = [[RSSLoader alloc] init];
     
     [rssLoader fetchRssWithURL:feedURL
@@ -76,6 +78,7 @@
                         
                         // Stop refresh control
                         [refreshControl endRefreshing];
+                        [MBProgressHUD hideHUDForView:self.view animated:YES];
                     });
                 }];
 }

@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RealityUpdateListener.h"
+#import "MBProgressHUD.h"
 
 
 @interface MasterViewController : UITableViewController <RealityUpdateListener>
@@ -14,5 +15,7 @@
 @property int icon_index;
 
 - (IBAction)togglePartyMode:(id)sender;
+@property MBProgressHUD *hud;
+
 
 @end

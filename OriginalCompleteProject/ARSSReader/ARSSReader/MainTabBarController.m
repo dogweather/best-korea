@@ -17,15 +17,6 @@
 
 @implementation MainTabBarController
 
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-//
 
 - (void)viewDidLoad
 {
@@ -56,31 +47,15 @@
 // to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [self inAlternateReality]) {
-        [self leaveAlternateReality];
+        [self setAlternateReality:NO];
     } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [self inAlternateReality]) {
-        [self enterAlternateReality];
+        [self setAlternateReality:YES];
     }
 }
 
-//
-//-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//}
-
 
 - (BOOL)inAlternateReality {
-    BOOL result = [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
-    NSLog(@"inAlternateReality? %u", result);
-    return result;
-}
-
-
-- (void)enterAlternateReality {
-    [self setAlternateReality:YES];
-}
-
-
-- (void)leaveAlternateReality {
-    [self setAlternateReality:NO];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }
 
 

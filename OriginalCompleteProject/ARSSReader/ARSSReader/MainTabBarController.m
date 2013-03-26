@@ -56,12 +56,17 @@
 
 - (void)setAlternateReality:(BOOL)option {
     NSLog(@"setAlternateReality to: %u", option);
-    UIViewController <RealityUpdateListener> *listener;
     
     // 1. Tell the app to make the change.
     [[App app] setAlternateRealityTo:option for:[self selectedViewController]];
     
     // 2. Notify the current view to update itself.
+    [self tellViewToUpdateReality];
+}
+
+
+- (void) tellViewToUpdateReality {
+    UIViewController <RealityUpdateListener> *listener;
     UIViewController *currentView = self.selectedViewController;
     
     // Is this a navigation controller?

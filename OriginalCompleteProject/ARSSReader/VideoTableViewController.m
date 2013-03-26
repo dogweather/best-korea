@@ -153,6 +153,20 @@
     
     if ([App inAlternateReality]) {
         v = [[Video alloc] init];
+        v.title     = @"Light Industry Exhibition";
+        v.source    = @"Korean Central News Agency / DPR of Korea";
+        v.url       = @"http://BestKoreaApp.com/media/video/light-industry.html";
+        v.pubDate   = @"2013-03-25";
+        [result addObject:v];
+        
+        v = [[Video alloc] init];
+        v.title     = @"DPRK People Reject UN \"Resolution on Sanctions\"";
+        v.source    = @"Korean Central News Agency / DPR of Korea";
+        v.url       = @"http://BestKoreaApp.com/media/video/people-reject.html";
+        v.pubDate   = @"2013-03-11";
+        [result addObject:v];
+
+        v = [[Video alloc] init];
         v.title     = @"Life in the People's Paradise of DPRK";
         v.source    = @"DPRK";
         v.url       = @"http://BestKoreaApp.com/media/video/peoples-paradise.html";

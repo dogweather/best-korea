@@ -45,13 +45,12 @@
 }
 
 - (void) refreshFeed {
-    // Reload the videos. Normally, this will be
-    // done in a separate thread.
-    // [self.tableView reloadData];
+    // Normally, this is done in a background thread.
+    self.videos = [self getVideos];
+    [self.tableView reloadData];
 
     // Stop the refresh control
     [self.refreshControl endRefreshing];
-
 }
 
 
@@ -194,8 +193,17 @@
 }
 
 
-- (void) updateForNewReality {
-    // TODO: implement.
+- (void)updateForNewReality {
+    NSLog(@"The Video Table View Controller got the notice to update for new reality.");
+    self.feedURL = [NSURL URLWithString:
+               [App inAlternateReality] ? @"TODO" : @"TODO"];
+    
+    // Clear the table
+    [self.videos removeAllObjects];
+    [self.tableView reloadData];
+    
+    // Read from the new datasource.
+    [self refreshFeed];
 }
 
 

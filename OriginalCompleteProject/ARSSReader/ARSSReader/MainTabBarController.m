@@ -43,8 +43,8 @@
 }
 
 
-// Change our view of reality when the UI is about
-// to rotate.
+// Possibly change our view of reality when the UI 
+// is about to rotate.
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) {
         [self setAlternateReality:NO];
@@ -58,11 +58,12 @@
     NSLog(@"setAlternateReality to: %u", option);
     UIViewController <RealityUpdateListener> *listener;
     
-    // Tell the app to make the change
+    // 1. Tell the app to make the change.
     [[App app] setAlternateRealityTo:option for:[self selectedViewController]];
     
-    // Figure out which view to notify
+    // 2. Notify the current view to update itself.
     UIViewController *currentView = self.selectedViewController;
+    
     // Is this a navigation controller?
     if ([currentView isKindOfClass:[UINavigationController class]]) {
         NSLog(@"Urp, this is a nav controller. Reset it and go to the root view.");

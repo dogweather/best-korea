@@ -10,8 +10,6 @@
 #import "App.h"
 #import "Constants.h"
 
-#import "TableHeaderView.h"
-
 #import "RSSLoader.h"
 #import "RSSItem.h"
 #import "TFHpple.h"
@@ -32,21 +30,18 @@
 {
     [super viewDidLoad];
     
-    self.icon_index = 1;
-    feedURL = [NSURL URLWithString:REALITY_NEWS_FEED];
-    
-    //add refresh control to the table view
+    // Set up the refresh control
     refreshControl = [[UIRefreshControl alloc] init];
-    
     [refreshControl addTarget:self
                        action:@selector(refreshInvoked:forState:)
              forControlEvents:UIControlEventValueChanged];
-    
-    NSString* fetchMessage = @"Refresh";
-    
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:fetchMessage
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
-    [self.tableView addSubview: refreshControl];
+    [self.tableView addSubview:refreshControl];
+
+    // Set up the news feed
+    self.icon_index = 1;
+    feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     [self refreshFeed];
 }
 
@@ -75,9 +70,6 @@
                     //completed fetching the RSS
                     dispatch_async(dispatch_get_main_queue(), ^{
                         
-                        //UI code on the main queue
-                        [(TableHeaderView*)self.tableView.tableHeaderView setText:title];
-                        
                         _objects = results;
                         [self.tableView reloadData];
                         
@@ -87,6 +79,8 @@
                 }];
 
 }
+
+
 
 #pragma mark - Table View
 
@@ -146,7 +140,21 @@
 }
 
 
+- (void)updateForNewReality {
+    feedURL = [NSURL URLWithString:
+               [App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
+    
+    // Clear the table
+    _objects = @[];
+    [self.tableView reloadData];
+    
+    // Read from the new datasource.
+    [self refreshFeed];
+}
+
+
 - (IBAction)togglePartyMode:(id)sender {
     [App toggleRealityFor:self];
+    [self updateForNewReality];
 }
 @end

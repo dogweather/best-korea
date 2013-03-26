@@ -18,7 +18,7 @@
 
 #define ALTERNATE_REALITY       @"Party Mode"
 #define ALTERNATE_APP_NAME      @"BEST KOREA"
-#define ALTERNATE_NEWS_FEED     @"TODO"
+#define ALTERNATE_NEWS_FEED     @"http://www.workers.org/tag/dprk/feed/"
 #define ALTERNATE_NAVBAR_FONT   @"Futura-CondensedExtraBold"
 
 

@@ -42,6 +42,8 @@
 }
 
 
+// Set the reality mode, making changes if necessary. Persist the
+// new value and update the app's look & feel.
 - (void) setAlternateRealityTo:(BOOL)alternate for:(UIViewController*)controller {
     // Do nothing if we're already there.
     if (alternate == [App inAlternateReality])

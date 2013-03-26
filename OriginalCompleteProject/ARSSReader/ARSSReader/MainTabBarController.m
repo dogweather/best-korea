@@ -44,10 +44,9 @@
 
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) {
-        self.view.alpha = 0;
-    } else if (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality]) {
-        self.view.alpha = 0;
+    if ((toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality])) {
+        // We're going to be switching, so black out the UI.
+        [self fadeOut];
     }
 }
 
@@ -61,6 +60,16 @@
         [self setAlternateReality:YES];
     }
     
+    [self fadeIn];
+}
+
+
+- (void) fadeOut {
+    self.view.alpha = 0;
+}
+
+
+- (void) fadeIn {
     if (self.view.alpha == 0) {
         [UIView beginAnimations:@"fade in" context:nil];
         [UIView setAnimationDuration:2.0];

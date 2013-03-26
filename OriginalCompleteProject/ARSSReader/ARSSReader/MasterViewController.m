@@ -162,8 +162,8 @@
                [App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     
     // Clear the table
-//    _objects = @[];
-//    [self.tableView reloadData];
+    _objects = @[];
+    [self.tableView reloadData];
     
     // Read from the new datasource.
     [self refreshFeed];

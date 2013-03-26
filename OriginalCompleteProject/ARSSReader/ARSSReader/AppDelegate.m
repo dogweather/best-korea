@@ -23,28 +23,22 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSDictionary *appDefaults;
-    NSString *style;
+    NSString *styleFile;
     
     // Register the preference defaults
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 
     // Initial L&F setup
-    style = [App inAlternateReality] ? ALTERNATE_STYLE_FILE : NORMAL_STYLE_FILE;
-    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:style ofType:@"json"]];
+    styleFile = [App inAlternateReality] ? ALTERNATE_STYLE_FILE : NORMAL_STYLE_FILE;
+    self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:styleFile ofType:@"json"]];
 
     return YES;
 }
 
 
 - (void) toggleRealityFor: (UIViewController*) controller {
-    // Toggle the saved value
-    [[NSUserDefaults standardUserDefaults] setBool:![App inAlternateReality] forKey:PREF_ALTERNATE_REALITY];
-    
-    // Change the app's look & feel
-    // Apply the hack-fix
-    [self setLookAndFeel];
-    [self setMyTitle:controller.navigationItem andFont:controller];
+    [self setAlternateRealityTo:![App inAlternateReality] for:controller];
 }
 
 

@@ -62,7 +62,11 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Best Korea" id="7bU-Oc-7SR">
-                        <barButtonItem key="leftBarButtonItem" image="star.png" id="62g-AQ-9TE"/>
+                        <barButtonItem key="leftBarButtonItem" image="star.png" id="62g-AQ-9TE">
+                            <connections>
+                                <action selector="togglePartyMode:" destination="z79-iz-SFG" id="rpL-mj-NzV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNp-1a-7n1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-zO-TN9">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -212,7 +216,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Best Korea" id="36">
-                        <barButtonItem key="leftBarButtonItem" image="star.png" id="3Gv-gR-UeP"/>
+                        <barButtonItem key="leftBarButtonItem" image="star.png" id="3Gv-gR-UeP">
+                            <connections>
+                                <action selector="togglePartyMode:" destination="12" id="HKu-1y-07E"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>

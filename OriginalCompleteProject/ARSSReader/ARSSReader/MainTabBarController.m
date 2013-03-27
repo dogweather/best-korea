@@ -135,36 +135,12 @@
     NSLog(@"setAlternateReality to: %u", option);
     
     // 1. Tell the app to make the change.
-    [[App app] setAlternateRealityTo:option for:[self selectedViewController]];
+    [[App appDelegate] setAlternateRealityTo:option for:[self selectedViewController]];
     
     // 2. Tell the tabs to update their contents.
-    for (id v in self.viewControllers) {
-        [self sendUpdateMessageTo:v];
-    }
+    [App sendRealityChangeNotifications];
     
     [self fadeInAndSpin];
-}
-
-
-- (void) sendUpdateMessageTo:(UIViewController *)currentView {
-    UIViewController <RealityUpdateListener> *listener;
-    
-    // Is this a navigation controller?
-    if ([currentView isKindOfClass:[UINavigationController class]]) {
-        NSLog(@"Urp, this is a nav controller. Reset it and go to the root view.");
-        // Go back to the root/top, and use the root as the listener.
-        [(UINavigationController *)currentView popToRootViewControllerAnimated:YES];
-        currentView = [(UINavigationController *)currentView topViewController];
-    }
-
-    // Try to notify the current view controller
-    NSLog(@"Trying to notify the view...");
-    if ([currentView conformsToProtocol:@protocol(RealityUpdateListener)]) {
-        listener = (UIViewController <RealityUpdateListener> *) currentView;
-        [listener updateForNewReality];
-    } else {
-        NSLog(@"It's not a listener: %@", currentView);
-    }
 }
 
 @end

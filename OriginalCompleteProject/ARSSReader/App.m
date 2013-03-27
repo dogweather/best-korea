@@ -11,6 +11,8 @@
 
 #import "App.h"
 #import "Constants.h"
+#import "RealityUpdateListener.h"
+
 
 @implementation App
 
@@ -20,18 +22,52 @@
 
 
 + (void) toggleRealityFor: (UIViewController *) controller {
-    [[self app] toggleRealityFor:controller];
+    [[self appDelegate] toggleRealityFor:controller];
+    [self sendRealityChangeNotifications];
 }
 
 
 + (void) setMyTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
-    [[self app] setMyTitle:navItem andFont:controller];
+    [[self appDelegate] setMyTitle:navItem andFont:controller];
 }
 
 
-+ (AppDelegate *) app {
++ (AppDelegate *) appDelegate {
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
+
++ (UITabBarController *) tabController {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    UIViewController *rootViewController = window.rootViewController;
+    return (UITabBarController *) rootViewController;
+}
+
+
++ (void) sendUpdateMessageTo:(UIViewController *)aController {
+    UIViewController <RealityUpdateListener> *listener;
+    
+    // Is this a navigation controller?
+    if ([aController isKindOfClass:[UINavigationController class]]) {
+        // Go back to the root/top, and use the root as the listener.
+        [(UINavigationController *)aController popToRootViewControllerAnimated:YES];
+        aController = [(UINavigationController *)aController topViewController];
+    }
+    
+    // Try to notify the current view controller
+    if ([aController conformsToProtocol:@protocol(RealityUpdateListener)]) {
+        listener = (UIViewController <RealityUpdateListener> *) aController;
+        [listener updateForNewReality];
+    } else {
+        NSLog(@"It's not a listener: %@", aController);
+    }
+}
+
+
++ (void) sendRealityChangeNotifications {
+    for (id c in [self tabController].viewControllers) {
+        [self sendUpdateMessageTo:c];
+    }
+}
 
 @end

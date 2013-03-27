@@ -175,6 +175,5 @@
 
 - (IBAction)togglePartyMode:(id)sender {
     [App toggleRealityFor:self];
-    [self updateForNewReality];
 }
 @end

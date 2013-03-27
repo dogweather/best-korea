@@ -13,8 +13,9 @@
 
 
 +(BOOL)inAlternateReality;
++(void)sendRealityChangeNotifications;
 
-+ (AppDelegate*) app;
++ (AppDelegate*) appDelegate;
 +(void)toggleRealityFor:(UIViewController *)controller;
 +(void)setMyTitle:(UINavigationItem*)navItem andFont:(UIViewController *)controller;
 

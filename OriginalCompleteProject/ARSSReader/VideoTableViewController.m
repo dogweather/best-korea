@@ -209,6 +209,7 @@
 - (IBAction)togglePartyMode:(id)sender {
     NSLog(@"togglePartyMode");
     [App toggleRealityFor: self];
+    [self updateForNewReality];
 }
 
 

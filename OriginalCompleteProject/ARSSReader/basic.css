@@ -1,0 +1,13 @@
+body {
+	background-color: 	#222;
+	color:				#eee;
+	font-family: 		"helvetica neue";
+}
+
+h1, h2 {
+	font-family: Optima-ExtraBlack;
+}
+
+h1 {
+	text-align: center;
+}

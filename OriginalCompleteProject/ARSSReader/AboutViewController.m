@@ -19,13 +19,12 @@
 @implementation AboutViewController
 
 - (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     NSString *htmlFile   = [[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"];
-    NSLog(@"Trying to load %@", htmlFile);
-    
     NSString *htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
-    NSLog(@"Got HTML: %@", htmlString);
+    NSURL    *baseURL    = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
     
-    [webView loadHTMLString:htmlString baseURL:nil];
+    [webView loadHTMLString:htmlString baseURL:baseURL];
 }
 
 @end

@@ -7,7 +7,7 @@
     "UINavigationBar": {
         "tintColor": "black",
         "titleTextAttributes": {
-            "font":["Georgia-Bold", 19]
+            "font":["Optima-ExtraBlack", 19]
         }
     },
     

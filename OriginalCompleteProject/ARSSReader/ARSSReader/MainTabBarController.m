@@ -15,7 +15,6 @@
 
 @interface MainTabBarController ()
 
-@property UIView *blackView;
 @property UIView *spinner;
 
 @end
@@ -30,38 +29,6 @@
 - (NSUInteger) supportedInterfaceOrientations { return UIInterfaceOrientationMaskAll; }
 
 
-//
-//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-//    if ((toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality])) {
-//        // We're going to be switching, so black out the UI.
-//        [self fadeOut];
-//    }
-//}
-//
-//
-//- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//    if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortrait)
-//        && [App inAlternateReality]) {
-//        [self setAlternateReality:NO];
-//    } else if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)
-//               && ! [App inAlternateReality]) {
-//        [self setAlternateReality:YES];
-//    }
-//}
-
-
-- (void) fadeOut {
-    if (self.blackView == nil)
-        self.blackView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.blackView.alpha = 0;
-    [self.blackView setBackgroundColor:[UIColor blackColor]];
-    [self.view.superview addSubview:self.blackView];
-    [UIView beginAnimations:@"fadeOut" context:NULL];
-    [UIView setAnimationDuration:0.25];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    self.blackView.alpha = 1.0;
-    [UIView commitAnimations];
-}
 
 
 - (void) fadeInAndSpin {
@@ -73,6 +40,7 @@
 
 
 - (void) spinUp {
+    NSLog(@"spinUp");
     if (self.spinner == nil) {
         self.spinner = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"spinner.png"]];
         self.spinner.center = self.view.center;
@@ -109,6 +77,7 @@
 
 
 - (void) fadeIn {
+    NSLog(@"fadeIn");
     [UIView beginAnimations:@"fadeIn" context:NULL];
     [UIView setAnimationDuration:1];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
@@ -118,24 +87,12 @@
 
 
 - (void) fadeInLong {
+    NSLog(@"fadeInLong");
     [UIView beginAnimations:@"fadeIn" context:NULL];
     [UIView setAnimationDuration:2.5];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
     self.blackView.alpha = 0;
     [UIView commitAnimations];
 }
-
-//
-//- (void)setAlternateReality:(BOOL)option {
-//    NSLog(@"setAlternateReality to: %u", option);
-//    
-//    // 1. Tell the app to make the change.
-//    [[App appDelegate] setAlternateRealityTo:option for:[self selectedViewController]];
-//    
-//    // 2. Tell the tabs to update their contents.
-//    [App sendRealityChangeNotifications];
-//    
-//    [self fadeInAndSpin];
-//}
 
 @end

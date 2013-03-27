@@ -9,10 +9,16 @@
 //  Copyright (c) 2013 Srsly.co. All rights reserved.
 //
 
+
 #import "App.h"
 #import "Constants.h"
 #import "RealityUpdateListener.h"
 #import "MainTabBarController.h"
+
+@interface App()
+
+@end
+
 
 
 @implementation App
@@ -22,12 +28,37 @@
 }
 
 
+
 + (void) toggleRealityFor: (UIViewController *) controller {
-    [[self tabController] fadeOut];
-    [[self appDelegate] toggleRealityFor:controller];
+    [self fadeOut];
+}
+
+
++ (void) animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    [[self appDelegate] toggleRealityFor:[[self tabController] selectedViewController]];
     [self sendRealityChangeNotifications];
     [[self tabController] fadeInAndSpin];
 }
+
+
++ (void) fadeOut {
+    if ([self tabController].blackView == nil)
+        [self tabController].blackView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self tabController].blackView.alpha = 0;
+    [[self tabController].blackView setBackgroundColor:[UIColor blackColor]];
+    [[self tabController].view.superview addSubview:[self tabController].blackView];
+    
+    CABasicAnimation *fadeAnim=[CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeAnim.fromValue=[NSNumber numberWithDouble:0.0];
+//    fadeAnim.toValue=[NSNumber numberWithDouble:1.0];
+    [self tabController].blackView.layer.opacity = 1;
+    fadeAnim.duration = 0.5;
+    fadeAnim.delegate = self;
+    fadeAnim.fillMode = kCAFillModeForwards;
+    fadeAnim.removedOnCompletion = NO;
+    [[self tabController].blackView.layer addAnimation:fadeAnim forKey:@"fadeOut"];
+}
+
 
 
 

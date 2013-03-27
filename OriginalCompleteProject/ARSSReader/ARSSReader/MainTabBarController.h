@@ -10,7 +10,7 @@
 
 @interface MainTabBarController : UITabBarController
 
-- (void) fadeOut;
 - (void) fadeInAndSpin;
+@property UIView *blackView;
 
 @end

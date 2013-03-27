@@ -10,4 +10,7 @@
 
 @interface MainTabBarController : UITabBarController
 
+- (void) fadeOut;
+- (void) fadeInAndSpin;
+
 @end

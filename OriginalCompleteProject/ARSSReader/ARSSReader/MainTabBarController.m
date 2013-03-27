@@ -25,34 +25,29 @@
 @implementation MainTabBarController
 
 
-// Allow all rotations. Necessary to override these:
-- (BOOL)shouldAutorotate;
-{
-    return YES;
-}
-- (NSUInteger)supportedInterfaceOrientations
-{
-    return UIInterfaceOrientationMaskAll;
-}
+// Allow all orientations
+- (BOOL) shouldAutorotate; { return YES; }
+- (NSUInteger) supportedInterfaceOrientations { return UIInterfaceOrientationMaskAll; }
 
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if ((toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality])) {
-        // We're going to be switching, so black out the UI.
-        [self fadeOut];
-    }
-}
-
-
-- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortrait)
-        && [App inAlternateReality]) {
-        [self setAlternateReality:NO];
-    } else if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)
-               && ! [App inAlternateReality]) {
-        [self setAlternateReality:YES];
-    }
-}
+//
+//- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+//    if ((toInterfaceOrientation == UIInterfaceOrientationPortrait && [App inAlternateReality]) || (toInterfaceOrientation == UIInterfaceOrientationPortraitUpsideDown && ! [App inAlternateReality])) {
+//        // We're going to be switching, so black out the UI.
+//        [self fadeOut];
+//    }
+//}
+//
+//
+//- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+//    if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortrait)
+//        && [App inAlternateReality]) {
+//        [self setAlternateReality:NO];
+//    } else if (([UIDevice currentDevice].orientation == UIDeviceOrientationPortraitUpsideDown)
+//               && ! [App inAlternateReality]) {
+//        [self setAlternateReality:YES];
+//    }
+//}
 
 
 - (void) fadeOut {
@@ -130,17 +125,17 @@
     [UIView commitAnimations];
 }
 
-
-- (void)setAlternateReality:(BOOL)option {
-    NSLog(@"setAlternateReality to: %u", option);
-    
-    // 1. Tell the app to make the change.
-    [[App appDelegate] setAlternateRealityTo:option for:[self selectedViewController]];
-    
-    // 2. Tell the tabs to update their contents.
-    [App sendRealityChangeNotifications];
-    
-    [self fadeInAndSpin];
-}
+//
+//- (void)setAlternateReality:(BOOL)option {
+//    NSLog(@"setAlternateReality to: %u", option);
+//    
+//    // 1. Tell the app to make the change.
+//    [[App appDelegate] setAlternateRealityTo:option for:[self selectedViewController]];
+//    
+//    // 2. Tell the tabs to update their contents.
+//    [App sendRealityChangeNotifications];
+//    
+//    [self fadeInAndSpin];
+//}
 
 @end

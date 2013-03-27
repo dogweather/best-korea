@@ -13,7 +13,6 @@
 
 
 +(BOOL)inAlternateReality;
-+(void)sendRealityChangeNotifications;
 
 + (AppDelegate*) appDelegate;
 +(void)toggleRealityFor:(UIViewController *)controller;

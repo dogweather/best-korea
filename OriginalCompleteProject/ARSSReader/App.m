@@ -12,6 +12,7 @@
 #import "App.h"
 #import "Constants.h"
 #import "RealityUpdateListener.h"
+#import "MainTabBarController.h"
 
 
 @implementation App
@@ -22,9 +23,13 @@
 
 
 + (void) toggleRealityFor: (UIViewController *) controller {
+    [[self tabController] fadeOut];
     [[self appDelegate] toggleRealityFor:controller];
     [self sendRealityChangeNotifications];
+    [[self tabController] fadeInAndSpin];
 }
+
+
 
 
 + (void) setMyTitle:(UINavigationItem *)navItem andFont:(UIViewController *)controller {
@@ -37,10 +42,10 @@
 }
 
 
-+ (UITabBarController *) tabController {
++ (MainTabBarController *) tabController {
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     UIViewController *rootViewController = window.rootViewController;
-    return (UITabBarController *) rootViewController;
+    return (MainTabBarController *) rootViewController;
 }
 
 

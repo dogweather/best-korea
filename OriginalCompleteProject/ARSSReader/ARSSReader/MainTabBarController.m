@@ -30,8 +30,8 @@
     // Pre-load the about page
     AboutViewController *aboutController;
     aboutController = (AboutViewController *)[[self viewControllers] objectAtIndex:2];
-    NSLog(@"Got controller: %@",aboutController);
-//    [aboutController loadTheContent];
+    UIView *view = aboutController.view;
+    view = nil;
 }
 
 

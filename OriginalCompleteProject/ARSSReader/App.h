@@ -9,6 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
 
 @interface App : NSObject
 
@@ -18,8 +19,7 @@
 + (AppDelegate*) appDelegate;
 +(void)toggleRealityFor:(UIViewController *)controller;
 +(void)setMyTitle:(UINavigationItem*)navItem andFont:(UIViewController *)controller;
-
-+ (void) animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
-
++(MainTabBarController *)tabController;
++(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
 
 @end

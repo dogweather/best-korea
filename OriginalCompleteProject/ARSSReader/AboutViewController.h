@@ -10,4 +10,7 @@
 
 @interface AboutViewController : UIViewController
 
+-(void)loadTheContent;
+@property NSString *htmlString;
+
 @end

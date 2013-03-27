@@ -30,7 +30,7 @@
 
 
 + (void) toggleRealityFor: (UIViewController *) controller {
-    [self fadeOut];
+    [self fadeOutWithDuration:0.1];
 }
 
 
@@ -41,7 +41,7 @@
 }
 
 
-+ (void) fadeOut {
++ (void) fadeOutWithDuration:(float)duration {
     if ([self tabController].blackView == nil)
         [self tabController].blackView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self tabController].blackView.alpha = 0;
@@ -50,9 +50,8 @@
     
     CABasicAnimation *fadeAnim=[CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeAnim.fromValue=[NSNumber numberWithDouble:0.0];
-//    fadeAnim.toValue=[NSNumber numberWithDouble:1.0];
     [self tabController].blackView.layer.opacity = 1;
-    fadeAnim.duration = 0.5;
+    fadeAnim.duration = duration;
     fadeAnim.delegate = self;
     fadeAnim.fillMode = kCAFillModeForwards;
     fadeAnim.removedOnCompletion = NO;

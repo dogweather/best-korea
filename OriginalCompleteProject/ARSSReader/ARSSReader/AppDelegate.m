@@ -9,6 +9,8 @@
 #import "App.h"
 #import "Constants.h"
 #import "UISS.h"
+#import "MainTabBarController.h"
+#import "AboutViewController.h"
 
 @interface AppDelegate ()
 
@@ -32,7 +34,7 @@
     // Initial L&F setup
     styleFile = [App inAlternateReality] ? ALTERNATE_STYLE_FILE : NORMAL_STYLE_FILE;
     self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:styleFile ofType:@"json"]];
-
+    
     return YES;
 }
 

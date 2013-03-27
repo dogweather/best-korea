@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "MainTabBarController.h"
 #import "MasterViewController.h"
+#import "AboutViewController.h"
 #import "App.h"
 
 @interface MainTabBarController ()
@@ -23,12 +24,15 @@
 
 @implementation MainTabBarController
 
-
-// Allow all orientations
-- (BOOL) shouldAutorotate; { return YES; }
-- (NSUInteger) supportedInterfaceOrientations { return UIInterfaceOrientationMaskAll; }
-
-
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    
+    // Pre-load the about page
+    AboutViewController *aboutController;
+    aboutController = (AboutViewController *)[[self viewControllers] objectAtIndex:2];
+    NSLog(@"Got controller: %@",aboutController);
+//    [aboutController loadTheContent];
+}
 
 
 - (void) fadeInAndSpin {
@@ -94,5 +98,13 @@
     self.blackView.alpha = 0;
     [UIView commitAnimations];
 }
+
+
+
+// Allow all orientations
+- (BOOL) shouldAutorotate; { return YES; }
+- (NSUInteger) supportedInterfaceOrientations { return UIInterfaceOrientationMaskAll; }
+
+
 
 @end

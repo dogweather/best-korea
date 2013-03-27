@@ -14,5 +14,5 @@
     "UITabBar": {
         "tintColor": "black",
         "selectedImageTintColor": "$highlightColor"
-    }
+    },
 }

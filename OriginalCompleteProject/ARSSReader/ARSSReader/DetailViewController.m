@@ -7,6 +7,7 @@
 
 #import "DetailViewController.h"
 #import "AppDelegate.h"
+#import "App.h"
 #import "RSSItem.h"
 
 @interface DetailViewController () <UIWebViewDelegate>
@@ -22,7 +23,10 @@
     [super viewDidAppear:animated];
     NSURLRequest* articleRequest;
     RSSItem* item = (RSSItem*)self.detailItem;
-    self.title = item.title;
+    if ([App inAlternateReality])
+        self.title = [item.title uppercaseString];
+    else
+        self.title = item.title;
     webView.delegate = self;
     webView.backgroundColor = [UIColor clearColor];
 

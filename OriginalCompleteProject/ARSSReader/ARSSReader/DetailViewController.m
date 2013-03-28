@@ -26,7 +26,7 @@
     webView.delegate = self;
     webView.backgroundColor = [UIColor clearColor];
 
-    articleRequest = [NSURLRequest requestWithURL: item.link];
+    articleRequest = [NSURLRequest requestWithURL: [item resolvedUrl]];
     [webView loadRequest: articleRequest];    
 }
 

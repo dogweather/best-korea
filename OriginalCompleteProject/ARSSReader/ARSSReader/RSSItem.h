@@ -16,4 +16,6 @@
 @property (strong, nonatomic) UIImage*  image;
 @property (strong, nonatomic) NSAttributedString* cellMessage;
 
+-(NSURL *) resolvedUrl;
+
 @end

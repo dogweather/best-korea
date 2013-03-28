@@ -6,8 +6,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 @interface DetailViewController : UIViewController
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+@property id detailItem;
+@property (weak) IBOutlet UILabel *detailDescriptionLabel;
+
+@property NSString *databasePath;
+@property (nonatomic) sqlite3 *seenDB;
+
 @end

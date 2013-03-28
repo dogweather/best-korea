@@ -25,6 +25,7 @@
 		5483D07A1701745500142234 /* square-placeholder-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D0731701745500142234 /* square-placeholder-5.jpg */; };
 		5483D07B1701745500142234 /* square-placeholder-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D0741701745500142234 /* square-placeholder-6.jpg */; };
 		5483D07C1701745500142234 /* square-placeholder-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D0751701745500142234 /* square-placeholder-7.jpg */; };
+		548C8BB71703FBF80099166D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 548C8BB61703FBF80099166D /* libsqlite3.dylib */; };
 		54A3A00316FFFDF500E8B908 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A39FFE16FFFDF500E8B908 /* TFHpple.m */; };
 		54A3A00416FFFDF500E8B908 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00016FFFDF500E8B908 /* TFHppleElement.m */; };
 		54A3A00516FFFDF500E8B908 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00216FFFDF500E8B908 /* XPathQuery.m */; };
@@ -121,6 +122,7 @@
 		5483D0741701745500142234 /* square-placeholder-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-6.jpg"; sourceTree = "<group>"; };
 		5483D0751701745500142234 /* square-placeholder-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-7.jpg"; sourceTree = "<group>"; };
 		5483D07D1701776C00142234 /* RealityUpdateListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealityUpdateListener.h; sourceTree = "<group>"; };
+		548C8BB61703FBF80099166D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		54A39FFD16FFFDF500E8B908 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		54A39FFE16FFFDF500E8B908 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		54A39FFF16FFFDF500E8B908 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				548C8BB71703FBF80099166D /* libsqlite3.dylib in Frameworks */,
 				544C2AD61701C44D0095E7B0 /* QuartzCore.framework in Frameworks */,
 				9C1806CC163E853B00A02D94 /* libz.dylib in Frameworks */,
 				9C1806CA163E852F00A02D94 /* libxml2.dylib in Frameworks */,
@@ -399,6 +402,7 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
+				548C8BB61703FBF80099166D /* libsqlite3.dylib */,
 				540858F416FAC786003B9BB4 /* App Code */,
 				9C1806BE163E849B00A02D94 /* Assets */,
 				9C1806D5163E875300A02D94 /* ReaderClasses */,

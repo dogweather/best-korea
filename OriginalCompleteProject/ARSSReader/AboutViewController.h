@@ -12,5 +12,6 @@
 
 -(void)loadTheContent;
 @property NSString *htmlString;
+- (IBAction)shareBestKorea:(id)sender;
 
 @end

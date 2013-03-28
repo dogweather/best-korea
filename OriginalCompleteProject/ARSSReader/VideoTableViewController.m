@@ -150,6 +150,13 @@
 - (NSMutableArray *) getVideos {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
     Video *v;
+
+    return result;
+}
+
+- (NSMutableArray *) getStaticVideos {
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
+    Video *v;
     
     if ([App inAlternateReality]) {
         v = [[Video alloc] init];

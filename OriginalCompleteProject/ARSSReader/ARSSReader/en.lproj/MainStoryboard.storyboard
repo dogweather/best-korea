@@ -130,13 +130,27 @@
                             <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-zO-TN9">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="mH8-i8-wyE">
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wQB-tE-LFx"/>
+                                    <barButtonItem title="Share Best Korea" id="qwV-kW-hz9">
+                                        <connections>
+                                            <action selector="shareBestKorea:" destination="jjO-Ut-Gau" id="jZd-sT-7Sq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wW8-XH-MC3"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nqd-zO-TN9" firstAttribute="leading" secondItem="e6k-V6-qov" secondAttribute="leading" type="default" id="3fB-Ck-uYH"/>
                             <constraint firstItem="Nqd-zO-TN9" firstAttribute="top" secondItem="e6k-V6-qov" secondAttribute="top" type="default" id="8pC-86-t6X"/>
                             <constraint firstItem="Nqd-zO-TN9" firstAttribute="trailing" secondItem="e6k-V6-qov" secondAttribute="trailing" type="default" id="Yc9-xg-9jF"/>
-                            <constraint firstItem="Nqd-zO-TN9" firstAttribute="bottom" secondItem="e6k-V6-qov" secondAttribute="bottom" type="default" id="t1O-4I-CCj"/>
+                            <constraint firstItem="mH8-i8-wyE" firstAttribute="leading" secondItem="e6k-V6-qov" secondAttribute="leading" type="default" id="cmr-bB-QVA"/>
+                            <constraint firstItem="mH8-i8-wyE" firstAttribute="top" secondItem="Nqd-zO-TN9" secondAttribute="bottom" type="default" id="nGU-RV-3D0"/>
+                            <constraint firstItem="mH8-i8-wyE" firstAttribute="trailing" secondItem="e6k-V6-qov" secondAttribute="trailing" type="default" id="pyh-2S-Dxd"/>
+                            <constraint firstItem="mH8-i8-wyE" firstAttribute="bottom" secondItem="e6k-V6-qov" secondAttribute="bottom" type="default" id="s2L-3t-JVO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="heart-tabbar-icon.png" id="NkM-bt-t3N"/>
@@ -276,6 +290,7 @@
         <class className="AboutViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutViewController.h"/>
             <relationships>
+                <relationship kind="action" name="shareBestKorea:"/>
                 <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>

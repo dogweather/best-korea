@@ -17,7 +17,6 @@
     NSString * proxyUrl = [self.link.absoluteString
                                stringByReplacingOccurrencesOfString:@"www.workers.org"
                                withString:@"proxy1.bestkoreaapp.com"];
-    NSLog(@"Proxy url: %@", proxyUrl);
     return [NSURL URLWithString:proxyUrl];
 }
 

@@ -16,7 +16,6 @@
 
 @interface VideoTableViewController ()
     @property NSMutableArray    *videos;
-    @property NSURL             *feedURL;
     @property UIRefreshControl  *refreshControl;
 @end
 
@@ -161,7 +160,6 @@
         NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         TFHpple *parser = [TFHpple hppleWithHTMLData:[responseString dataUsingEncoding:NSUTF8StringEncoding]];
         NSArray *nodes  = [parser searchWithXPathQuery:@"//article"];
-        NSLog(@"Got index: %@",responseString);
         
         [self.videos removeAllObjects];
         
@@ -193,9 +191,6 @@
 
 
 - (void)updateForNewReality {
-    self.feedURL = [NSURL URLWithString:
-               [App inAlternateReality] ? @"TODO" : @"TODO"];
-    
     // Clear the table
     [self.videos removeAllObjects];
     [self.tableView reloadData];

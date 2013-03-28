@@ -36,7 +36,7 @@
 }
 
 - (IBAction)shareBestKorea:(id)sender {
-    NSArray* dataToShare = @[@"North Korea news for the iPhone — BestKoreaApp.com"];
+    NSArray* dataToShare = @[@"North Korea news for the iPhone – BestKoreaApp.com"];
     
     UIActivityViewController* activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:dataToShare

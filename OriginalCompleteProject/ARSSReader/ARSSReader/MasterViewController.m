@@ -199,10 +199,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     RSSItem *rss = _objects[indexPath.row];
+    cell.textLabel.textColor  = [self wasSeen:[rss.resolvedUrl absoluteString]] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text       = rss.title;
     cell.detailTextLabel.text = rss.publication;
     if (rss.image != nil) {
-        NSLog(@"Reading image from the cache");
         cell.imageView.image = rss.image;
         return cell;
     }
@@ -252,6 +252,7 @@
         RSSItem *rss = _objects[indexPath.row];
         [self markAsSeen:[rss.resolvedUrl absoluteString]];
         [[segue destinationViewController] setDetailItem:rss];
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
     }
 }
 

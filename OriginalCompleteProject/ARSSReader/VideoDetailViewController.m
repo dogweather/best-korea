@@ -26,5 +26,4 @@
         self.prevUrl = self.url;
     }
 }
-
 @end

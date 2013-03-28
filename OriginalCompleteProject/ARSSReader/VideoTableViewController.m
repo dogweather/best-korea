@@ -207,13 +207,11 @@
 
 
 - (IBAction)togglePartyMode:(id)sender {
-    NSLog(@"togglePartyMode");
     [App toggleRealityFor: self];
 }
 
 
 - (void)updateForNewReality {
-    NSLog(@"The Video Table View Controller got the notice to update for new reality.");
     self.feedURL = [NSURL URLWithString:
                [App inAlternateReality] ? @"TODO" : @"TODO"];
     

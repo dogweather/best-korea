@@ -55,4 +55,14 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
+- (IBAction)startShare:(id)sender {
+    RSSItem* item        = (RSSItem*)self.detailItem;
+    NSString* someText   = [item.link absoluteString];
+    NSArray* dataToShare = @[someText];
+    
+    UIActivityViewController* activityViewController =
+    [[UIActivityViewController alloc] initWithActivityItems:dataToShare
+                                      applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:^{}];
+}
 @end

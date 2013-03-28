@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 #define NORMAL_STYLE_FILE    @"uiss"
 #define ALTERNATE_STYLE_FILE @"uiss-alternative"
@@ -20,5 +21,11 @@
 - (void) setMyTitle: (UINavigationItem*)navItem andFont: (UIViewController*)controller;
 - (void) toggleRealityFor: (UIViewController*) controller;
 - (void) setAlternateRealityTo:(BOOL)alternate for:(UIViewController*)controller;
+
+// Methods views use to store and find out which
+// of their content has already been seen.
+-(void)markAsSeen:(NSString *)url;
+-(BOOL)wasSeen:(NSString *)url;
+
 
 @end

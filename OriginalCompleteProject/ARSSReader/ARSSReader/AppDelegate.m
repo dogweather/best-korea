@@ -5,16 +5,19 @@
 //  Created by Marin Todorov on 29/10/2012.
 //
 
+#import "UISS.h"
+#import "Constants.h"
 #import "AppDelegate.h"
 #import "App.h"
-#import "Constants.h"
-#import "UISS.h"
 #import "MainTabBarController.h"
 #import "AboutViewController.h"
+
 
 @interface AppDelegate ()
 
 @property(nonatomic, strong) UISS *uiss;
+@property NSString *databasePath;
+@property (nonatomic) sqlite3 *seenDB;
 
 @end
 
@@ -34,6 +37,9 @@
     // Initial L&F setup
     styleFile = [App inAlternateReality] ? ALTERNATE_STYLE_FILE : NORMAL_STYLE_FILE;
     self.uiss = [UISS configureWithJSONFilePath: [[NSBundle mainBundle] pathForResource:styleFile ofType:@"json"]];
+    
+    // The Seen DB
+    [self prepareTheSeenDB];
     
     return YES;
 }
@@ -69,7 +75,6 @@
 }
 
 
-// TODO: Refactor the text out to the app constants header.
 - (void) setTitleOf:(UINavigationItem *)navItem {
     if ([App inAlternateReality])
         navItem.title = ALTERNATE_APP_NAME;
@@ -91,6 +96,106 @@
     [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
     [controller.navigationController.navigationBar setNeedsDisplay];
 }
+
+
+
+
+//
+// The Seen DB Implementation /////////////////////////////////////////
+//
+
+
+-(void)prepareTheSeenDB {
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = dirPaths[0];
+    
+    // Build the path to the database file
+    self.databasePath = [[NSString alloc]
+                         initWithString: [docsDir stringByAppendingPathComponent:
+                                          @"contacts.db"]];
+    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    
+    if ([filemgr fileExistsAtPath: self.databasePath ] == NO)
+    {
+        const char *dbpath = [self.databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &_seenDB) == SQLITE_OK)
+        {
+            char *errMsg;
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS URLS (URL TEXT PRIMARY KEY)";
+            
+            if (sqlite3_exec(self.seenDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
+            {
+                NSLog(@"Failed to create table");
+            }
+            sqlite3_close(self.seenDB);
+            NSLog(@"Successfully created/opened the SQLite database");
+        } else {
+            NSLog(@"Failed to open/create database");
+        }
+    }
+}
+
+
+-(BOOL)wasSeen:(NSString *)url {
+    BOOL result = NO;
+    const char *dbpath = [_databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    
+    if (sqlite3_open(dbpath, &_seenDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat:
+                              @"SELECT url FROM urls WHERE url=\"%@\"",
+                              url];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(_seenDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                result = YES;
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(_seenDB);
+    }
+    return result;
+}
+
+
+-(void)markAsSeen:(NSString *)url {
+    sqlite3_stmt    *statement;
+    const char *dbpath = [_databasePath UTF8String];
+    
+    if (sqlite3_open(dbpath, &_seenDB) == SQLITE_OK)
+    {
+        
+        NSString *insertSQL = [NSString stringWithFormat:
+                               @"INSERT INTO URLS (url) VALUES (\"%@\")",
+                               url];
+        
+        const char *insert_stmt = [insertSQL UTF8String];
+        sqlite3_prepare_v2(_seenDB, insert_stmt, -1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            NSLog(@"Marked as seen: %@", url);
+        } else {
+            NSLog(@"Could NOT mark as seen: %@", url);
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(_seenDB);
+    }
+}
+
+
+
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

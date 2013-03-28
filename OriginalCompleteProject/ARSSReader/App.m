@@ -107,17 +107,4 @@
 }
 
 
-+(void)markAsSeen:(NSString *)url {
-    UINavigationController *n = (UINavigationController *) [[[self tabController] viewControllers] objectAtIndex:0];
-    MasterViewController   *c = (MasterViewController *)[n topViewController];
-    [c markAsSeen:url];
-}
-+(BOOL)wasSeen:(NSString *)url {
-    UINavigationController *n = (UINavigationController *) [[[self tabController] viewControllers] objectAtIndex:0];
-    MasterViewController   *c = (MasterViewController *)[n topViewController];
-    return [c wasSeen:url];
-}
-
-
-
 @end

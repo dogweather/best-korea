@@ -8,46 +8,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ARSSReader/AppDelegate.h"
-         timestampString = "386114350.488056"
+         timestampString = "386190939.698208"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "24"
-         endingLineNumber = "24"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "@interface AppDelegate"
          landmarkType = "2">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "ARSSReader/AppDelegate.h"
-         timestampString = "386114355.51965"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "5"
-         endingLineNumber = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "ARSSReader/AppDelegate.h"
-         timestampString = "386114356.343624"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "7"
-         endingLineNumber = "7">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "ARSSReader/AppDelegate.h"
-         timestampString = "386114356.887156"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "8"
-         endingLineNumber = "8">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

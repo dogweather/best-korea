@@ -22,7 +22,4 @@
 +(MainTabBarController *)tabController;
 +(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
 
-+(void)markAsSeen:(NSString *)url;
-+(BOOL)wasSeen:(NSString *)url;
-
 @end

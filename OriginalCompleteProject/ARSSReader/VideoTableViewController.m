@@ -68,7 +68,7 @@
         indexPath = [self.tableView indexPathForSelectedRow];
         detailViewController = [segue destinationViewController];
         video = self.videos[indexPath.row];
-        [App markAsSeen:video.url];
+        [[App appDelegate] markAsSeen:video.url];
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
         detailViewController.url = video.url;
     }
@@ -94,7 +94,7 @@
 {
     Video *video = self.videos[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"aVideoCell" forIndexPath:indexPath];
-    cell.textLabel.textColor  = [App wasSeen:video.url] ? [UIColor grayColor] : [UIColor blackColor];
+    cell.textLabel.textColor  = [[App appDelegate] wasSeen:video.url] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text= video.title;
     cell.detailTextLabel.text = video.source;
    

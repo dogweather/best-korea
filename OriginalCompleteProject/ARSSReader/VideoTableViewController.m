@@ -11,6 +11,8 @@
 #import "Video.h"
 #import "App.h"
 #import "Constants.h"
+#import "TFHpple.h"
+
 
 @interface VideoTableViewController ()
     @property NSMutableArray    *videos;
@@ -33,9 +35,8 @@
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
     [self.tableView addSubview:self.refreshControl];
-
-    self.feedURL = [NSURL URLWithString:[App inAlternateReality] ? @"TODO" : @"TODO"];
-    self.videos = [self getVideos];
+    self.videos = [NSMutableArray arrayWithCapacity:10];
+    [self refreshFeed];
 }
 
 
@@ -45,12 +46,7 @@
 }
 
 - (void) refreshFeed {
-    // Normally, this is done in a background thread.
-    self.videos = [self getVideos];
-    [self.tableView reloadData];
-
-    // Stop the refresh control
-    [self.refreshControl endRefreshing];
+    [self getVideos];
 }
 
 
@@ -147,11 +143,44 @@
 //
 // TODO: Refactor this into a library data access layer. It can be
 //       used across all the News apps.
-- (NSMutableArray *) getVideos {
-    NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
-    Video *v;
+- (void) getVideos {
+    NSString *filename = [App inAlternateReality] ? @"alternate.html" : @"reality.html";
+    NSString *url      = [@"http://bestkoreaapp.com/media/video/index-" stringByAppendingString:filename];
+    NSURL *indexUrl    = [NSURL URLWithString:url];
+    NSURLRequest *req  = [NSURLRequest requestWithURL:indexUrl];
 
-    return result;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        // Background Task:
+        // Load and parse the html into Video objects
+        Video *v;
+        NSURLResponse* response = nil;
+        NSData *data    = [NSURLConnection sendSynchronousRequest:req returningResponse:&response error:nil];
+        NSString *responseString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        TFHpple *parser = [TFHpple hppleWithHTMLData:[responseString dataUsingEncoding:NSUTF8StringEncoding]];
+        NSArray *nodes  = [parser searchWithXPathQuery:@"//article"];
+        NSLog(@"Got index: %@",responseString);
+        
+        [self.videos removeAllObjects];
+        
+        for (id article in nodes) {
+            v = [[Video alloc] init];
+            v.title   = [article objectForKey:@"data-title"];
+            v.url     = [article objectForKey:@"data-slug"];
+            v.source  = [article objectForKey:@"data-source"];
+            v.pubDate = [article objectForKey:@"data-pubDate"];
+            
+            v.url = [@"http://bestkoreaapp.com/media/video/" stringByAppendingString:v.url];
+            v.url = [v.url stringByAppendingString:@".html"];
+            [self.videos addObject:v];
+        }
+
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update the UI
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        });
+    });
 }
 
 - (NSMutableArray *) getStaticVideos {

@@ -68,6 +68,8 @@
         indexPath = [self.tableView indexPathForSelectedRow];
         detailViewController = [segue destinationViewController];
         video = self.videos[indexPath.row];
+        [App markAsSeen:video.url];
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
         detailViewController.url = video.url;
     }
 }
@@ -92,6 +94,7 @@
 {
     Video *video = self.videos[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"aVideoCell" forIndexPath:indexPath];
+    cell.textLabel.textColor  = [App wasSeen:video.url] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text= video.title;
     cell.detailTextLabel.text = video.source;
    
@@ -181,64 +184,6 @@
             [self.refreshControl endRefreshing];
         });
     });
-}
-
-- (NSMutableArray *) getStaticVideos {
-    NSMutableArray *result = [NSMutableArray arrayWithCapacity:10];
-    Video *v;
-    
-    if ([App inAlternateReality]) {
-        v = [[Video alloc] init];
-        v.title     = @"Light Industry Exhibition";
-        v.source    = @"Korean Central News Agency / DPR of Korea";
-        v.url       = @"http://BestKoreaApp.com/media/video/light-industry.html";
-        v.pubDate   = @"2013-03-25";
-        [result addObject:v];
-        
-        v = [[Video alloc] init];
-        v.title     = @"DPRK People Reject UN \"Resolution on Sanctions\"";
-        v.source    = @"Korean Central News Agency / DPR of Korea";
-        v.url       = @"http://BestKoreaApp.com/media/video/people-reject.html";
-        v.pubDate   = @"2013-03-11";
-        [result addObject:v];
-
-        v = [[Video alloc] init];
-        v.title     = @"Life in the People's Paradise of DPRK";
-        v.source    = @"DPRK";
-        v.url       = @"http://BestKoreaApp.com/media/video/peoples-paradise.html";
-        v.pubDate   = @"2010-10";
-        [result addObject:v];
-    } else {
-        v = [[Video alloc] init];
-        v.title     = @"North Korea Threatens US Airbases in Japan";
-        v.source    = @"The Guardian";
-        v.url       = @"http://BestKoreaApp.com/media/video/guardian-nk-threatens-us-airbases.html";
-        v.pubDate   = @"2013-03-21";
-        [result addObject:v];
-        
-        v = [[Video alloc] init];
-        v.title     = @"Dennis Rodman 'This Week' Interview";
-        v.source    = @"ABC News";
-        v.url       = @"http://BestKoreaApp.com/media/video/dennis-rodman-this-week-interview.html";
-        v.pubDate   = @"2013-03-03";
-        [result addObject:v];
-        
-        v = [[Video alloc] init];
-        v.title     = @"My Escape from North Korea";
-        v.source    = @"TED";
-        v.url       = @"http://BestKoreaApp.com/media/video/hyeonseo_lee_my_escape_from_north_korea.html";
-        v.pubDate   = @"2013-02";
-        [result addObject:v];
-        
-        v = [[Video alloc] init];
-        v.title     = @"Why the World Needs Charter Cities";
-        v.source    = @"TED";
-        v.url       = @"http://BestKoreaApp.com/media/video/paul-romer-why-the-world-needs-charter-cities.html";
-        v.pubDate   = @"2007-07";
-        [result addObject:v];
-    }
-    
-    return result;
 }
 
 

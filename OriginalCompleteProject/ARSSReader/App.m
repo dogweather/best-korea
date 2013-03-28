@@ -14,6 +14,7 @@
 #import "Constants.h"
 #import "RealityUpdateListener.h"
 #import "MainTabBarController.h"
+#import "MasterViewController.h"
 
 @interface App()
 
@@ -104,5 +105,19 @@
         [self sendUpdateMessageTo:c];
     }
 }
+
+
++(void)markAsSeen:(NSString *)url {
+    UINavigationController *n = (UINavigationController *) [[[self tabController] viewControllers] objectAtIndex:0];
+    MasterViewController   *c = (MasterViewController *)[n topViewController];
+    [c markAsSeen:url];
+}
++(BOOL)wasSeen:(NSString *)url {
+    UINavigationController *n = (UINavigationController *) [[[self tabController] viewControllers] objectAtIndex:0];
+    MasterViewController   *c = (MasterViewController *)[n topViewController];
+    return [c wasSeen:url];
+}
+
+
 
 @end

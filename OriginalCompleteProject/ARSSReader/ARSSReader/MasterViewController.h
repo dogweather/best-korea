@@ -19,8 +19,10 @@
 @property MBProgressHUD *hud;
 @property NSString *databasePath;
 @property (nonatomic) sqlite3 *seenDB;
+
+// Methods for views to store and find out which
+// of their content has already been seen.
 -(void)markAsSeen:(NSString *)url;
-
-
+-(BOOL)wasSeen:(NSString *)url;
 
 @end

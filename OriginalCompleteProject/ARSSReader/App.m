@@ -30,7 +30,7 @@
 
 
 + (void) toggleRealityFor: (UIViewController *) controller {
-    [self fadeOutWithDuration:0.1];
+    [self fadeOutWithDuration:0.2];
 }
 
 

@@ -1,8 +1,5 @@
 //
-//  MasterViewController.h
-//  ARSSReader
-//
-//  Created by Marin Todorov on 29/10/2012.
+//  NewsViewController.h
 //
 
 #import <UIKit/UIKit.h>

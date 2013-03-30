@@ -1,8 +1,5 @@
 //
-//  MasterViewController.m
-//  ARSSReader
-//
-//  Created by Marin Todorov on 29/10/2012.
+//  NewsTableViewController.m
 //
 
 #import "NewsTableViewController.h"

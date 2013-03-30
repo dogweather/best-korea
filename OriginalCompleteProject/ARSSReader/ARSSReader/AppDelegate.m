@@ -1,8 +1,5 @@
 //
 //  AppDelegate.m
-//  ARSSReader
-//
-//  Created by Marin Todorov on 29/10/2012.
 //
 
 #import "UISS.h"

@@ -24,7 +24,7 @@
 
 @implementation App
 
-+(BOOL)inAlternateReality {
++ (BOOL) inAlternateReality {
     return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }
 

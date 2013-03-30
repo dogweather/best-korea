@@ -1,8 +1,5 @@
 //
-//  DetailViewController.h
-//  ARSSReader
-//
-//  Created by Marin Todorov on 29/10/2012.
+//  NewsDetailViewController.h
 //
 
 #import <UIKit/UIKit.h>
@@ -11,6 +8,7 @@
 
 @property id detailItem;
 @property (weak) IBOutlet UILabel *detailDescriptionLabel;
+
 - (IBAction)startShare:(id)sender;
 
 @end

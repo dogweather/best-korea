@@ -1,8 +1,5 @@
 //
-//  DetailViewController.m
-//  ARSSReader
-//
-//  Created by Marin Todorov on 29/10/2012.
+//  NewsViewController.m
 //
 
 #import "NewsDetailViewController.h"

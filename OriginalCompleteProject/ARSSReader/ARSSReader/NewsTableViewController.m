@@ -5,8 +5,8 @@
 //  Created by Marin Todorov on 29/10/2012.
 //
 
-#import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "NewsTableViewController.h"
+#import "NewsDetailViewController.h"
 #import "App.h"
 #import "Constants.h"
 
@@ -16,7 +16,7 @@
 #import "MBProgressHUD.h"
 
 
-@interface MasterViewController ()
+@interface NewsTableViewController ()
 {
     NSArray *_objects;
     NSURL* feedURL;
@@ -25,7 +25,7 @@
 @end
 
 
-@implementation MasterViewController
+@implementation NewsTableViewController
 
 - (void)viewDidLoad
 {

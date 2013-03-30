@@ -92,8 +92,8 @@
 		9C947BA8163E835500842C2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BA7163E835500842C2F /* main.m */; };
 		9C947BAC163E835500842C2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BAB163E835500842C2F /* AppDelegate.m */; };
 		9C947BB5163E835500842C2F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C947BB3163E835500842C2F /* MainStoryboard.storyboard */; };
-		9C947BB8163E835500842C2F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BB7163E835500842C2F /* MasterViewController.m */; };
-		9C947BBB163E835500842C2F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BBA163E835500842C2F /* DetailViewController.m */; };
+		9C947BB8163E835500842C2F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BB7163E835500842C2F /* NewsTableViewController.m */; };
+		9C947BBB163E835500842C2F /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C947BBA163E835500842C2F /* NewsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,10 +207,10 @@
 		9C947BAA163E835500842C2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ARSSReader/AppDelegate.h; sourceTree = "<group>"; };
 		9C947BAB163E835500842C2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ARSSReader/AppDelegate.m; sourceTree = "<group>"; };
 		9C947BB4163E835500842C2F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		9C947BB6163E835500842C2F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MasterViewController.h; path = ARSSReader/MasterViewController.h; sourceTree = "<group>"; };
-		9C947BB7163E835500842C2F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MasterViewController.m; path = ARSSReader/MasterViewController.m; sourceTree = "<group>"; };
-		9C947BB9163E835500842C2F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ARSSReader/DetailViewController.h; sourceTree = "<group>"; };
-		9C947BBA163E835500842C2F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ARSSReader/DetailViewController.m; sourceTree = "<group>"; };
+		9C947BB6163E835500842C2F /* NewsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewsTableViewController.h; path = ARSSReader/NewsTableViewController.h; sourceTree = "<group>"; };
+		9C947BB7163E835500842C2F /* NewsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewController.m; path = ARSSReader/NewsTableViewController.m; sourceTree = "<group>"; };
+		9C947BB9163E835500842C2F /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NewsDetailViewController.h; path = ARSSReader/NewsDetailViewController.h; sourceTree = "<group>"; };
+		9C947BBA163E835500842C2F /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NewsDetailViewController.m; path = ARSSReader/NewsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,10 +239,10 @@
 				5461A05C16FFDBEF0015D5AC /* App.h */,
 				9C947BAA163E835500842C2F /* AppDelegate.h */,
 				54D1CC6716F884F400691CEB /* Constants.h */,
-				9C947BB9163E835500842C2F /* DetailViewController.h */,
 				5416D23616FF047300576320 /* LibraryTableViewController.h */,
 				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
-				9C947BB6163E835500842C2F /* MasterViewController.h */,
+				9C947BB9163E835500842C2F /* NewsDetailViewController.h */,
+				9C947BB6163E835500842C2F /* NewsTableViewController.h */,
 				5483D07D1701776C00142234 /* RealityUpdateListener.h */,
 				54800B6216FD6DD8005219B4 /* Video.h */,
 				54800B6516FD76A5005219B4 /* VideoDetailViewController.h */,
@@ -250,10 +250,10 @@
 				54B3ABD01702BCBD008D31A7 /* AboutViewController.m */,
 				5461A05D16FFDBEF0015D5AC /* App.m */,
 				9C947BAB163E835500842C2F /* AppDelegate.m */,
-				9C947BBA163E835500842C2F /* DetailViewController.m */,
 				5416D23716FF047300576320 /* LibraryTableViewController.m */,
 				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
-				9C947BB7163E835500842C2F /* MasterViewController.m */,
+				9C947BBA163E835500842C2F /* NewsDetailViewController.m */,
+				9C947BB7163E835500842C2F /* NewsTableViewController.m */,
 				54800B6316FD6DD8005219B4 /* Video.m */,
 				54800B6616FD76A5005219B4 /* VideoDetailViewController.m */,
 				54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */,
@@ -606,8 +606,8 @@
 			files = (
 				9C947BA8163E835500842C2F /* main.m in Sources */,
 				9C947BAC163E835500842C2F /* AppDelegate.m in Sources */,
-				9C947BB8163E835500842C2F /* MasterViewController.m in Sources */,
-				9C947BBB163E835500842C2F /* DetailViewController.m in Sources */,
+				9C947BB8163E835500842C2F /* NewsTableViewController.m in Sources */,
+				9C947BBB163E835500842C2F /* NewsDetailViewController.m in Sources */,
 				9C1806C7163E84B200A02D94 /* GTMNSString+HTML.m in Sources */,
 				9C1806C8163E84B200A02D94 /* RXMLElement.m in Sources */,
 				9C1806D1163E86CF00A02D94 /* TableHeaderView.m in Sources */,

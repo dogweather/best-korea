@@ -14,7 +14,7 @@
 #import "Constants.h"
 #import "RealityUpdateListener.h"
 #import "MainTabBarController.h"
-#import "MasterViewController.h"
+#import "NewsTableViewController.h"
 
 @interface App()
 

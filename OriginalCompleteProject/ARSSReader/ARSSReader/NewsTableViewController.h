@@ -10,7 +10,7 @@
 #import "MBProgressHUD.h"
 
 
-@interface MasterViewController : UITableViewController <RealityUpdateListener>
+@interface NewsTableViewController : UITableViewController <RealityUpdateListener>
 
 @property int icon_index;
 

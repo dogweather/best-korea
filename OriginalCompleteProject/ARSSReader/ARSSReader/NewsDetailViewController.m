@@ -5,19 +5,19 @@
 //  Created by Marin Todorov on 29/10/2012.
 //
 
-#import "DetailViewController.h"
+#import "NewsDetailViewController.h"
 #import "AppDelegate.h"
 #import "App.h"
 #import "RSSItem.h"
 
-@interface DetailViewController () <UIWebViewDelegate>
+@interface NewsDetailViewController () <UIWebViewDelegate>
 {
     IBOutlet UIWebView* webView;
 }
 @end
 
 
-@implementation DetailViewController
+@implementation NewsDetailViewController
 
 -(void)viewDidAppear:(BOOL)animated
 {

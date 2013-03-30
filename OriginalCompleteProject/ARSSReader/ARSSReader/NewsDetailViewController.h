@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface NewsDetailViewController : UIViewController
 
 @property id detailItem;
 @property (weak) IBOutlet UILabel *detailDescriptionLabel;

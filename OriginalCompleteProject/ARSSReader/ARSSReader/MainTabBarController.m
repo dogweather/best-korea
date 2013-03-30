@@ -10,7 +10,7 @@
 
 #import "Constants.h"
 #import "MainTabBarController.h"
-#import "MasterViewController.h"
+#import "NewsTableViewController.h"
 #import "AboutViewController.h"
 #import "App.h"
 

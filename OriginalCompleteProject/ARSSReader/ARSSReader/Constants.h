@@ -22,6 +22,7 @@
 #define ALTERNATE_NAVBAR_FONT   @"Futura-CondensedExtraBold"
 
 #define ALTERNATE_PLACEHOLDER_ICONS 10
+#define MARKETING_DN            @"BestKoreaApp.com"
 
 
 // General News App Configuration

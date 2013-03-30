@@ -6,6 +6,7 @@
 #import "AppDelegate.h"
 #import "App.h"
 #import "RSSItem.h"
+#import "Constants.h"
 
 @interface NewsDetailViewController () <UIWebViewDelegate>
 {
@@ -53,9 +54,10 @@
 }
 
 - (IBAction)startShare:(id)sender {
-    RSSItem* item        = (RSSItem*)self.detailItem;
-    NSString* someText   = [item.link absoluteString];
-    NSArray* dataToShare = @[someText];
+    RSSItem  *rss            = (RSSItem*)self.detailItem;
+    NSString *url           = [rss.link absoluteString];
+    NSString *marketing     = [@"Via " stringByAppendingString:MARKETING_DN];
+    NSArray* dataToShare    = @[url, marketing];
     
     UIActivityViewController* activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:dataToShare

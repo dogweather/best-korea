@@ -10,11 +10,12 @@
 
 @interface Video : NSObject
 
-@property (strong, nonatomic) NSString* title;
-@property (strong, nonatomic) NSString* url;
-@property (strong, nonatomic) NSString* source;
-@property (strong, nonatomic) NSString* pubDate;
-@property (strong, nonatomic) UIImage*  image;
+@property NSString* title;
+@property NSString* url;
+@property NSString* shareUrl;
+@property NSString* source;
+@property NSString* pubDate;
+@property UIImage*  image;
 
 -(NSString *) imageUrl;
 

@@ -131,7 +131,6 @@
                 NSLog(@"Failed to create table");
             }
             sqlite3_close(self.seenDB);
-            NSLog(@"Successfully created/opened the SQLite database");
         } else {
             NSLog(@"Failed to open/create database");
         }
@@ -182,9 +181,9 @@
         sqlite3_prepare_v2(_seenDB, insert_stmt, -1, &statement, NULL);
         if (sqlite3_step(statement) == SQLITE_DONE)
         {
-            NSLog(@"Marked as seen: %@", url);
+            // Marked as seen
         } else {
-            NSLog(@"Could NOT mark as seen: %@", url);
+            // Not marked as seen
         }
         sqlite3_finalize(statement);
         sqlite3_close(_seenDB);

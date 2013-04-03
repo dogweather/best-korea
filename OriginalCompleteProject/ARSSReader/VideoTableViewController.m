@@ -70,6 +70,7 @@
         [[App appDelegate] markAsSeen:video.url];
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
         detailViewController.url = video.url;
+        detailViewController.shareUrl = video.shareUrl;
     }
 }
 
@@ -98,7 +99,6 @@
     cell.detailTextLabel.text = video.source;
    
     if (video.image == nil) {
-        NSLog(@"Loading an image: %@", video.imageUrl);
         NSURL *imageURL         = [NSURL URLWithString:video.imageUrl];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -111,7 +111,6 @@
             });
         });
     } else {
-        NSLog(@"Reading image from the cache");
         cell.imageView.image = video.image;
     }
     
@@ -162,14 +161,16 @@
         NSArray *nodes  = [parser searchWithXPathQuery:@"//article"];
         
         [self.videos removeAllObjects];
+        NSLog(@"Got html %@", responseString);
         
         for (id article in nodes) {
             v = [[Video alloc] init];
-            v.title   = [article objectForKey:@"data-title"];
-            v.url     = [article objectForKey:@"data-slug"];
-            v.source  = [article objectForKey:@"data-source"];
-            v.pubDate = [article objectForKey:@"data-pubDate"];
-            
+            v.title    = [article objectForKey:@"data-title"];
+            v.url      = [article objectForKey:@"data-slug"];
+            v.source   = [article objectForKey:@"data-source"];
+            v.pubDate  = [article objectForKey:@"data-pubdate"];
+            v.shareUrl = [article objectForKey:@"data-shareurl"];
+
             v.url = [@"http://bestkoreaapp.com/media/video/" stringByAppendingString:v.url];
             v.url = [v.url stringByAppendingString:@".html"];
             [self.videos addObject:v];

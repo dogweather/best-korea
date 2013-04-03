@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
 @interface VideoDetailViewController : UIViewController
 
-@property (nonatomic, strong) NSString *url;
-@property (nonatomic, strong) NSString *prevUrl;
+@property NSString *url;
+@property NSString *prevUrl;
+@property NSString *shareUrl;
+
+- (IBAction)startShare:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;
 
 @end

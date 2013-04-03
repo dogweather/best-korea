@@ -22,7 +22,6 @@
     [super viewDidLoad];
 
     // Set the share button to correct state
-    NSLog(@"Got share url: %@",self.shareUrl);
     self.shareButton.enabled = (self.shareUrl != nil);
     
     // Load the video page if necessary

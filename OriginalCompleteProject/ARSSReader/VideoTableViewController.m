@@ -161,7 +161,6 @@
         NSArray *nodes  = [parser searchWithXPathQuery:@"//article"];
         
         [self.videos removeAllObjects];
-        NSLog(@"Got html %@", responseString);
         
         for (id article in nodes) {
             v = [[Video alloc] init];

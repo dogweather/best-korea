@@ -19,29 +19,28 @@
 -(void)fetchRssWithURL:(NSURL*)url complete:(RSSLoaderCompleteBlock)c
 {
     dispatch_async(kBgQueue, ^{
-        
-        // Work in the background
-        NSLog(@"Fetching RSS from %@",url);
         RXMLElement *rss   = [RXMLElement elementFromURL: url];
-        RXMLElement* title = [[rss child:@"channel"] child:@"title"];
-        NSArray* items     = [[rss child:@"channel"] children:@"item"];
-      
-        NSMutableArray* result = [NSMutableArray arrayWithCapacity:items.count];
-        
-        // More code
-        for (RXMLElement *e in items) {
+        if (! rss.isValid) {
+            c(@"", @[]);
+        } else {
+            RXMLElement* title = [[rss child:@"channel"] child:@"title"];
+            NSArray *items     = [[rss child:@"channel"] children:@"item"];
+          
+            NSMutableArray* result = [NSMutableArray arrayWithCapacity:items.count];
             
-            //iterate over the articles
-            RSSItem* item = [[RSSItem alloc] init];
-            NSString *rawTitle = [[e child:@"title"] text];
+            for (RXMLElement *e in items) {
+                //iterate over the articles
+                RSSItem* item = [[RSSItem alloc] init];
+                NSString *rawTitle = [[e child:@"title"] text];
 
-            item.title       = [[rawTitle componentsSeparatedByString:@" - "] objectAtIndex:0];
-            item.link        = [NSURL URLWithString: [[e child:@"link"] text]];
-            item.publication = [[rawTitle componentsSeparatedByString:@" - "] lastObject];
-            item.imageUrl    = [self imageUrlFromGoogleDescription:[[e child:@"description"] text]];
-            [result addObject: item];
+                item.title       = [[rawTitle componentsSeparatedByString:@" - "] objectAtIndex:0];
+                item.link        = [NSURL URLWithString: [[e child:@"link"] text]];
+                item.publication = [[rawTitle componentsSeparatedByString:@" - "] lastObject];
+                item.imageUrl    = [self imageUrlFromGoogleDescription:[[e child:@"description"] text]];
+                [result addObject: item];
+            }
+            c([title text], result);
         }
-        c([title text], result);
     });
 }
 

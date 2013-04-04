@@ -26,7 +26,6 @@
 
 - (void) loadTheContent {
     if (self.htmlString == nil) {
-        NSLog(@"Loading html");
         NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"];
         self.htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
         NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];

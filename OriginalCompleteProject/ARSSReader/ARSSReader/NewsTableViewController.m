@@ -63,14 +63,12 @@
     [rssLoader fetchRssWithURL:feedURL
                 complete:^(NSString *title, NSArray *results) {
 
-                    //completed fetching the RSS
+                    // completed fetching the RSS
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        
-                        NSLog(@"  Received the result from %@",feedURL);
                         _objects = results;
                         [self.tableView reloadData];
                         
-                        // Stop refresh control
+                        // Stop the refresh control
                         [refreshControl endRefreshing];
                         [MBProgressHUD hideHUDForView:self.view animated:YES];
                     });

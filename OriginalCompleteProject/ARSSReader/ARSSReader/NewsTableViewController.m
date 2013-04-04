@@ -35,7 +35,7 @@
              forControlEvents:UIControlEventValueChanged];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
-    [self.tableView addSubview:refreshControl];
+    self.refreshControl = refreshControl;
 
     // News feed
     self.icon_index = 1;
@@ -54,6 +54,7 @@
 {
     [self refreshFeed];
 }
+
 
 -(void)refreshFeed
 {

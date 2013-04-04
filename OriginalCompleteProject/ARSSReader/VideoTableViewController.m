@@ -33,7 +33,6 @@
              forControlEvents:UIControlEventValueChanged];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
-    [self.tableView addSubview:self.refreshControl];
     self.videos = [NSMutableArray arrayWithCapacity:10];
     [self refreshFeed];
 }

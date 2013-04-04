@@ -34,6 +34,7 @@
     }
 }
 
+
 - (IBAction)shareBestKorea:(id)sender {
     NSArray* dataToShare = @[@"North Korea news for the iPhone – BestKoreaApp.com"];
     

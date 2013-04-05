@@ -26,9 +26,22 @@
 
 - (void) loadTheContent {
     if (self.htmlString == nil) {
-        NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"];
-        self.htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+        NSString *versionNumber = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        NSString *version       = [@"<h2>Version</h2><ul><li>" stringByAppendingString:versionNumber];
+
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"YYYY-MMM-dd"];
+        [dateFormat setDateStyle:NSDateFormatterLongStyle];
+        NSString *date = [@"<li>" stringByAppendingString:[dateFormat stringFromDate:[NSDate date]]];
+        
+        
+        NSString *htmlFile      = [[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"];
         NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
+
+        self.htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+        self.htmlString = [self.htmlString stringByAppendingString:version];
+        self.htmlString = [self.htmlString stringByAppendingString:date];
+        self.htmlString = [self.htmlString stringByAppendingString:@"</ul>"];
         
         [webView loadHTMLString:self.htmlString baseURL:baseURL];
     }

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^RSSLoaderCompleteBlock)(NSString* title, NSArray* results);
+typedef void (^RSSLoaderCompleteBlock)(NSArray* results);
 
 @interface RSSLoader : NSObject
 

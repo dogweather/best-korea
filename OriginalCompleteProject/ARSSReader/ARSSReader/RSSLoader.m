@@ -21,12 +21,11 @@
     dispatch_async(kBgQueue, ^{
         RXMLElement *rss   = [RXMLElement elementFromURL: url];
         if (! rss.isValid) {
-            c(@"", @[]);
+            c(@[]);
         } else {
-            RXMLElement* title = [[rss child:@"channel"] child:@"title"];
             NSArray *items     = [[rss child:@"channel"] children:@"item"];
           
-            NSMutableArray* result = [NSMutableArray arrayWithCapacity:items.count];
+            NSMutableArray* results = [NSMutableArray arrayWithCapacity:items.count];
             
             for (RXMLElement *e in items) {
                 //iterate over the articles
@@ -37,9 +36,9 @@
                 item.link        = [NSURL URLWithString: [[e child:@"link"] text]];
                 item.publication = [[rawTitle componentsSeparatedByString:@" - "] lastObject];
                 item.imageUrl    = [self imageUrlFromGoogleDescription:[[e child:@"description"] text]];
-                [result addObject: item];
+                [results addObject: item];
             }
-            c([title text], result);
+            c(results);
         }
     });
 }

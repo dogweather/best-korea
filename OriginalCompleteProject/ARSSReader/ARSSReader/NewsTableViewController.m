@@ -62,7 +62,7 @@
     RSSLoader* rssLoader = [[RSSLoader alloc] init];
     
     [rssLoader fetchRssWithURL:feedURL
-                complete:^(NSString *title, NSArray *results) {
+                complete:^(NSArray *results) {
 
                     // completed fetching the RSS
                     dispatch_async(dispatch_get_main_queue(), ^{

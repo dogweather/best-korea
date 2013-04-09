@@ -22,6 +22,9 @@
     [super viewDidAppear:animated];
     NSURLRequest* articleRequest;
     RSSItem* item = (RSSItem*)self.detailItem;
+    // TODO: Refactor this into an app-specific strategy
+    //       class. I.e., not all apps will want uppercase
+    //       titles in alternate reality.
     if ([App inAlternateReality])
         self.title = [item.title uppercaseString];
     else

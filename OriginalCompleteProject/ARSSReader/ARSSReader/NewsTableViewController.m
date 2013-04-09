@@ -17,7 +17,6 @@
 {
     NSArray *_objects;
     NSURL* feedURL;
-    UIRefreshControl* refreshControl;
 }
 @end
 
@@ -28,19 +27,18 @@
 {
     [super viewDidLoad];
     
-    // Refresh control
-    refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self
-                       action:@selector(refreshInvoked:forState:)
-             forControlEvents:UIControlEventValueChanged];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
+    // The "refresh control"
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(refreshInvoked:forState:)
+                  forControlEvents:UIControlEventValueChanged];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
-    self.refreshControl = refreshControl;
 
     // News feed
     self.icon_index = 1;
     feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
-    [self refreshFeed];
+    [self refreshFeedwithActivityDisplay:YES];
 }
 
 
@@ -52,13 +50,14 @@
 
 -(void) refreshInvoked:(id)sender forState:(UIControlState)state
 {
-    [self refreshFeed];
+    [self refreshFeedwithActivityDisplay:NO];
 }
 
 
--(void)refreshFeed
+-(void)refreshFeedwithActivityDisplay:(BOOL)useHud
 {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    if (useHud)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     RSSLoader* rssLoader = [[RSSLoader alloc] init];
     
     [rssLoader fetchRssWithURL:feedURL
@@ -70,8 +69,9 @@
                         [self.tableView reloadData];
                         
                         // Stop the refresh control
-                        [refreshControl endRefreshing];
-                        [MBProgressHUD hideHUDForView:self.view animated:YES];
+                        [self.refreshControl endRefreshing];
+                        if (useHud)
+                            [MBProgressHUD hideHUDForView:self.view animated:YES];
                     });
                 }];
 }
@@ -165,7 +165,7 @@
     [self.tableView reloadData];
     
     // Read from the new datasource.
-    [self refreshFeed];
+    [self refreshFeedwithActivityDisplay:NO];
 }
 
 

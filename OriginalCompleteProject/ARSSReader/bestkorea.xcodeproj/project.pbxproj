@@ -309,12 +309,12 @@
 			name = "Tab Bar";
 			sourceTree = "<group>";
 		};
-		54A39FF916FFFC5300E8B908 /* HTMLParsing */ = {
+		54A39FF916FFFC5300E8B908 /* HTMLParser */ = {
 			isa = PBXGroup;
 			children = (
 				54A39FFC16FFFD9C00E8B908 /* hpple */,
 			);
-			name = HTMLParsing;
+			name = HTMLParser;
 			sourceTree = "<group>";
 		};
 		54A39FFC16FFFD9C00E8B908 /* hpple */ = {
@@ -386,7 +386,7 @@
 			path = RaptureXML;
 			sourceTree = "<group>";
 		};
-		9C1806D5163E875300A02D94 /* ReaderClasses */ = {
+		9C1806D5163E875300A02D94 /* RSSParser */ = {
 			isa = PBXGroup;
 			children = (
 				9C1806D6163E879900A02D94 /* RSSItem.h */,
@@ -396,7 +396,7 @@
 				9C1806CF163E86CF00A02D94 /* TableHeaderView.h */,
 				9C1806D0163E86CF00A02D94 /* TableHeaderView.m */,
 			);
-			name = ReaderClasses;
+			name = RSSParser;
 			sourceTree = "<group>";
 		};
 		9C947B8C163E835500842C2F = {
@@ -404,9 +404,9 @@
 			children = (
 				548C8BB61703FBF80099166D /* libsqlite3.dylib */,
 				540858F416FAC786003B9BB4 /* App Code */,
+				9C1806D5163E875300A02D94 /* RSSParser */,
+				54A39FF916FFFC5300E8B908 /* HTMLParser */,
 				9C1806BE163E849B00A02D94 /* Assets */,
-				9C1806D5163E875300A02D94 /* ReaderClasses */,
-				54A39FF916FFFC5300E8B908 /* HTMLParsing */,
 				9C947B9A163E835500842C2F /* Frameworks */,
 				9C947B98163E835500842C2F /* Products */,
 				47A4A39FE7B74C0DB10DB12A /* Pods.xcconfig */,

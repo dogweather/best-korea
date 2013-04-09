@@ -8,6 +8,7 @@
 
 #import "VideoDetailViewController.h"
 #import "AppDelegate.h"
+#import "App.h"
 
 @interface VideoDetailViewController () <UIWebViewDelegate>
 {
@@ -21,8 +22,12 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
 
-    // Set the share button to correct state
+    // Set up the nav bar.
     self.shareButton.enabled = (self.shareUrl != nil);
+    if ([App inAlternateReality])
+        self.title = [self.videoTitle uppercaseString];
+    else
+        self.title = self.videoTitle;
     
     // Load the video page if necessary
     if (self.url != self.prevUrl) {

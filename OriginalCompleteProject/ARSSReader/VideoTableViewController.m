@@ -70,6 +70,7 @@
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
         detailViewController.url = video.url;
         detailViewController.shareUrl = video.shareUrl;
+        detailViewController.videoTitle = video.title;
     }
 }
 

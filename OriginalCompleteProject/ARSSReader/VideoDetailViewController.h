@@ -14,6 +14,7 @@
 @property NSString *url;
 @property NSString *prevUrl;
 @property NSString *shareUrl;
+@property NSString *videoTitle;
 
 - (IBAction)startShare:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;

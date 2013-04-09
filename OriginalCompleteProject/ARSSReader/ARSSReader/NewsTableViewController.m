@@ -36,7 +36,6 @@
                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
 
     // News feed
-    self.icon_index = 1;
     feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     [self refreshFeedWithActivityDisplay:YES];
 }
@@ -112,12 +111,9 @@
     // * Put in a placeholder (Alternate Reality)
     if (url == nil) {
         if ([App inAlternateReality]) {
-            NSString *placeholder_icon = [NSString stringWithFormat:@"square-placeholder-%d.jpg", self.icon_index];
-            cell.imageView.image = [UIImage imageNamed:placeholder_icon];
-            self.icon_index++;
-            if (self.icon_index > ALTERNATE_PLACEHOLDER_ICONS) {
-                self.icon_index = 1;
-            }
+            int imageNumber      = (([rss hash] / 100) % ALTERNATE_PLACEHOLDER_ICONS) + 1;
+            NSString *imageName  = [NSString stringWithFormat:@"square-placeholder-%d.jpg", imageNumber];
+            cell.imageView.image = [UIImage imageNamed:imageName];
         } else {
             cell.imageView.image = nil;
         }

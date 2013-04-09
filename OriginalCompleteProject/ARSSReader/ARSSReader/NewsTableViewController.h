@@ -9,8 +9,6 @@
 
 @interface NewsTableViewController : UITableViewController <RealityUpdateListener>
 
-@property int icon_index;
-
 - (IBAction)togglePartyMode:(id)sender;
 //@property MBProgressHUD *hud;
 

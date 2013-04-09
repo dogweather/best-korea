@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ARSSReader/AppDelegate.h"
-         timestampString = "386190939.698208"
+         timestampString = "387191419.453814"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "31"
-         endingLineNumber = "31"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
          landmarkName = "@interface AppDelegate"
          landmarkType = "2">
       </FileBreakpoint>

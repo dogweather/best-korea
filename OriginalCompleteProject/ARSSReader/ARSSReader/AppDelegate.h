@@ -16,6 +16,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property int party_placeholders;
 
 - (void) setLookAndFeel;
 - (void) setMyTitle: (UINavigationItem*)navItem andFont: (UIViewController*)controller;

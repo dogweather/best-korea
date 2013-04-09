@@ -21,7 +21,6 @@
 #define ALTERNATE_NEWS_FEED     @"http://bestkoreaapp.com/media/news/workers.org.rss"
 #define ALTERNATE_NAVBAR_FONT   @"Futura-CondensedExtraBold"
 
-#define ALTERNATE_PLACEHOLDER_ICONS 12
 #define MARKETING_DN            @"BestKoreaApp.com"
 
 

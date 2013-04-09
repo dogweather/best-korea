@@ -38,6 +38,13 @@
     // The Seen DB
     [self prepareTheSeenDB];
     
+    // Determine the number of placeholder images
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSPredicate *fltr = [NSPredicate predicateWithFormat:@"self MATCHES 'square-placeholder.*'"];
+    NSArray *fileList = [fm contentsOfDirectoryAtPath:[[NSBundle mainBundle] bundlePath] error:nil];
+    self.party_placeholders = [[fileList filteredArrayUsingPredicate:fltr] count];
+    NSLog(@"Found %d party-mode placeholder images", self.party_placeholders);
+    
     return YES;
 }
 

@@ -1,8 +1,6 @@
 //
 //  main.m
-//  ARSSReader
-//
-//  Created by Marin Todorov on 29/10/2012.
+//  News Junkie
 //
 
 #import <UIKit/UIKit.h>

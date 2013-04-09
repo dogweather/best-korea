@@ -101,7 +101,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
+//    cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
 
     
     RSSItem *rss = _objects[indexPath.row];
@@ -172,7 +172,7 @@
     [self.tableView reloadData];
     
     // Read from the new datasource.
-    [self refreshFeedWithActivityDisplay:NO];
+    [self refreshFeedWithActivityDisplay:YES];
 }
 
 

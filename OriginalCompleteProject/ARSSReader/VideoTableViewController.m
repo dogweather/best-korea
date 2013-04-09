@@ -17,6 +17,9 @@
 @interface VideoTableViewController ()
     @property NSMutableArray    *videos;
     @property UIRefreshControl  *refreshControl;
+    @property UIView  *normalCellBg;
+    @property UIView  *alternateCellBg;
+
 @end
 
 
@@ -25,6 +28,13 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    
+    _alternateCellBg = [[UIView alloc] init];
+    _alternateCellBg.backgroundColor = [UIColor colorWithRed:(137/255.0) green:(23/255.0) blue:(15/255.0) alpha:1];
+    
+    _normalCellBg = [[UIView alloc] init];
+    _normalCellBg.backgroundColor = [UIColor colorWithRed:(17/255.0) green:(118/255.0) blue:(223/255.0) alpha:1];
+
 
     // Set up the refresh control
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -95,6 +105,8 @@
     cell.textLabel.textColor  = [[App appDelegate] wasSeen:video.url] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text= video.title;
     cell.detailTextLabel.text = video.source;
+//    cell.selectedBackgroundView = [App inAlternateReality] ? _alternateCellBg : _normalCellBg;
+
    
     if (video.image == nil) {
         NSURL *imageURL = [NSURL URLWithString:video.imageUrl];

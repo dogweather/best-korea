@@ -26,9 +26,11 @@
         if (! rss.isValid) {
             c(@[]);
         } else {
-            NSArray *items     = [[rss child:@"channel"] children:@"item"];
-          
-            NSMutableArray* results = [NSMutableArray arrayWithCapacity:items.count];
+            NSSortDescriptor *valueDescriptor = [[NSSortDescriptor alloc] initWithKey:@"pubDate" ascending:NO];
+            NSArray * descriptors = [NSArray arrayWithObject:valueDescriptor];
+            NSMutableArray* results = [NSMutableArray arrayWithCapacity:10];
+            
+            NSArray *items          = [[rss child:@"channel"] children:@"item"];
             
             for (RXMLElement *e in items) {
                 // iterate over the articles
@@ -54,7 +56,7 @@
                 
                 [results addObject: item];
             }
-            c(results);
+            c([results sortedArrayUsingDescriptors:descriptors]);
         }
     });
 }

@@ -12,6 +12,6 @@
 @property int icon_index;
 
 - (IBAction)togglePartyMode:(id)sender;
-@property MBProgressHUD *hud;
+//@property MBProgressHUD *hud;
 
 @end

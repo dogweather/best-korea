@@ -34,7 +34,7 @@
         NSURLRequest * videoRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: self.video.url]];
         [webView loadRequest: videoRequest];
         self.prevUrl = self.video.url;
-    }    
+    }
 }
 
 
@@ -52,5 +52,29 @@
                                       applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:^{}];
 }
+
+
+//
+// TODO: These are not working, but I'm not sure why.
+//
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    webView.delegate = nil;
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+}
+
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+}
+
 
 @end

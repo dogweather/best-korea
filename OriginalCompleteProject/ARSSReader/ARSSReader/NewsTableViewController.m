@@ -16,7 +16,7 @@
 @interface NewsTableViewController ()
 {
     NSArray *_objects;
-    NSURL* feedURL;
+    NSURL   *feedURL;
 }
 @end
 
@@ -38,7 +38,7 @@
     // News feed
     self.icon_index = 1;
     feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
-    [self refreshFeedwithActivityDisplay:YES];
+    [self refreshFeedWithActivityDisplay:YES];
 }
 
 
@@ -50,11 +50,11 @@
 
 -(void) refreshInvoked:(id)sender forState:(UIControlState)state
 {
-    [self refreshFeedwithActivityDisplay:NO];
+    [self refreshFeedWithActivityDisplay:NO];
 }
 
 
--(void)refreshFeedwithActivityDisplay:(BOOL)useHud
+-(void)refreshFeedWithActivityDisplay:(BOOL)useHud
 {
     if (useHud)
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -165,7 +165,7 @@
     [self.tableView reloadData];
     
     // Read from the new datasource.
-    [self refreshFeedwithActivityDisplay:NO];
+    [self refreshFeedWithActivityDisplay:NO];
 }
 
 

@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 #import "Video.h"
+#import "MBProgressHUD.h"
+
 
 @interface VideoDetailViewController : UIViewController
 
-@property NSString *prevUrl;
-@property Video    *video;
+@property NSString      *prevUrl;
+@property Video         *video;
 
 - (IBAction)startShare:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;

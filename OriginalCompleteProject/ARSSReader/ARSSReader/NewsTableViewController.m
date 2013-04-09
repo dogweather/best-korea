@@ -107,7 +107,7 @@
     RSSItem *rss = _objects[indexPath.row];
     cell.textLabel.textColor  = [[App appDelegate] wasSeen:[rss.resolvedUrl absoluteString]] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text       = rss.title;
-    cell.detailTextLabel.text = rss.publication;
+    cell.detailTextLabel.text = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];
     if (rss.image != nil) {
         cell.imageView.image = rss.image;
         return cell;

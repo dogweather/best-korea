@@ -21,6 +21,44 @@
 }
 
 
+-(NSString *)shortRelativeTime {
+    return [self formatShortRelativeTime:self.pubDate];
+}
+
+
+- (NSString*)formatShortRelativeTime:(NSDate *)pubDate {
+    NSTimeInterval elapsed = abs([pubDate timeIntervalSinceNow]);
+    
+    int TT_MINUTE = 60;
+    int TT_HOUR   = 60 * TT_MINUTE;
+    int TT_DAY    = 24 * TT_HOUR;
+    int TT_WEEK   = 7 * TT_DAY;
+    
+    if (elapsed < TT_MINUTE) {
+        return @"<1m";
+        
+    } else if (elapsed < TT_HOUR) {
+        int mins = (int)(elapsed / TT_MINUTE);
+        return [NSString stringWithFormat:@"%dm", mins];
+        
+    } else if (elapsed < TT_DAY) {
+        int hours = (int)((elapsed + TT_HOUR / 2) / TT_HOUR);
+        return [NSString stringWithFormat:@"%dh", hours];
+        
+    } else if (elapsed < TT_WEEK) {
+        int day = (int)((elapsed + TT_DAY / 2) / TT_DAY);
+        return [NSString stringWithFormat:@"%dd", day];
+        
+    } else {
+        NSDateFormatter * formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+        return [NSString stringWithFormat:@"on %@", [formatter stringFromDate:pubDate]];
+    }
+}
+
+
+
+
 -(NSAttributedString*)cellMessage
 {
     if (_cellMessage != nil) return _cellMessage;

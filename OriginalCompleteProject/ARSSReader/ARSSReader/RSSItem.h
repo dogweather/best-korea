@@ -14,8 +14,10 @@
 @property (strong, nonatomic) NSURL*    link;
 @property (strong, nonatomic) NSString* imageUrl;
 @property (strong, nonatomic) UIImage*  image;
+@property NSDate *pubDate;
 @property (strong, nonatomic) NSAttributedString* cellMessage;
 
 -(NSURL *) resolvedUrl;
+-(NSString *) shortRelativeTime;
 
 @end

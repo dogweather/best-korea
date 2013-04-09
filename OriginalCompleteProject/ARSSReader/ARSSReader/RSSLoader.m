@@ -34,6 +34,8 @@
                 // iterate over the articles
                 RSSItem* item  = [[RSSItem alloc] init];
                 item.link      = [NSURL URLWithString: [[e child:@"link"] text]];
+                item.pubDate   = [RSSLoader dateFromRFC822:[[e child:@"pubDate"] text]];
+
                 NSString *guid = [[e child:@"guid"] text];
                 if ([guid rangeOfString:@"google.com"].location != NSNotFound) {
                     // Google format
@@ -74,6 +76,23 @@
     }
     
     return result;
+}
+
+
++ (NSDateFormatter *)rfc822Formatter {
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+    	formatter = [[NSDateFormatter alloc] init];
+    	NSLocale *enUS = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    	[formatter setLocale:enUS];
+    	[formatter setDateFormat:@"EEE, dd MMM yyyy HH:mm:ss z"];
+    }
+    return formatter;
+}
+
++ (NSDate *)dateFromRFC822:(NSString *)date {
+    NSDateFormatter *formatter = [self rfc822Formatter];
+    return [formatter dateFromString:date];
 }
 
 @end

@@ -17,6 +17,8 @@
 {
     NSArray *_objects;
     NSURL   *feedURL;
+    UIView  *normalCellBg;
+    UIView  *alternateCellBg;
 }
 @end
 
@@ -38,6 +40,12 @@
     // News feed
     feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     [self refreshFeedWithActivityDisplay:YES];
+    
+    alternateCellBg = [[UIView alloc] init];
+    alternateCellBg.backgroundColor = [UIColor colorWithRed:(137/255.0) green:(23/255.0) blue:(15/255.0) alpha:1];
+    
+    normalCellBg = [[UIView alloc] init];
+    normalCellBg.backgroundColor = [UIColor colorWithRed:(17/255.0) green:(118/255.0) blue:(223/255.0) alpha:1];
 }
 
 
@@ -93,6 +101,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
+
     
     RSSItem *rss = _objects[indexPath.row];
     cell.textLabel.textColor  = [[App appDelegate] wasSeen:[rss.resolvedUrl absoluteString]] ? [UIColor grayColor] : [UIColor blackColor];

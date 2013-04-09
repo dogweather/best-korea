@@ -97,7 +97,8 @@
     cell.detailTextLabel.text = video.source;
    
     if (video.image == nil) {
-        NSURL *imageURL         = [NSURL URLWithString:video.imageUrl];
+        NSURL *imageURL = [NSURL URLWithString:video.imageUrl];
+        cell.imageView.image = [UIImage imageNamed:@"white-video.jpg"];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
             NSData *imageData = [NSData dataWithContentsOfURL:imageURL];

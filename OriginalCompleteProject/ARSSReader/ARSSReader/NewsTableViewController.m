@@ -106,7 +106,7 @@
     
     
     NSString *url = rss.imageUrl;
-    
+
     // No image url in the RSS? Then either
     // * Leave blank (Reality), or
     // * Put in a placeholder (Alternate Reality)
@@ -128,6 +128,7 @@
     // It wasn't cached, and we do have a url.
     NSLog(@"Loading an image: %@", url);
     NSURL *imageURL = [NSURL URLWithString:url];
+    cell.imageView.image = [UIImage imageNamed:@"white-square.jpg"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];

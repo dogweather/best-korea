@@ -68,9 +68,7 @@
         video = self.videos[indexPath.row];
         [[App appDelegate] markAsSeen:video.url];
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
-        detailViewController.url = video.url;
-        detailViewController.shareUrl = video.shareUrl;
-        detailViewController.videoTitle = video.title;
+        detailViewController.video = video;
     }
 }
 

@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "Video.h"
 
 @interface VideoDetailViewController : UIViewController
 
-@property NSString *url;
 @property NSString *prevUrl;
-@property NSString *shareUrl;
-@property NSString *videoTitle;
+@property Video    *video;
 
 - (IBAction)startShare:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shareButton;

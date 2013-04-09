@@ -23,29 +23,29 @@
     [super viewDidLoad];
 
     // Set up the nav bar.
-    self.shareButton.enabled = (self.shareUrl != nil);
+    self.shareButton.enabled = (self.video.shareUrl != nil);
     if ([App inAlternateReality])
-        self.title = [self.videoTitle uppercaseString];
+        self.title = [self.video.title uppercaseString];
     else
-        self.title = self.videoTitle;
+        self.title = self.video.title;
     
     // Load the video page if necessary
-    if (self.url != self.prevUrl) {
-        NSURLRequest * videoRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: self.url]];
+    if (self.video.url != self.prevUrl) {
+        NSURLRequest * videoRequest = [NSURLRequest requestWithURL: [NSURL URLWithString: self.video.url]];
         [webView loadRequest: videoRequest];
-        self.prevUrl = self.url;
+        self.prevUrl = self.video.url;
     }    
 }
 
 
 - (IBAction)startShare:(id)sender {
-    if (self.shareUrl == nil) {
+    if (self.video.shareUrl == nil) {
         NSLog(@"Not sharing: no share url.");
         return;
     }
     
     NSString *marketing     = [@"Via " stringByAppendingString:MARKETING_DN];
-    NSArray* dataToShare    = @[self.shareUrl, marketing];
+    NSArray* dataToShare    = @[self.video.shareUrl, marketing];
     
     UIActivityViewController* activityViewController =
     [[UIActivityViewController alloc] initWithActivityItems:dataToShare

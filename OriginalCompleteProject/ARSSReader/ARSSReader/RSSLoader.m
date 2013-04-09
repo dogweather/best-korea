@@ -16,6 +16,9 @@
 
 @implementation RSSLoader
 
+//
+// Retrieve the RSS feed and parse into RSSItem objects.
+//
 -(void)fetchRssWithURL:(NSURL*)url complete:(RSSLoaderCompleteBlock)c
 {
     dispatch_async(kBgQueue, ^{
@@ -28,14 +31,25 @@
             NSMutableArray* results = [NSMutableArray arrayWithCapacity:items.count];
             
             for (RXMLElement *e in items) {
-                //iterate over the articles
-                RSSItem* item = [[RSSItem alloc] init];
-                NSString *rawTitle = [[e child:@"title"] text];
-
-                item.title       = [[rawTitle componentsSeparatedByString:@" - "] objectAtIndex:0];
-                item.link        = [NSURL URLWithString: [[e child:@"link"] text]];
-                item.publication = [[rawTitle componentsSeparatedByString:@" - "] lastObject];
-                item.imageUrl    = [self imageUrlFromGoogleDescription:[[e child:@"description"] text]];
+                // iterate over the articles
+                RSSItem* item  = [[RSSItem alloc] init];
+                item.link      = [NSURL URLWithString: [[e child:@"link"] text]];
+                NSString *guid = [[e child:@"guid"] text];
+                if ([guid rangeOfString:@"google.com"].location != NSNotFound) {
+                    // Google format
+                    NSString *rawTitle = [[e child:@"title"] text];
+                    item.title       = [[rawTitle componentsSeparatedByString:@" - "] objectAtIndex:0];
+                    item.publication = [[rawTitle componentsSeparatedByString:@" - "] lastObject];
+                    item.imageUrl    = [self imageUrlFromGoogleDescription:[[e child:@"description"] text]];
+                } else {
+                    // Other "standard" rss
+                    // Use the Channel Title. This will have to change when the
+                    // RSS contains Items from multiple channels.
+                    item.title       = [[e child:@"title"] text];
+                    item.publication = [[[rss child:@"channel"] child:@"title"] text];
+                    item.publication = [[item.publication componentsSeparatedByString:@" » "] objectAtIndex:0];
+                }
+                
                 [results addObject: item];
             }
             c(results);

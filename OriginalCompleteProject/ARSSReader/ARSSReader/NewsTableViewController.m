@@ -19,7 +19,7 @@
     NSURL   *feedURL;
     UIView  *normalCellBg;
     UIView  *alternateCellBg;
-    NSArray *sections;
+    NSMutableArray *sections;
 }
 @end
 
@@ -90,20 +90,29 @@
 
 -(void)createSectionsWith:(NSArray *)rssItems {
     // The table sections data structure
-    sections = @[
+    sections = [NSMutableArray arrayWithCapacity:3];
+    NSArray *potentialSections =
+                @[
                  [NSMutableDictionary dictionaryWithObjects:@[@"Today",     [NSMutableArray arrayWithCapacity:30]] forKeys:@[@"title", @"items"]],
                  [NSMutableDictionary dictionaryWithObjects:@[@"Yesterday", [NSMutableArray arrayWithCapacity:30]] forKeys:@[@"title", @"items"]],
                  [NSMutableDictionary dictionaryWithObjects:@[@"Earlier",   [NSMutableArray arrayWithCapacity:30]] forKeys:@[@"title", @"items"]]
                  ];
     
+    // Add pointers to the rss items
     for(RSSItem *i in rssItems) {
         if ([i isFromToday]) {
-            [[[sections objectAtIndex:0] objectForKey:@"items"] addObject:i];
+            [[[potentialSections objectAtIndex:0] objectForKey:@"items"] addObject:i];
         } else if ([i isFromYesterday]) {
-            [[[sections objectAtIndex:1] objectForKey:@"items"] addObject:i];
+            [[[potentialSections objectAtIndex:1] objectForKey:@"items"] addObject:i];
         } else {
-            [[[sections objectAtIndex:2] objectForKey:@"items"] addObject:i];
+            [[[potentialSections objectAtIndex:2] objectForKey:@"items"] addObject:i];
         }
+    }
+    
+    // Add non-empty sections
+    for (NSMutableDictionary *d in potentialSections) {
+        if ([[d objectForKey:@"items"] count] > 0)
+            [sections addObject:d];
     }
 }
 

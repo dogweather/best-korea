@@ -134,7 +134,7 @@
     if ([App inAlternateReality]) {
         [headerView setBackgroundColor:alternateCellBg.backgroundColor];
     } else {
-        [headerView setBackgroundColor:[UIColor grayColor]];
+        [headerView setBackgroundColor:[UIColor darkGrayColor]];
     }
     headerView.opaque = NO;
     headerView.alpha = 0.9f;
@@ -143,7 +143,7 @@
     label.text = [tableView.dataSource tableView:tableView titleForHeaderInSection:section];
     label.textColor             = [UIColor whiteColor];
     label.backgroundColor       = [UIColor clearColor];
-    label.shadowColor           = [UIColor darkGrayColor];
+    label.shadowColor           = [UIColor blackColor];
     if ([App inAlternateReality]) {
         label.font = [UIFont fontWithName:ALTERNATE_NAVBAR_FONT size:17.0f];
     } else {

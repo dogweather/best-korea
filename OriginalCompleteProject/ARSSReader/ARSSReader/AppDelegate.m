@@ -94,9 +94,9 @@
     [self setTitleOf:navItem];
     
     if ([App inAlternateReality])
-        navbarFont = [UIFont fontWithName:ALTERNATE_NAVBAR_FONT size:18.0f];
+        navbarFont = [UIFont fontWithName:ALTERNATE_NAVBAR_FONT size:19.0f];
     else
-        navbarFont = [UIFont fontWithName:REALITY_NAVBAR_FONT size:18.0f];
+        navbarFont = [UIFont fontWithName:REALITY_NAVBAR_FONT size:19.0f];
     [controller.navigationController.navigationBar setTitleTextAttributes: @{UITextAttributeFont: navbarFont}];
     [controller.navigationController.navigationBar setNeedsDisplay];
 }

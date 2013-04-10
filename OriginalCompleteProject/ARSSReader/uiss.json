@@ -6,9 +6,6 @@
     
     "UINavigationBar": {
         "tintColor": "black",
-        "titleTextAttributes": {
-            "font":["Optima-ExtraBlack", 19]
-        }
     },
     
     "UITabBar": {

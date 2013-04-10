@@ -7,9 +7,6 @@
     
     "UINavigationBar": {
         "tintColor": "$communistRed",
-        "titleTextAttributes": {
-            "font":["Futura-CondensedExtraBold", 19]
-        }
     },
     
     "UITabBar": {

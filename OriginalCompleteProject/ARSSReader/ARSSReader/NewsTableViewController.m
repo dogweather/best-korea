@@ -29,14 +29,6 @@
 {
     [super viewDidLoad];
     
-    // The "refresh control"
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self
-                            action:@selector(refreshInvoked:forState:)
-                  forControlEvents:UIControlEventValueChanged];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
-                                                                     attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
-
     // News feed
     feedURL = [NSURL URLWithString:[App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     [self refreshFeedWithActivityDisplay:YES];
@@ -79,6 +71,16 @@
                         [self.refreshControl endRefreshing];
                         if (useHud)
                             [MBProgressHUD hideHUDForView:self.view animated:YES];
+                        
+                        // Add the "refresh control" if needed
+                        if (self.refreshControl == nil) {
+                            self.refreshControl = [[UIRefreshControl alloc] init];
+                            [self.refreshControl addTarget:self
+                                                    action:@selector(refreshInvoked:forState:)
+                                          forControlEvents:UIControlEventValueChanged];
+                            self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
+                                                                                                  attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
+                        }
                     });
                 }];
 }

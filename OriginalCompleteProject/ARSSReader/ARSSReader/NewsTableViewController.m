@@ -147,7 +147,7 @@
     if ([App inAlternateReality]) {
         label.font = [UIFont fontWithName:ALTERNATE_NAVBAR_FONT size:17.0f];
     } else {
-        label.font = [UIFont boldSystemFontOfSize:18.5f];
+        label.font = [UIFont fontWithName:REALITY_NAVBAR_FONT size:17.0f];
     }
     label.opaque                = YES;
     label.shadowOffset          = CGSizeMake(0,1);

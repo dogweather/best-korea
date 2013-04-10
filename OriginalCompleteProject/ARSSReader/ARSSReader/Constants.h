@@ -14,7 +14,7 @@
 #define REALITY                 @"Party-Pooper Mode"
 #define REALITY_APP_NAME        @"Best Korea"
 #define REALITY_NEWS_FEED       @"http://bestkoreaapp.com/media/news/google.com.rss"
-#define REALITY_NAVBAR_FONT     @"Optima-ExtraBlack"
+#define REALITY_NAVBAR_FONT     @"Georgia-Bold"
 
 #define ALTERNATE_REALITY       @"Party Mode"
 #define ALTERNATE_APP_NAME      @"BEST KOREA"

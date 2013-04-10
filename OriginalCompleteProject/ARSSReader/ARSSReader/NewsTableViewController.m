@@ -111,6 +111,26 @@
 
 #pragma mark - Table View
 
+// Commented this out because although it works, it needs to be changed
+// to use an image. This is how the default headers are made.
+
+//- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+//{
+//    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
+//    if ([App inAlternateReality])
+//        [headerView setBackgroundColor:alternateCellBg.backgroundColor]];
+//    else
+//        [headerView setBackgroundColor:normalCellBg.backgroundColor];
+//    
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 3, tableView.bounds.size.width - 10, 18)];
+//    label.text = [tableView.dataSource tableView:tableView titleForHeaderInSection:section];
+//    label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.75];
+//    label.backgroundColor = [UIColor clearColor];
+//    [headerView addSubview:label];
+//    return headerView;
+//}
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return sections.count;
@@ -141,7 +161,6 @@
         cell.imageView.image = rss.image;
         return cell;
     }
-    
     
     NSString *url = rss.imageUrl;
 

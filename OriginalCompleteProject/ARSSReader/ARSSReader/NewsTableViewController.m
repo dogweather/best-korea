@@ -103,7 +103,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-//    cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
+    cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
 
     
     RSSItem *rss = _objects[indexPath.row];
@@ -158,10 +158,17 @@
         RSSItem *rss = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:rss];
 
-        // This item has now been seen.
+        // This item has now been seen. This needs a delay because otherwise
+        // it interferes with the custom cell selection background.
         [[App appDelegate] markAsSeen:[rss.resolvedUrl absoluteString]];
-        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
+        [self performSelector:@selector(reloadCurrentRow) withObject:nil afterDelay:1.0];
     }
+}
+
+
+-(void)reloadCurrentRow {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
 }
 
 

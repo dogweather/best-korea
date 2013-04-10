@@ -34,7 +34,6 @@
         [dateFormat setDateStyle:NSDateFormatterLongStyle];
         NSString *date = [@"<li>" stringByAppendingString:[dateFormat stringFromDate:[NSDate date]]];
         
-        
         NSString *htmlFile      = [[NSBundle mainBundle] pathForResource:@"about" ofType:@"html"];
         NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
 

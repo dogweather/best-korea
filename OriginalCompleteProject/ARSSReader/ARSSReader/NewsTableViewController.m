@@ -66,6 +66,14 @@
                     // completed fetching the RSS
                     dispatch_async(dispatch_get_main_queue(), ^{
                         _objects = results;
+                        if ([_objects count] == 0) {
+                            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Network is unavailable"
+                                                                              message:@"Cannot connect to the Internet to retrieve news items."
+                                                                             delegate:nil
+                                                                    cancelButtonTitle:@"OK"
+                                                                    otherButtonTitles:nil];
+                            [message show];
+                        }
                         [self createSectionsWith:_objects];
                         [self.tableView reloadData];
                         

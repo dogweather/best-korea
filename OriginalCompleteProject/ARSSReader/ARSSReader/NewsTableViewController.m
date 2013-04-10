@@ -121,7 +121,7 @@
     // * Put in a placeholder (Alternate Reality)
     if (url == nil) {
         if ([App inAlternateReality]) {
-            int imageNumber      = (([rss hash] / 10) % [App appDelegate].party_placeholders) + 1;
+            int imageNumber      = (([rss.link hash] / 10) % [App appDelegate].party_placeholders) + 1;
             NSString *imageName  = [NSString stringWithFormat:@"square-placeholder-%d.jpg", imageNumber];
             cell.imageView.image = [UIImage imageNamed:imageName];
         } else {

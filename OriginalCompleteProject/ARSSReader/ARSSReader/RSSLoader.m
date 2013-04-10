@@ -47,11 +47,8 @@
                     item.imageUrl    = [self imageUrlFromGoogleDescription:[[e child:@"description"] text]];
                 } else {
                     // Other "standard" rss
-                    // Use the Channel Title. This will have to change when the
-                    // RSS contains Items from multiple channels.
                     item.title       = [[e child:@"title"] text];
-                    item.publication = [[[rss child:@"channel"] child:@"title"] text];
-                    item.publication = [[item.publication componentsSeparatedByString:@" » "] objectAtIndex:0];
+                    item.publication = [[e child:@"srsly-source"] text];
                 }
                 
                 [results addObject: item];

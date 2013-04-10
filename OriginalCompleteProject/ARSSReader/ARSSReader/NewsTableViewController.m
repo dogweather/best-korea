@@ -210,7 +210,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        RSSItem *rss = _objects[indexPath.row];
+        RSSItem *rss = [[[sections objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:rss];
 
         // This item has now been seen. This needs a delay because otherwise

@@ -19,6 +19,7 @@
     NSURL   *feedURL;
     UIView  *normalCellBg;
     UIView  *alternateCellBg;
+    NSArray *sections;
 }
 @end
 
@@ -65,6 +66,7 @@
                     // completed fetching the RSS
                     dispatch_async(dispatch_get_main_queue(), ^{
                         _objects = results;
+                        [self createSectionsWith:_objects];
                         [self.tableView reloadData];
                         
                         // Stop the refresh control
@@ -86,17 +88,43 @@
 }
 
 
+-(void)createSectionsWith:(NSArray *)rssItems {
+    // The table sections data structure
+    sections = @[
+                 [NSMutableDictionary dictionaryWithObjects:@[@"Today",     [NSMutableArray arrayWithCapacity:30]] forKeys:@[@"title", @"items"]],
+                 [NSMutableDictionary dictionaryWithObjects:@[@"Yesterday", [NSMutableArray arrayWithCapacity:30]] forKeys:@[@"title", @"items"]],
+                 [NSMutableDictionary dictionaryWithObjects:@[@"Earlier",   [NSMutableArray arrayWithCapacity:30]] forKeys:@[@"title", @"items"]]
+                 ];
+    
+    for(RSSItem *i in rssItems) {
+        if ([i isFromToday]) {
+            [[[sections objectAtIndex:0] objectForKey:@"items"] addObject:i];
+        } else if ([i isFromYesterday]) {
+            [[[sections objectAtIndex:1] objectForKey:@"items"] addObject:i];
+        } else {
+            [[[sections objectAtIndex:2] objectForKey:@"items"] addObject:i];
+        }
+    }
+}
+
+
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return sections.count;
 }
+
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [[sections objectAtIndex:section] objectForKey:@"title"];
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [[[sections objectAtIndex:section] objectForKey:@"items"] count];
 }
 
 
@@ -105,8 +133,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
 
-    
-    RSSItem *rss = _objects[indexPath.row];
+    RSSItem *rss = [[[sections objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row];
     cell.textLabel.textColor  = [[App appDelegate] wasSeen:[rss.resolvedUrl absoluteString]] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text       = rss.title;
     cell.detailTextLabel.text = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];

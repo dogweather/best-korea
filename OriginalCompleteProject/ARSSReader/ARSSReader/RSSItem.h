@@ -19,5 +19,7 @@
 
 -(NSURL *) resolvedUrl;
 -(NSString *) shortRelativeTime;
+-(BOOL) isFromToday;
+-(BOOL) isFromYesterday;
 
 @end

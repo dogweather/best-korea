@@ -9,9 +9,14 @@
 #import "RSSItem.h"
 #import "GTMNSString+HTML.h"
 
+@interface RSSItem()
+{
+    NSDateFormatter *dayComparisonFormatter;
+}
+@end
+
+
 @implementation RSSItem
-
-
 
 - (NSURL *)resolvedUrl {
     NSString * proxyUrl = [self.link.absoluteString
@@ -54,6 +59,30 @@
         [formatter setDateStyle:NSDateFormatterMediumStyle];
         return [NSString stringWithFormat:@"on %@", [formatter stringFromDate:pubDate]];
     }
+}
+
+
+-(BOOL)isFromToday {
+    return [self isFromSameDayAs:[NSDate date]];
+}
+
+
+-(BOOL)isFromYesterday {
+    NSDate *yesterday = [[NSDate date] dateByAddingTimeInterval: -86400.0];
+    //NSDate *thisWeek  = [today dateByAddingTimeInterval: -604800.0];
+    //NSDate *lastWeek  = [today dateByAddingTimeInterval: -1209600.0];
+
+    return [self isFromSameDayAs:yesterday];
+}
+
+
+-(BOOL)isFromSameDayAs:(NSDate *)date {
+    if (dayComparisonFormatter == nil ) {
+        dayComparisonFormatter = [[NSDateFormatter alloc] init];
+        [dayComparisonFormatter setDateFormat:@"yyyy-MM-dd"];
+    }
+    
+    return [[dayComparisonFormatter stringFromDate:self.pubDate] isEqualToString:[dayComparisonFormatter stringFromDate:date]];
 }
 
 

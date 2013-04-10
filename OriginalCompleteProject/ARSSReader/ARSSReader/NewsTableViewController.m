@@ -123,19 +123,24 @@
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 30)];
-    if ([App inAlternateReality])
+    if ([App inAlternateReality]) {
         [headerView setBackgroundColor:alternateCellBg.backgroundColor];
-    else
+    } else {
         [headerView setBackgroundColor:[UIColor grayColor]];
+    }
     headerView.opaque = NO;
-    headerView.alpha = 0.9;
+    headerView.alpha = 0.9f;
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, tableView.bounds.size.width - 10, 22)];
     label.text = [tableView.dataSource tableView:tableView titleForHeaderInSection:section];
     label.textColor             = [UIColor whiteColor];
     label.backgroundColor       = [UIColor clearColor];
     label.shadowColor           = [UIColor darkGrayColor];
-    label.font                  = [UIFont boldSystemFontOfSize:18.5f];
+    if ([App inAlternateReality]) {
+        label.font = [UIFont fontWithName:ALTERNATE_NAVBAR_FONT size:17.0f];
+    } else {
+        label.font = [UIFont boldSystemFontOfSize:18.5f];
+    }
     label.opaque                = YES;
     label.shadowOffset          = CGSizeMake(0,1);
     label.layer.masksToBounds   = NO;
@@ -151,7 +156,10 @@
 
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [[sections objectAtIndex:section] objectForKey:@"title"];
+    if ([App inAlternateReality])
+        return [[[sections objectAtIndex:section] objectForKey:@"title"] uppercaseString];
+    else
+        return [[sections objectAtIndex:section] objectForKey:@"title"];
 }
 
 

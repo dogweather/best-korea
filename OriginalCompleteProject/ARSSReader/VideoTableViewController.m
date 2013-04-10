@@ -19,8 +19,9 @@
     @property UIRefreshControl  *refreshControl;
     @property UIView  *normalCellBg;
     @property UIView  *alternateCellBg;
-
 @end
+
+
 
 
 @implementation VideoTableViewController
@@ -76,11 +77,19 @@
         indexPath = [self.tableView indexPathForSelectedRow];
         detailViewController = [segue destinationViewController];
         video = self.videos[indexPath.row];
-        [[App appDelegate] markAsSeen:video.url];
-        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:false];
         detailViewController.video = video;
+        [[App appDelegate] markAsSeen:video.url];
+        [self performSelector:@selector(reloadCurrentRow) withObject:nil afterDelay:1.0];
     }
 }
+
+
+-(void)reloadCurrentRow {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
+}
+
+
 
 
 #pragma mark - Table view data source
@@ -105,7 +114,7 @@
     cell.textLabel.textColor  = [[App appDelegate] wasSeen:video.url] ? [UIColor grayColor] : [UIColor blackColor];
     cell.textLabel.text= video.title;
     cell.detailTextLabel.text = video.source;
-//    cell.selectedBackgroundView = [App inAlternateReality] ? _alternateCellBg : _normalCellBg;
+    cell.selectedBackgroundView = [App inAlternateReality] ? _alternateCellBg : _normalCellBg;
 
    
     if (video.image == nil) {

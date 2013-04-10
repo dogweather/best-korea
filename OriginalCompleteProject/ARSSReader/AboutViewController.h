@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "App.h"
+#import "RealityUpdateListener.h"
 
-@interface AboutViewController : UIViewController
+@interface AboutViewController : UIViewController <RealityUpdateListener>
 
 -(void)loadTheContent;
 @property NSString *htmlString;
 - (IBAction)shareBestKorea:(id)sender;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *share_button;
 
 @end

@@ -56,4 +56,10 @@
                                       applicationActivities:nil];
     [self presentViewController:activityViewController animated:YES completion:^{}];
 }
+
+
+- (void)updateForNewReality {
+    self.share_button.title = [App inAlternateReality] ? @"Tell your comrades" : @"Share Best Korea";
+}
+
 @end

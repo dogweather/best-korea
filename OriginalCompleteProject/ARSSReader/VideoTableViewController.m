@@ -198,6 +198,15 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             // Update the UI
+            if ([self.videos count] == 0) {
+                UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Network is unavailable"
+                                                                  message:@"Cannot connect to the Internet to retrieve videos."
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles:nil];
+                [message show];
+            }
+
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
         });

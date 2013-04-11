@@ -44,7 +44,7 @@
         return;
     }
     
-    NSString *marketing     = [@"Via " stringByAppendingString:MARKETING_DN];
+    NSString *marketing     = [@"via " stringByAppendingString:MARKETING_DN];
     NSArray* dataToShare    = @[self.video.shareUrl, marketing];
     
     UIActivityViewController* activityViewController =

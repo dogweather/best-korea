@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RealityUpdateListener.h"
+#import "MBProgressHUD.h"
+
 
 @interface VideoTableViewController : UITableViewController <RealityUpdateListener>
 

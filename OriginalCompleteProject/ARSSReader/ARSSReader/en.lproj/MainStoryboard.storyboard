@@ -62,7 +62,7 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Best Korea" id="7bU-Oc-7SR">
-                        <barButtonItem key="leftBarButtonItem" image="star-2.png" id="62g-AQ-9TE">
+                        <barButtonItem key="leftBarButtonItem" image="star-3.png" id="62g-AQ-9TE">
                             <connections>
                                 <action selector="togglePartyMode:" destination="z79-iz-SFG" id="rpL-mj-NzV"/>
                             </connections>
@@ -316,7 +316,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Best Korea" id="36">
-                        <barButtonItem key="leftBarButtonItem" image="star-2.png" id="3Gv-gR-UeP">
+                        <barButtonItem key="leftBarButtonItem" image="star-3.png" id="3Gv-gR-UeP">
                             <connections>
                                 <action selector="togglePartyMode:" destination="12" id="HKu-1y-07E"/>
                             </connections>
@@ -367,7 +367,7 @@
     <resources>
         <image name="faq-tabbar-icon.png" width="30" height="30"/>
         <image name="heart-tabbar-icon.png" width="30" height="30"/>
-        <image name="star-2.png" width="26" height="26"/>
+        <image name="star-3.png" width="26" height="26"/>
         <image name="table-tabbar-icon.png" width="30" height="30"/>
         <image name="television-tabbar-icon.png" width="30" height="30"/>
         <image name="white-square.jpg" width="200" height="200"/>

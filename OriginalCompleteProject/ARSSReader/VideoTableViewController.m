@@ -36,14 +36,6 @@
     _normalCellBg = [[UIView alloc] init];
     _normalCellBg.backgroundColor = [UIColor colorWithRed:(17/255.0) green:(118/255.0) blue:(223/255.0) alpha:1];
 
-
-    // Set up the refresh control
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self
-                       action:@selector(refreshInvoked:forState:)
-             forControlEvents:UIControlEventValueChanged];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
-                                                                     attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
     self.videos = [NSMutableArray arrayWithCapacity:10];
     [self refreshFeed];
 }
@@ -51,11 +43,11 @@
 
 -(void) refreshInvoked:(id)sender forState:(UIControlState)state
 {
-    [self refreshFeed];
+    [self getVideosWithActivityDisplay:NO];
 }
 
 - (void) refreshFeed {
-    [self getVideos];
+    [self getVideosWithActivityDisplay:YES];
 }
 
 
@@ -164,11 +156,14 @@
 //
 // TODO: Refactor this into a library data access layer. It can be
 //       used across all the News apps.
-- (void) getVideos {
+- (void) getVideosWithActivityDisplay:(BOOL)useHud {
     NSString *filename = [App inAlternateReality] ? @"alternate.html" : @"reality.html";
     NSString *url      = [@"http://bestkoreaapp.com/media/video/index-" stringByAppendingString:filename];
     NSURL *indexUrl    = [NSURL URLWithString:url];
     NSURLRequest *req  = [NSURLRequest requestWithURL:indexUrl];
+    
+    if (useHud)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         // Background Task:
@@ -209,6 +204,18 @@
 
             [self.tableView reloadData];
             [self.refreshControl endRefreshing];
+            if (self.refreshControl == nil) {
+                // Set up the refresh control
+                self.refreshControl = [[UIRefreshControl alloc] init];
+                [self.refreshControl addTarget:self
+                                        action:@selector(refreshInvoked:forState:)
+                              forControlEvents:UIControlEventValueChanged];
+                self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh"
+                                                                                      attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:11.0]}];
+
+            }
+            if (useHud)
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
         });
     });
 }

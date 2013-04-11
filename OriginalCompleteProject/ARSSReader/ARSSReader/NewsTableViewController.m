@@ -252,12 +252,14 @@
                [App inAlternateReality] ? ALTERNATE_NEWS_FEED : REALITY_NEWS_FEED];
     
     // Clear the table
+    NSLog(@"Clearing the table");
     _objects = @[];
+    [self createSectionsWith:_objects];
     [self.tableView reloadData];
     
     // Read from the new datasource.
+    NSLog(@"Launching the refresh thread");
     [self refreshFeedWithActivityDisplay:YES];
-    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 

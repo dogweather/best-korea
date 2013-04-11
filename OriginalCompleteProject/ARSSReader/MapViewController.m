@@ -36,11 +36,17 @@
     [self.view addGestureRecognizer:pinchGesture];
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveImage:)];
+    panGesture.delegate = self;
     [panGesture setMinimumNumberOfTouches:1];
     [panGesture setMaximumNumberOfTouches:1];
     [self.view addGestureRecognizer:panGesture];
 }
 
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
 
 - (void)rotateImage:(UIRotationGestureRecognizer *)recognizer
 {
@@ -58,15 +64,19 @@
 
 - (void)scaleImage:(UIPinchGestureRecognizer *)recognizer
 {
-    if([recognizer state] == UIGestureRecognizerStateEnded) {
-        previousScale = 1.0;
-        return;
-    }
-    CGFloat newScale = 1.0 - (previousScale - [recognizer scale]);
-    CGAffineTransform currentTransformation = self.mapImageView.transform;
-    CGAffineTransform newTransform = CGAffineTransformScale(currentTransformation, newScale, newScale);
-    self.mapImageView.transform = newTransform;
-    previousScale = [recognizer scale];
+    CGFloat scale = recognizer.scale;
+    self.mapImageView.transform = CGAffineTransformScale(self.mapImageView.transform, scale, scale);
+    recognizer.scale = 1.0;
+
+//    if([recognizer state] == UIGestureRecognizerStateEnded) {
+//        previousScale = 1.0;
+//        return;
+//    }
+//    CGFloat newScale = 1.0 - (previousScale - [recognizer scale]);
+//    CGAffineTransform currentTransformation = self.mapImageView.transform;
+//    CGAffineTransform newTransform = CGAffineTransformScale(currentTransformation, newScale, newScale);
+//    self.mapImageView.transform = newTransform;
+//    previousScale = [recognizer scale];
 }
 
 

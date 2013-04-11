@@ -2,13 +2,14 @@
 //  LibraryTableViewController.h
 //  bestkorea
 //
-//  Created by Robb Shecter on 3/24/13.
+//  Created by Robb Shecter on 4/11/13.
 //  Copyright (c) 2013 Srsly.co. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "RealityUpdateListener.h"
+#import "App.h"
 
-@interface LibraryTableViewController : UITableViewController
-- (IBAction)togglePartyMode:(id)sender;
+@interface LibraryTableViewController : UITableViewController <RealityUpdateListener>
 
 @end

@@ -2,20 +2,26 @@
 //  LibraryTableViewController.m
 //  bestkorea
 //
-//  Created by Robb Shecter on 3/24/13.
+//  Created by Robb Shecter on 4/11/13.
 //  Copyright (c) 2013 Srsly.co. All rights reserved.
 //
 
 #import "LibraryTableViewController.h"
-#import "App.h"
+
+@interface LibraryTableViewController ()
+{
+    NSArray *items;
+}
+@end
 
 
 @implementation LibraryTableViewController
 
-- (void) viewDidLoad
+
+- (void)viewDidLoad
 {
     [super viewDidLoad];
-    // TODO: Set up the table data
+    items = @[@"Maps"];
 }
 
 
@@ -25,36 +31,43 @@
 }
 
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 
 #pragma mark - Table view data source
 
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return 0;
+    return items.count;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"libraryCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [items objectAtIndex:indexPath.row];
     
     return cell;
 }
 
 
-- (IBAction)togglePartyMode:(id)sender {
-    NSLog(@"togglePartyMode");
-    AppDelegate *app = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app toggleRealityFor: self];
+#pragma mark - Reality Update Listener
+
+- (void)updateForNewReality {
+    // So far, not much to do.
 }
+
 @end

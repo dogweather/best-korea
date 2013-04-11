@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5416D23716FF047300576320 /* LibraryTableViewController.m */; };
+		5404C4EC1716FA9700B00756 /* LibraryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5404C4EB1716FA9700B00756 /* LibraryTableViewController.m */; };
+		5404C4EF1716FD6400B00756 /* star-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5404C4ED1716FD6400B00756 /* star-3.png */; };
+		5404C4F01716FD6400B00756 /* star-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5404C4EE1716FD6400B00756 /* star-3@2x.png */; };
 		54205AF717040E77006BD433 /* star-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 54205AF517040E77006BD433 /* star-2.png */; };
 		54205AF817040E77006BD433 /* star-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54205AF617040E77006BD433 /* star-2@2x.png */; };
 		5440DE1516FDD284007D2216 /* white-video.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5440DE1416FDD284007D2216 /* white-video.jpg */; };
@@ -89,8 +91,6 @@
 		54E709611714267A0060828D /* square-placeholder-18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E709601714267A0060828D /* square-placeholder-18.jpg */; };
 		54E87FBA16FEDA1200C95CB3 /* uiss-alternative.json in Resources */ = {isa = PBXBuildFile; fileRef = 54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */; };
 		54E87FBB16FEDA1200C95CB3 /* uiss.json in Resources */ = {isa = PBXBuildFile; fileRef = 54E87FB916FEDA1200C95CB3 /* uiss.json */; };
-		54FCCA5E1702F7A000EEA49B /* star-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCCA5C1702F7A000EEA49B /* star-outline.png */; };
-		54FCCA5F1702F7A000EEA49B /* star-outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54FCCA5D1702F7A000EEA49B /* star-outline@2x.png */; };
 		70972021CF204F3988862416 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CF130996C44927A3427CC5 /* libPods.a */; };
 		9C1806C7163E84B200A02D94 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806C3163E84B200A02D94 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9C1806C8163E84B200A02D94 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1806C6163E84B200A02D94 /* RXMLElement.m */; };
@@ -111,8 +111,10 @@
 
 /* Begin PBXFileReference section */
 		47A4A39FE7B74C0DB10DB12A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		5416D23616FF047300576320 /* LibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryTableViewController.h; sourceTree = "<group>"; };
-		5416D23716FF047300576320 /* LibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTableViewController.m; sourceTree = "<group>"; };
+		5404C4EA1716FA9700B00756 /* LibraryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryTableViewController.h; sourceTree = "<group>"; };
+		5404C4EB1716FA9700B00756 /* LibraryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryTableViewController.m; sourceTree = "<group>"; };
+		5404C4ED1716FD6400B00756 /* star-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-3.png"; sourceTree = "<group>"; };
+		5404C4EE1716FD6400B00756 /* star-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-3@2x.png"; sourceTree = "<group>"; };
 		54205AF517040E77006BD433 /* star-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-2.png"; sourceTree = "<group>"; };
 		54205AF617040E77006BD433 /* star-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-2@2x.png"; sourceTree = "<group>"; };
 		5440DE1416FDD284007D2216 /* white-video.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "white-video.jpg"; sourceTree = "<group>"; };
@@ -207,8 +209,6 @@
 		54E709601714267A0060828D /* square-placeholder-18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-18.jpg"; sourceTree = "<group>"; };
 		54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "uiss-alternative.json"; sourceTree = "<group>"; };
 		54E87FB916FEDA1200C95CB3 /* uiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = uiss.json; sourceTree = "<group>"; };
-		54FCCA5C1702F7A000EEA49B /* star-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-outline.png"; sourceTree = "<group>"; };
-		54FCCA5D1702F7A000EEA49B /* star-outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-outline@2x.png"; sourceTree = "<group>"; };
 		86CF130996C44927A3427CC5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1806C2163E84B200A02D94 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		9C1806C3163E84B200A02D94 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 				5461A05C16FFDBEF0015D5AC /* App.h */,
 				9C947BAA163E835500842C2F /* AppDelegate.h */,
 				54D1CC6716F884F400691CEB /* Constants.h */,
-				5416D23616FF047300576320 /* LibraryTableViewController.h */,
+				5404C4EA1716FA9700B00756 /* LibraryTableViewController.h */,
 				54D1CC6416F875E000691CEB /* MainTabBarController.h */,
 				5469DB621716B5560025A0C6 /* MapCollectionViewController.h */,
 				5469DB861716BEF60025A0C6 /* MapViewController.h */,
@@ -275,7 +275,7 @@
 				54B3ABD01702BCBD008D31A7 /* AboutViewController.m */,
 				5461A05D16FFDBEF0015D5AC /* App.m */,
 				9C947BAB163E835500842C2F /* AppDelegate.m */,
-				5416D23716FF047300576320 /* LibraryTableViewController.m */,
+				5404C4EB1716FA9700B00756 /* LibraryTableViewController.m */,
 				54D1CC6516F875E000691CEB /* MainTabBarController.m */,
 				5469DB631716B5560025A0C6 /* MapCollectionViewController.m */,
 				5469DB871716BEF60025A0C6 /* MapViewController.m */,
@@ -425,6 +425,8 @@
 		9C1806BE163E849B00A02D94 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				5404C4ED1716FD6400B00756 /* star-3.png */,
+				5404C4EE1716FD6400B00756 /* star-3@2x.png */,
 				5469DB801716B87D0025A0C6 /* photo-frame.png */,
 				5469DB651716B70A0025A0C6 /* Library */,
 				54B3ABCA1702B9F6008D31A7 /* about.html */,
@@ -437,8 +439,6 @@
 				544C2AD31701BE2C0095E7B0 /* spinner.png */,
 				54205AF517040E77006BD433 /* star-2.png */,
 				54205AF617040E77006BD433 /* star-2@2x.png */,
-				54FCCA5C1702F7A000EEA49B /* star-outline.png */,
-				54FCCA5D1702F7A000EEA49B /* star-outline@2x.png */,
 				9C947BA2163E835500842C2F /* Supporting Files */,
 				54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */,
 				54E87FB916FEDA1200C95CB3 /* uiss.json */,
@@ -621,8 +621,6 @@
 				54B3ABCB1702B9F6008D31A7 /* about.html in Resources */,
 				54B3ABD61702C2C5008D31A7 /* basic.css in Resources */,
 				54B3ABD81702CABE008D31A7 /* white-square.jpg in Resources */,
-				54FCCA5E1702F7A000EEA49B /* star-outline.png in Resources */,
-				54FCCA5F1702F7A000EEA49B /* star-outline@2x.png in Resources */,
 				54205AF717040E77006BD433 /* star-2.png in Resources */,
 				54205AF817040E77006BD433 /* star-2@2x.png in Resources */,
 				54E7095417140EAC0060828D /* square-placeholder-11.jpg in Resources */,
@@ -648,6 +646,8 @@
 				5469DB811716B87D0025A0C6 /* photo-frame.png in Resources */,
 				5469DB841716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg in Resources */,
 				5469DB851716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg in Resources */,
+				5404C4EF1716FD6400B00756 /* star-3.png in Resources */,
+				5404C4F01716FD6400B00756 /* star-3@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +687,6 @@
 				54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */,
 				54800B6416FD6DD8005219B4 /* Video.m in Sources */,
 				54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */,
-				5416D23816FF047300576320 /* LibraryTableViewController.m in Sources */,
 				5461A05E16FFDBEF0015D5AC /* App.m in Sources */,
 				54A3A00316FFFDF500E8B908 /* TFHpple.m in Sources */,
 				54A3A00416FFFDF500E8B908 /* TFHppleElement.m in Sources */,
@@ -695,6 +694,7 @@
 				54B3ABD11702BCBD008D31A7 /* AboutViewController.m in Sources */,
 				5469DB641716B5560025A0C6 /* MapCollectionViewController.m in Sources */,
 				5469DB881716BEF60025A0C6 /* MapViewController.m in Sources */,
+				5404C4EC1716FA9700B00756 /* LibraryTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

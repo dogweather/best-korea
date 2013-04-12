@@ -28,7 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    mapFileNames = @[@"1969 DMZ thumbnail.jpg", @"2005 Political.jpg", @"2005 Relief.jpg"];
+    mapFileNames = @[@"1969 DMZ thumbnail.jpg", @"2005 Political thumbnail.jpg", @"2005 Relief thumbnail.jpg"];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

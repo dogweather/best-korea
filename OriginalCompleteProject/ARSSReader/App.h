@@ -22,4 +22,6 @@
 +(MainTabBarController *)tabController;
 +(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
 
++(UIColor *) communistGold;
+
 @end

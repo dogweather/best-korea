@@ -24,6 +24,10 @@
 
 @implementation App
 
++ (UIColor *) communistGold {
+    return [UIColor colorWithRed:(222/255.0) green:(172/255.0) blue:(0/255.0) alpha:1];
+}
+
 + (BOOL) inAlternateReality {
     return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];
 }

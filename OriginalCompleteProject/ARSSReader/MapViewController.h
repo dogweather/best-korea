@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "App.h"
 
 @interface MapViewController : UIViewController<UIScrollViewDelegate>
 

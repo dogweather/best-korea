@@ -16,18 +16,10 @@
 
 @implementation MapCollectionViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = [App inAlternateReality] ? @"MAPS" : @"Maps";
     mapNames = @[@"1969 DMZ", @"2005 Political", @"2005 Relief"];
 }
 
@@ -56,7 +48,8 @@
     NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
     MapViewController *destViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
-    destViewController.mapFileName = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
+    destViewController.title        = [mapNames objectAtIndex:indexPath.row];
+    destViewController.mapFileName  = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
     NSLog(@"Found filename: %@",destViewController.mapFileName);
     [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }

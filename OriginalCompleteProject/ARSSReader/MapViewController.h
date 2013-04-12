@@ -8,15 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController<UIGestureRecognizerDelegate>
-{
-    CGFloat previousScale;
-    CGFloat previousRotation;
-    CGFloat beginX;
-    CGFloat beginY;
-}
+@interface MapViewController : UIViewController<UIScrollViewDelegate>
 
 @property NSString *mapFileName;
-@property (strong, nonatomic) IBOutlet UIImageView *mapImageView;
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

@@ -9,6 +9,9 @@
 #import "MapViewController.h"
 
 @interface MapViewController ()
+{
+    UIImageView *imageView;
+}
 
 @end
 
@@ -19,7 +22,26 @@
 {
     [super viewDidLoad];
     NSLog(@"Setting image to %@", self.mapFileName);
-    self.mapImageView.image = [UIImage imageNamed:self.mapFileName];
+    imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.mapFileName]];
+    
+    // Enable gestures
+    float edge = 32.0;
+    [self.scrollView setCanCancelContentTouches:NO];
+    self.scrollView.contentSize         = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
+    self.scrollView.contentInset        = UIEdgeInsetsMake(edge, edge, edge, edge);
+    self.scrollView.minimumZoomScale    = 0.5;
+    self.scrollView.maximumZoomScale    = 1.5;
+    self.scrollView.delegate            = self;
+    
+    [self.scrollView addSubview:imageView];
+    [self.scrollView setScrollEnabled:YES];
+}
+
+
+// Required to enable gestures
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return imageView;
 }
 
 

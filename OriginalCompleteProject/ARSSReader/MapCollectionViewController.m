@@ -20,7 +20,11 @@
 {
     [super viewDidLoad];
     self.title = [App inAlternateReality] ? @"MAPS" : @"Maps";
-    mapNames = @[@"1969 DMZ", @"2005 Administrative Divisions"];
+    mapNames = @[
+                 @"1969 DMZ",
+                 @"2005 Administrative Divisions",
+                 @"2006 Free Trade Zones"
+                 ];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

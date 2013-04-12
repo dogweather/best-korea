@@ -21,7 +21,6 @@
 		5469DB751716B70A0025A0C6 /* 1989 South Korea.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB681716B70A0025A0C6 /* 1989 South Korea.jp2 */; };
 		5469DB761716B70A0025A0C6 /* 1996 North Korea.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB691716B70A0025A0C6 /* 1996 North Korea.jp2 */; };
 		5469DB771716B70A0025A0C6 /* 2005 Administrative Divisions.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB6A1716B70A0025A0C6 /* 2005 Administrative Divisions.jp2 */; };
-		5469DB7A1716B70A0025A0C6 /* 2006 Free Trade Zones.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB6D1716B70A0025A0C6 /* 2006 Free Trade Zones.jp2 */; };
 		5469DB7B1716B70A0025A0C6 /* 2011 Korean Peninsula.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB6E1716B70A0025A0C6 /* 2011 Korean Peninsula.jp2 */; };
 		5469DB7C1716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB701716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 */; };
 		5469DB7D1716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB711716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 */; };
@@ -47,6 +46,10 @@
 		5483D07B1701745500142234 /* square-placeholder-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D0741701745500142234 /* square-placeholder-6.jpg */; };
 		5483D07C1701745500142234 /* square-placeholder-7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D0751701745500142234 /* square-placeholder-7.jpg */; };
 		548C8BB71703FBF80099166D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 548C8BB61703FBF80099166D /* libsqlite3.dylib */; };
+		549B17F21717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B17EE1717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg */; };
+		549B17F31717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B17EF1717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg */; };
+		549B17F41717D0280061F393 /* 2006 Free Trade Zones.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B17F01717D0280061F393 /* 2006 Free Trade Zones.jpg */; };
+		549B17F51717D0280061F393 /* 2006 Free Trade Zones@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B17F11717D0280061F393 /* 2006 Free Trade Zones@2x.jpg */; };
 		54A3A00316FFFDF500E8B908 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A39FFE16FFFDF500E8B908 /* TFHpple.m */; };
 		54A3A00416FFFDF500E8B908 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00016FFFDF500E8B908 /* TFHppleElement.m */; };
 		54A3A00516FFFDF500E8B908 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00216FFFDF500E8B908 /* XPathQuery.m */; };
@@ -132,7 +135,6 @@
 		5469DB681716B70A0025A0C6 /* 1989 South Korea.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1989 South Korea.jp2"; sourceTree = "<group>"; };
 		5469DB691716B70A0025A0C6 /* 1996 North Korea.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1996 North Korea.jp2"; sourceTree = "<group>"; };
 		5469DB6A1716B70A0025A0C6 /* 2005 Administrative Divisions.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2005 Administrative Divisions.jp2"; sourceTree = "<group>"; };
-		5469DB6D1716B70A0025A0C6 /* 2006 Free Trade Zones.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2006 Free Trade Zones.jp2"; sourceTree = "<group>"; };
 		5469DB6E1716B70A0025A0C6 /* 2011 Korean Peninsula.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "2011 Korean Peninsula.jp2"; sourceTree = "<group>"; };
 		5469DB701716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1785 Chōsen hachidō no zu.jp2"; sourceTree = "<group>"; };
 		5469DB711716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1800 Ch'onha chido.jp2"; sourceTree = "<group>"; };
@@ -162,6 +164,10 @@
 		5483D0751701745500142234 /* square-placeholder-7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-7.jpg"; sourceTree = "<group>"; };
 		5483D07D1701776C00142234 /* RealityUpdateListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealityUpdateListener.h; sourceTree = "<group>"; };
 		548C8BB61703FBF80099166D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		549B17EE1717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2006 Free Trade Zones thumbnail.jpg"; sourceTree = "<group>"; };
+		549B17EF1717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2006 Free Trade Zones thumbnail@2x.jpg"; sourceTree = "<group>"; };
+		549B17F01717D0280061F393 /* 2006 Free Trade Zones.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2006 Free Trade Zones.jpg"; sourceTree = "<group>"; };
+		549B17F11717D0280061F393 /* 2006 Free Trade Zones@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2006 Free Trade Zones@2x.jpg"; sourceTree = "<group>"; };
 		54A39FFD16FFFDF500E8B908 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		54A39FFE16FFFDF500E8B908 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		54A39FFF16FFFDF500E8B908 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -308,6 +314,10 @@
 		5469DB661716B70A0025A0C6 /* Contemporary Maps */ = {
 			isa = PBXGroup;
 			children = (
+				549B17EE1717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg */,
+				549B17EF1717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg */,
+				549B17F01717D0280061F393 /* 2006 Free Trade Zones.jpg */,
+				549B17F11717D0280061F393 /* 2006 Free Trade Zones@2x.jpg */,
 				5478A6241717BA92001E76B9 /* 2005 Administrative Divisions thumbnail.jpg */,
 				5478A6251717BA92001E76B9 /* 2005 Administrative Divisions thumbnail@2x.jpg */,
 				5478A6261717BA92001E76B9 /* 2005 Administrative Divisions.jpg */,
@@ -319,7 +329,6 @@
 				5469DB681716B70A0025A0C6 /* 1989 South Korea.jp2 */,
 				5469DB691716B70A0025A0C6 /* 1996 North Korea.jp2 */,
 				5469DB6A1716B70A0025A0C6 /* 2005 Administrative Divisions.jp2 */,
-				5469DB6D1716B70A0025A0C6 /* 2006 Free Trade Zones.jp2 */,
 				5469DB6E1716B70A0025A0C6 /* 2011 Korean Peninsula.jp2 */,
 			);
 			path = "Contemporary Maps";
@@ -643,7 +652,6 @@
 				5469DB751716B70A0025A0C6 /* 1989 South Korea.jp2 in Resources */,
 				5469DB761716B70A0025A0C6 /* 1996 North Korea.jp2 in Resources */,
 				5469DB771716B70A0025A0C6 /* 2005 Administrative Divisions.jp2 in Resources */,
-				5469DB7A1716B70A0025A0C6 /* 2006 Free Trade Zones.jp2 in Resources */,
 				5469DB7B1716B70A0025A0C6 /* 2011 Korean Peninsula.jp2 in Resources */,
 				5469DB7C1716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 in Resources */,
 				5469DB7D1716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 in Resources */,
@@ -660,6 +668,10 @@
 				5478A6291717BA92001E76B9 /* 2005 Administrative Divisions thumbnail@2x.jpg in Resources */,
 				5478A62A1717BA92001E76B9 /* 2005 Administrative Divisions.jpg in Resources */,
 				5478A62B1717BA92001E76B9 /* 2005 Administrative Divisions@2x.jpg in Resources */,
+				549B17F21717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg in Resources */,
+				549B17F31717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg in Resources */,
+				549B17F41717D0280061F393 /* 2006 Free Trade Zones.jpg in Resources */,
+				549B17F51717D0280061F393 /* 2006 Free Trade Zones@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

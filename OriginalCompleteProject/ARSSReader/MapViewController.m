@@ -12,7 +12,6 @@
 {
     UIImageView *imageView;
 }
-
 @end
 
 
@@ -34,8 +33,8 @@
     [self.scrollView setCanCancelContentTouches:NO];
     self.scrollView.contentSize         = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
     self.scrollView.contentInset        = UIEdgeInsetsMake(edge, edge, edge, edge);
-    self.scrollView.minimumZoomScale    = 0.7;
-    self.scrollView.maximumZoomScale    = 1.1;
+    self.scrollView.minimumZoomScale    = 0.1;
+    self.scrollView.maximumZoomScale    = 1.0;
     self.scrollView.delegate            = self;
     self.scrollView.backgroundColor     = [UIColor blackColor];
     

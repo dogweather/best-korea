@@ -479,25 +479,25 @@
 		9C1806BE163E849B00A02D94 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				5404C4ED1716FD6400B00756 /* star-3.png */,
-				5404C4EE1716FD6400B00756 /* star-3@2x.png */,
-				5469DB801716B87D0025A0C6 /* photo-frame.png */,
-				5469DB651716B70A0025A0C6 /* Library */,
+				54B3ABD51702C2C5008D31A7 /* basic.css */,
 				54B3ABCA1702B9F6008D31A7 /* about.html */,
+				54B3ABD71702CABE008D31A7 /* white-square.jpg */,
+				5440DE1416FDD284007D2216 /* white-video.jpg */,
+				54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */,
+				54E87FB916FEDA1200C95CB3 /* uiss.json */,
 				54CB0EDA16F09C0500C91B32 /* app-icon-nonretina.png */,
 				54CB0ED816F09B7700C91B32 /* app-icon.png */,
-				54B3ABD51702C2C5008D31A7 /* basic.css */,
 				54CB0EDC16F09C9D00C91B32 /* Default-568h@2x.png */,
-				9C1806C1163E84B200A02D94 /* GTMNSString+HTML */,
-				54F80D7B16F32961001DC004 /* icons */,
+				5469DB801716B87D0025A0C6 /* photo-frame.png */,
 				544C2AD31701BE2C0095E7B0 /* spinner.png */,
 				54205AF517040E77006BD433 /* star-2.png */,
 				54205AF617040E77006BD433 /* star-2@2x.png */,
+				5404C4ED1716FD6400B00756 /* star-3.png */,
+				5404C4EE1716FD6400B00756 /* star-3@2x.png */,
+				9C1806C1163E84B200A02D94 /* GTMNSString+HTML */,
+				54F80D7B16F32961001DC004 /* icons */,
+				5469DB651716B70A0025A0C6 /* Library */,
 				9C947BA2163E835500842C2F /* Supporting Files */,
-				54E87FB816FEDA1200C95CB3 /* uiss-alternative.json */,
-				54E87FB916FEDA1200C95CB3 /* uiss.json */,
-				54B3ABD71702CABE008D31A7 /* white-square.jpg */,
-				5440DE1416FDD284007D2216 /* white-video.jpg */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -535,9 +535,9 @@
 			children = (
 				548C8BB61703FBF80099166D /* libsqlite3.dylib */,
 				540858F416FAC786003B9BB4 /* App Code */,
+				9C1806BE163E849B00A02D94 /* Assets */,
 				9C1806D5163E875300A02D94 /* RSSParser */,
 				54A39FF916FFFC5300E8B908 /* HTMLParser */,
-				9C1806BE163E849B00A02D94 /* Assets */,
 				9C947B9A163E835500842C2F /* Frameworks */,
 				9C947B98163E835500842C2F /* Products */,
 				47A4A39FE7B74C0DB10DB12A /* Pods.xcconfig */,

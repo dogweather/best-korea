@@ -11,6 +11,7 @@
 @interface MapViewController ()
 {
     float edge;
+    BOOL  appearedOnce;
 }
 @property (weak) UIImageView *imageView;
 @end
@@ -28,8 +29,14 @@
         self.title = [self.title uppercaseString];
     
     edge = 16;
+    appearedOnce = NO;
+
+    UIImageView *i;
+    i = [[UIImageView alloc] initWithImage:[MapViewController imageFromMainBundleFile:self.mapFileName]];
+    i.hidden = YES;
     
     // Enable gestures
+    self.scrollView.contentSize = CGSizeMake(i.frame.size.width, i.frame.size.height);
     [self.scrollView setCanCancelContentTouches:NO];
     [self.scrollView setScrollEnabled:YES];
     self.scrollView.contentInset        = UIEdgeInsetsMake(edge, edge, edge, edge);
@@ -37,18 +44,18 @@
     self.scrollView.maximumZoomScale    = 1.0;
     self.scrollView.delegate            = self;
     self.scrollView.backgroundColor     = [UIColor blackColor];    
+    [self.scrollView addSubview:i];
+    self.imageView = i;
 }
 
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    UIImageView *i;
-    
-    i = [[UIImageView alloc] initWithImage:[MapViewController imageFromMainBundleFile:self.mapFileName]];
-    self.scrollView.contentSize = CGSizeMake(i.frame.size.width, i.frame.size.height);
-    self.scrollView.zoomScale = (self.scrollView.bounds.size.width - (edge * 2.0)) / i.bounds.size.width;
-    [self.scrollView addSubview:i];
-    self.imageView = i;
+    if (! appearedOnce) {
+        self.scrollView.zoomScale = (self.scrollView.bounds.size.width - (edge * 2.0)) / self.imageView.bounds.size.width;
+        self.imageView.hidden = NO;
+        appearedOnce = YES;
+    }
 }
 
 

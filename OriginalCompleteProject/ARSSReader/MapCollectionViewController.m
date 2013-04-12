@@ -26,6 +26,7 @@
             @"2011 Korea"
             ];
     mapNames = @[
+            @"1989 S. Political",
             @"1996 N. Political",
             @"2005 Admin. Divisions",
             @"2006 Free Trade Zones",

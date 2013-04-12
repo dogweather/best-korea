@@ -31,6 +31,7 @@
     // Enable gestures
     float edge = 32.0;
     [self.scrollView setCanCancelContentTouches:NO];
+    [self.scrollView setScrollEnabled:YES];
     self.scrollView.contentSize         = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
     self.scrollView.contentInset        = UIEdgeInsetsMake(edge, edge, edge, edge);
     self.scrollView.minimumZoomScale    = 0.1;
@@ -39,7 +40,6 @@
     self.scrollView.backgroundColor     = [UIColor blackColor];
     
     [self.scrollView addSubview:imageView];
-    [self.scrollView setScrollEnabled:YES];
 }
 
 

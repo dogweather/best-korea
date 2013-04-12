@@ -38,6 +38,9 @@
 		5478A61A17178D18001E76B9 /* 2005 Relief thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61817178D18001E76B9 /* 2005 Relief thumbnail.jpg */; };
 		5478A61B17178D18001E76B9 /* 2005 Relief thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61917178D18001E76B9 /* 2005 Relief thumbnail@2x.jpg */; };
 		5478A61D17178FFD001E76B9 /* 1969 DMZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */; };
+		5478A6211717A666001E76B9 /* 1969 DMZ@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */; };
+		5478A6221717A666001E76B9 /* 2005 Political@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61F1717A666001E76B9 /* 2005 Political@2x.jpg */; };
+		5478A6231717A666001E76B9 /* 2005 Relief@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A6201717A666001E76B9 /* 2005 Relief@2x.jpg */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
 		54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6616FD76A5005219B4 /* VideoDetailViewController.m */; };
 		5483D0761701745500142234 /* square-placeholder-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D06F1701745500142234 /* square-placeholder-1.jpg */; };
@@ -151,6 +154,9 @@
 		5478A61817178D18001E76B9 /* 2005 Relief thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Relief thumbnail.jpg"; sourceTree = "<group>"; };
 		5478A61917178D18001E76B9 /* 2005 Relief thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Relief thumbnail@2x.jpg"; sourceTree = "<group>"; };
 		5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ.jpg"; sourceTree = "<group>"; };
+		5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ@2x.jpg"; sourceTree = "<group>"; };
+		5478A61F1717A666001E76B9 /* 2005 Political@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Political@2x.jpg"; sourceTree = "<group>"; };
+		5478A6201717A666001E76B9 /* 2005 Relief@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Relief@2x.jpg"; sourceTree = "<group>"; };
 		54800B6216FD6DD8005219B4 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		54800B6316FD6DD8005219B4 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		54800B6516FD76A5005219B4 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
@@ -313,15 +319,18 @@
 				5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */,
 				5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */,
 				5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */,
+				5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */,
 				5469DB681716B70A0025A0C6 /* 1989 South Korea.jp2 */,
 				5469DB691716B70A0025A0C6 /* 1996 North Korea.jp2 */,
 				5469DB6A1716B70A0025A0C6 /* 2005 Administrative Divisions.jp2 */,
 				5478A61417178BAD001E76B9 /* 2005 Political thumbnail.jpg */,
 				5478A61517178BAD001E76B9 /* 2005 Political thumbnail@2x.jpg */,
 				5469DB6B1716B70A0025A0C6 /* 2005 Political.jpg */,
+				5478A61F1717A666001E76B9 /* 2005 Political@2x.jpg */,
 				5478A61817178D18001E76B9 /* 2005 Relief thumbnail.jpg */,
 				5478A61917178D18001E76B9 /* 2005 Relief thumbnail@2x.jpg */,
 				5469DB6C1716B70A0025A0C6 /* 2005 Relief.jpg */,
+				5478A6201717A666001E76B9 /* 2005 Relief@2x.jpg */,
 				5469DB6D1716B70A0025A0C6 /* 2006 Free Trade Zones.jp2 */,
 				5469DB6E1716B70A0025A0C6 /* 2011 Korean Peninsula.jp2 */,
 			);
@@ -664,6 +673,9 @@
 				5478A61A17178D18001E76B9 /* 2005 Relief thumbnail.jpg in Resources */,
 				5478A61B17178D18001E76B9 /* 2005 Relief thumbnail@2x.jpg in Resources */,
 				5478A61D17178FFD001E76B9 /* 1969 DMZ.jpg in Resources */,
+				5478A6211717A666001E76B9 /* 1969 DMZ@2x.jpg in Resources */,
+				5478A6221717A666001E76B9 /* 2005 Political@2x.jpg in Resources */,
+				5478A6231717A666001E76B9 /* 2005 Relief@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

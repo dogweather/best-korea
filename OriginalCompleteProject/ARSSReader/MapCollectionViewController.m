@@ -10,7 +10,7 @@
 
 @interface MapCollectionViewController ()
 {
-    NSArray *mapFileNames;
+    NSArray *mapNames;
 }
 @end
 
@@ -28,22 +28,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    mapFileNames = @[@"1969 DMZ thumbnail.jpg", @"2005 Political thumbnail.jpg", @"2005 Relief thumbnail.jpg"];
+    mapNames = @[@"1969 DMZ", @"2005 Political", @"2005 Relief"];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return mapFileNames.count;
+    return mapNames.count;
 }
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *identifier = @"cell";
+    static NSString *identifier = @"mapCell";
+    NSString *filename;
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame.png"]];
     
     UIImageView *mapImageView = (UIImageView *)[cell viewWithTag:100];
-    mapImageView.image = [UIImage imageNamed:[mapFileNames objectAtIndex:indexPath.row]];
+    
+    filename = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@" thumbnail.jpg"];
+    mapImageView.image = [UIImage imageNamed:filename];
     
     return cell;
 }
@@ -54,7 +57,7 @@
         NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
         MapViewController *destViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
-        destViewController.mapFileName = [mapFileNames objectAtIndex:indexPath.row];
+        destViewController.mapFileName = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
     }
 }
@@ -64,6 +67,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    // TODO: (How?)
     // Dispose of any resources that can be recreated.
 }
 

@@ -53,15 +53,13 @@
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showMapView"]) {
-        NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
-        MapViewController *destViewController = segue.destinationViewController;
-        NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
-        destViewController.mapFileName = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
-        [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
-    }
+    NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+    MapViewController *destViewController = segue.destinationViewController;
+    NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+    destViewController.mapFileName = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
+    NSLog(@"Found filename: %@",destViewController.mapFileName);
+    [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
-
 
 
 - (void)didReceiveMemoryWarning

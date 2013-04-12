@@ -15,7 +15,8 @@
     CGFloat beginX;
     CGFloat beginY;
 }
-@property (strong, nonatomic) IBOutlet UIImageView *mapImageView;
+
 @property NSString *mapFileName;
+@property (strong, nonatomic) IBOutlet UIImageView *mapImageView;
 
 @end

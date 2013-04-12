@@ -12,83 +12,14 @@
 
 @end
 
-@implementation MapViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation MapViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-     self.mapImageView.image = [UIImage imageNamed:self.mapFileName];
-    
-//    UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(rotateImage:)];
-//    [self.view addGestureRecognizer:rotationGesture];
-    
-    UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(scaleImage:)];
-    pinchGesture.delegate = self;
-    [self.view addGestureRecognizer:pinchGesture];
-    
-    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveImage:)];
-    panGesture.delegate = self;
-    [panGesture setMinimumNumberOfTouches:1];
-    [panGesture setMaximumNumberOfTouches:1];
-    [self.view addGestureRecognizer:panGesture];
-}
-
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-    return YES;
-}
-
-- (void)rotateImage:(UIRotationGestureRecognizer *)recognizer
-{
-    if([recognizer state] == UIGestureRecognizerStateEnded) {
-        previousRotation = 0.0;
-        return;
-    }
-    CGFloat newRotation = 0.0 - (previousRotation - [recognizer rotation]);
-    CGAffineTransform currentTransformation = self.mapImageView.transform;
-    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransformation, newRotation);
-    self.mapImageView.transform = newTransform;
-    previousRotation = [recognizer rotation];
-}
-
-
-- (void)scaleImage:(UIPinchGestureRecognizer *)recognizer
-{
-    CGFloat scale = recognizer.scale;
-    self.mapImageView.transform = CGAffineTransformScale(self.mapImageView.transform, scale, scale);
-    recognizer.scale = 1.0;
-
-//    if([recognizer state] == UIGestureRecognizerStateEnded) {
-//        previousScale = 1.0;
-//        return;
-//    }
-//    CGFloat newScale = 1.0 - (previousScale - [recognizer scale]);
-//    CGAffineTransform currentTransformation = self.mapImageView.transform;
-//    CGAffineTransform newTransform = CGAffineTransformScale(currentTransformation, newScale, newScale);
-//    self.mapImageView.transform = newTransform;
-//    previousScale = [recognizer scale];
-}
-
-
-- (void)moveImage:(UIPanGestureRecognizer *)recognizer
-{
-    CGPoint newCenter = [recognizer translationInView:self.view];
-    if([recognizer state] == UIGestureRecognizerStateBegan) {
-        beginX = self.mapImageView.center.x;
-        beginY = self.mapImageView.center.y;
-    }
-    newCenter = CGPointMake(beginX + newCenter.x, beginY + newCenter.y);
-    [self.mapImageView setCenter:newCenter];
+    NSLog(@"Setting image to %@", self.mapFileName);
+    self.mapImageView.image = [UIImage imageNamed:self.mapFileName];
 }
 
 

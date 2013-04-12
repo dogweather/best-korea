@@ -312,6 +312,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MNn-Z4-5WN"/>
+                    <connections>
+                        <outlet property="mapImageView" destination="hFc-Lr-3KW" id="PhE-Ru-u3P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="veY-dE-dAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

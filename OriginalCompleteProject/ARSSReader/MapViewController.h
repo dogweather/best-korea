@@ -13,6 +13,6 @@
 
 @property NSString *mapFileName;
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

@@ -76,6 +76,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    NSLog(@"Memory warning in MapCollectionViewController");
     // TODO: (How?)
     // Dispose of any resources that can be recreated.
 }

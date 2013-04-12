@@ -35,8 +35,14 @@
             ];
 }
 
+
+-(NSArray *)currentMapNames {
+    return [App inAlternateReality] ? partyMapNames : mapNames;
+}
+
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return mapNames.count;
+    return [self currentMapNames].count;
 }
 
 
@@ -49,7 +55,7 @@
     
     UIImageView *mapImageView = (UIImageView *)[cell viewWithTag:100];
     
-    filename = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@" thumbnail.jpg"];
+    filename = [[[self currentMapNames] objectAtIndex:indexPath.row] stringByAppendingString:@" thumbnail.jpg"];
     mapImageView.image = [UIImage imageNamed:filename];
     
     return cell;
@@ -60,8 +66,8 @@
     NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
     MapViewController *destViewController = segue.destinationViewController;
     NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
-    destViewController.title        = [mapNames objectAtIndex:indexPath.row];
-    destViewController.mapFileName  = [[mapNames objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
+    destViewController.title        = [[self currentMapNames] objectAtIndex:indexPath.row];
+    destViewController.mapFileName  = [[[self currentMapNames] objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
     NSLog(@"Found filename: %@",destViewController.mapFileName);
     [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }

@@ -23,7 +23,8 @@
     mapNames = @[
                  @"1969 DMZ",
                  @"2005 Administrative Divisions",
-                 @"2006 Free Trade Zones"
+                 @"2006 Free Trade Zones",
+                 @"2011 Korean Peninsula"
                  ];
 }
 

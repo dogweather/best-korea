@@ -11,6 +11,7 @@
 @interface MapCollectionViewController ()
 {
     NSArray *mapNames;
+    NSArray *partyMapNames;
 }
 @end
 
@@ -20,14 +21,18 @@
 {
     [super viewDidLoad];
     self.title = [App inAlternateReality] ? @"MAPS" : @"Maps";
+    partyMapNames = @[
+            @"2010 Korea",
+            @"2011 Korea"
+            ];
     mapNames = @[
-                 @"1969 DMZ",
-                 @"2005 Admin. Divisions",
-                 @"2006 Free Trade Zones",
-                 @"2010 S. Pop. Density",
-                 @"2011 Peninsula",
-                 @"2012 Asia"
-                 ];
+            @"1969 DMZ",
+            @"2005 Admin. Divisions",
+            @"2006 Free Trade Zones",
+            @"2010 S. Pop. Density",
+            @"2011 Peninsula",
+            @"2012 Asia"
+            ];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

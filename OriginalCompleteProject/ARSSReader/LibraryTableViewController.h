@@ -11,5 +11,6 @@
 #import "App.h"
 
 @interface LibraryTableViewController : UITableViewController <RealityUpdateListener>
+- (IBAction)togglePartyMode:(id)sender;
 
 @end

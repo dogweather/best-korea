@@ -70,4 +70,7 @@
     // So far, not much to do.
 }
 
+- (IBAction)togglePartyMode:(id)sender {
+    [App toggleRealityFor: self];
+}
 @end

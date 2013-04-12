@@ -25,7 +25,8 @@
                  @"2005 Admin. Divisions",
                  @"2006 Free Trade Zones",
                  @"2010 S. Pop. Density",
-                 @"2011 Peninsula"
+                 @"2011 Peninsula",
+                 @"2012 Asia"
                  ];
 }
 

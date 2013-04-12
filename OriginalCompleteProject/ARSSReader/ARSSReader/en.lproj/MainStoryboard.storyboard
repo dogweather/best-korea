@@ -193,7 +193,7 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1969 DMZ thumbnail.jpg" id="CUA-I2-LE0">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="2011 Peninsula thumbnail.jpg" id="CUA-I2-LE0">
                                             <rect key="frame" x="6" y="6" width="90" height="72"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -293,7 +293,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-HP-ZhW"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-HP-ZhW">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -431,7 +433,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1969 DMZ thumbnail.jpg" width="90" height="72"/>
+        <image name="2011 Peninsula thumbnail.jpg" width="90" height="72"/>
         <image name="faq-tabbar-icon.png" width="30" height="30"/>
         <image name="heart-tabbar-icon.png" width="30" height="30"/>
         <image name="library-tabbar-icon.png" width="30" height="30"/>

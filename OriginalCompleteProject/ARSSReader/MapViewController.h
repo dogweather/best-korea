@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "App.h"
+#import "MBProgressHUD.h"
 
 @interface MapViewController : UIViewController<UIScrollViewDelegate>
 

@@ -19,11 +19,7 @@
 		5461A05E16FFDBEF0015D5AC /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 5461A05D16FFDBEF0015D5AC /* App.m */; };
 		5469DB641716B5560025A0C6 /* MapCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469DB631716B5560025A0C6 /* MapCollectionViewController.m */; };
 		5469DB811716B87D0025A0C6 /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB801716B87D0025A0C6 /* photo-frame.png */; };
-		5469DB841716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */; };
-		5469DB851716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */; };
 		5469DB881716BEF60025A0C6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469DB871716BEF60025A0C6 /* MapViewController.m */; };
-		5478A61D17178FFD001E76B9 /* 1969 DMZ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */; };
-		5478A6211717A666001E76B9 /* 1969 DMZ@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */; };
 		54800B6416FD6DD8005219B4 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6316FD6DD8005219B4 /* Video.m */; };
 		54800B6716FD76A5005219B4 /* VideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54800B6616FD76A5005219B4 /* VideoDetailViewController.m */; };
 		5483D0761701745500142234 /* square-placeholder-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5483D06F1701745500142234 /* square-placeholder-1.jpg */; };
@@ -145,12 +141,8 @@
 		5469DB621716B5560025A0C6 /* MapCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCollectionViewController.h; sourceTree = "<group>"; };
 		5469DB631716B5560025A0C6 /* MapCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCollectionViewController.m; sourceTree = "<group>"; };
 		5469DB801716B87D0025A0C6 /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
-		5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ thumbnail.jpg"; sourceTree = "<group>"; };
-		5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ thumbnail@2x.jpg"; sourceTree = "<group>"; };
 		5469DB861716BEF60025A0C6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		5469DB871716BEF60025A0C6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ.jpg"; sourceTree = "<group>"; };
-		5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ@2x.jpg"; sourceTree = "<group>"; };
 		54800B6216FD6DD8005219B4 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		54800B6316FD6DD8005219B4 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		54800B6516FD76A5005219B4 /* VideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailViewController.h; sourceTree = "<group>"; };
@@ -338,10 +330,6 @@
 		5469DB661716B70A0025A0C6 /* Contemporary Maps */ = {
 			isa = PBXGroup;
 			children = (
-				5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */,
-				5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */,
-				5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */,
-				5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */,
 				549B18061717DD010061F393 /* 2005 Admin. Divisions thumbnail.jpg */,
 				549B18071717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg */,
 				549B18081717DD010061F393 /* 2005 Admin. Divisions.jpg */,
@@ -686,12 +674,8 @@
 				54E7095F171424FF0060828D /* square-placeholder-17.jpg in Resources */,
 				54E709611714267A0060828D /* square-placeholder-18.jpg in Resources */,
 				5469DB811716B87D0025A0C6 /* photo-frame.png in Resources */,
-				5469DB841716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg in Resources */,
-				5469DB851716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg in Resources */,
 				5404C4EF1716FD6400B00756 /* star-3.png in Resources */,
 				5404C4F01716FD6400B00756 /* star-3@2x.png in Resources */,
-				5478A61D17178FFD001E76B9 /* 1969 DMZ.jpg in Resources */,
-				5478A6211717A666001E76B9 /* 1969 DMZ@2x.jpg in Resources */,
 				549B17F21717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg in Resources */,
 				549B17F31717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg in Resources */,
 				549B17F41717D0280061F393 /* 2006 Free Trade Zones.jpg in Resources */,

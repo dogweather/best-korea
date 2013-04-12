@@ -22,39 +22,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad of %d", self.hash);
-    NSLog(@"Setting image to %@", self.mapFileName);
     
     if ([App inAlternateReality])
         self.title = [self.title uppercaseString];
     
     edge = 16;
     appearedOnce = NO;
-
-    UIImageView *i;
-    i = [[UIImageView alloc] initWithImage:[MapViewController imageFromMainBundleFile:self.mapFileName]];
-    i.hidden = YES;
-    
-    // Enable gestures
-    self.scrollView.contentSize = CGSizeMake(i.frame.size.width, i.frame.size.height);
-    [self.scrollView setCanCancelContentTouches:NO];
-    [self.scrollView setScrollEnabled:YES];
-    self.scrollView.contentInset        = UIEdgeInsetsMake(edge, edge, edge, edge);
-    self.scrollView.minimumZoomScale    = 0.1;
-    self.scrollView.maximumZoomScale    = 1.0;
-    self.scrollView.delegate            = self;
-    self.scrollView.backgroundColor     = [UIColor blackColor];    
-    [self.scrollView addSubview:i];
-    self.imageView = i;
 }
 
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if (! appearedOnce) {
-        self.scrollView.zoomScale = (self.scrollView.bounds.size.width - (edge * 2.0)) / self.imageView.bounds.size.width;
-        self.imageView.hidden = NO;
-        appearedOnce = YES;
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 0.01 * NSEC_PER_SEC);
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            UIImageView *i;
+            i = [[UIImageView alloc] initWithImage:[MapViewController imageFromMainBundleFile:self.mapFileName]];
+            
+            // Enable gestures
+            self.scrollView.contentSize = CGSizeMake(i.frame.size.width, i.frame.size.height);
+            [self.scrollView setCanCancelContentTouches:NO];
+            [self.scrollView setScrollEnabled:YES];
+            self.scrollView.contentInset        = UIEdgeInsetsMake(edge, edge, edge, edge);
+            self.scrollView.minimumZoomScale    = 0.1;
+            self.scrollView.maximumZoomScale    = 1.0;
+            self.scrollView.delegate            = self;
+            self.imageView = i;
+            
+            self.scrollView.zoomScale = (self.scrollView.bounds.size.width - (edge * 2.0)) / self.imageView.bounds.size.width;
+            [self.scrollView addSubview:i];
+            appearedOnce = YES;
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
     }
 }
 

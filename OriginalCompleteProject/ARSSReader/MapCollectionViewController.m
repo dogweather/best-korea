@@ -26,7 +26,6 @@
             @"2011 Korea"
             ];
     mapNames = @[
-            @"1969 DMZ",
             @"2005 Admin. Divisions",
             @"2006 Free Trade Zones",
             @"2010 S. Pop. Density",
@@ -68,7 +67,6 @@
     NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
     destViewController.title        = [[self currentMapNames] objectAtIndex:indexPath.row];
     destViewController.mapFileName  = [[[self currentMapNames] objectAtIndex:indexPath.row] stringByAppendingString:@".jpg"];
-    NSLog(@"Found filename: %@",destViewController.mapFileName);
     [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 

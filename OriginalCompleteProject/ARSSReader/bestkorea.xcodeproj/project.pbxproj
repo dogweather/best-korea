@@ -18,10 +18,6 @@
 		54565DE816FB19C9007F3CF9 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54565DE716FB19C9007F3CF9 /* VideoTableViewController.m */; };
 		5461A05E16FFDBEF0015D5AC /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 5461A05D16FFDBEF0015D5AC /* App.m */; };
 		5469DB641716B5560025A0C6 /* MapCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5469DB631716B5560025A0C6 /* MapCollectionViewController.m */; };
-		5469DB7C1716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB701716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 */; };
-		5469DB7D1716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB711716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 */; };
-		5469DB7E1716B70A0025A0C6 /* 1822 Haejwa chondo.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB721716B70A0025A0C6 /* 1822 Haejwa chondo.jp2 */; };
-		5469DB7F1716B70A0025A0C6 /* 1875 Rikugun Sanbōkyoku, Meiji 8.jp2 in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB731716B70A0025A0C6 /* 1875 Rikugun Sanbōkyoku, Meiji 8.jp2 */; };
 		5469DB811716B87D0025A0C6 /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB801716B87D0025A0C6 /* photo-frame.png */; };
 		5469DB841716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */; };
 		5469DB851716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */; };
@@ -148,10 +144,6 @@
 		5461A05D16FFDBEF0015D5AC /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		5469DB621716B5560025A0C6 /* MapCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapCollectionViewController.h; sourceTree = "<group>"; };
 		5469DB631716B5560025A0C6 /* MapCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapCollectionViewController.m; sourceTree = "<group>"; };
-		5469DB701716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1785 Chōsen hachidō no zu.jp2"; sourceTree = "<group>"; };
-		5469DB711716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1800 Ch'onha chido.jp2"; sourceTree = "<group>"; };
-		5469DB721716B70A0025A0C6 /* 1822 Haejwa chondo.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1822 Haejwa chondo.jp2"; sourceTree = "<group>"; };
-		5469DB731716B70A0025A0C6 /* 1875 Rikugun Sanbōkyoku, Meiji 8.jp2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "1875 Rikugun Sanbōkyoku, Meiji 8.jp2"; sourceTree = "<group>"; };
 		5469DB801716B87D0025A0C6 /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
 		5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ thumbnail.jpg"; sourceTree = "<group>"; };
 		5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "1969 DMZ thumbnail@2x.jpg"; sourceTree = "<group>"; };
@@ -385,10 +377,6 @@
 		5469DB6F1716B70A0025A0C6 /* Historical Maps */ = {
 			isa = PBXGroup;
 			children = (
-				5469DB701716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 */,
-				5469DB711716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 */,
-				5469DB721716B70A0025A0C6 /* 1822 Haejwa chondo.jp2 */,
-				5469DB731716B70A0025A0C6 /* 1875 Rikugun Sanbōkyoku, Meiji 8.jp2 */,
 			);
 			path = "Historical Maps";
 			sourceTree = "<group>";
@@ -697,10 +685,6 @@
 				54E7095D171416670060828D /* square-placeholder-16.jpg in Resources */,
 				54E7095F171424FF0060828D /* square-placeholder-17.jpg in Resources */,
 				54E709611714267A0060828D /* square-placeholder-18.jpg in Resources */,
-				5469DB7C1716B70A0025A0C6 /* 1785 Chōsen hachidō no zu.jp2 in Resources */,
-				5469DB7D1716B70A0025A0C6 /* 1800 Ch'onha chido.jp2 in Resources */,
-				5469DB7E1716B70A0025A0C6 /* 1822 Haejwa chondo.jp2 in Resources */,
-				5469DB7F1716B70A0025A0C6 /* 1875 Rikugun Sanbōkyoku, Meiji 8.jp2 in Resources */,
 				5469DB811716B87D0025A0C6 /* photo-frame.png in Resources */,
 				5469DB841716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg in Resources */,
 				5469DB851716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg in Resources */,

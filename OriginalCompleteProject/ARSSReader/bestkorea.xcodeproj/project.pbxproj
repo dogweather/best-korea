@@ -92,6 +92,14 @@
 		54D1CC6A16F8FF7B00691CEB /* table-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */; };
 		54D1CC6B16F8FF7B00691CEB /* table-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */; };
 		54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */; };
+		54D87ACB1718425000179F12 /* 2007 S. Elevation thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AC71718425000179F12 /* 2007 S. Elevation thumbnail.jpg */; };
+		54D87ACC1718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AC81718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg */; };
+		54D87ACD1718425000179F12 /* 2007 S. Elevation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AC91718425000179F12 /* 2007 S. Elevation.jpg */; };
+		54D87ACE1718425000179F12 /* 2007 S. Elevation@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87ACA1718425000179F12 /* 2007 S. Elevation@2x.jpg */; };
+		54D87AD3171843B500179F12 /* 2007 N. Elevation thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87ACF171843B500179F12 /* 2007 N. Elevation thumbnail.jpg */; };
+		54D87AD4171843B500179F12 /* 2007 N. Elevation@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AD0171843B500179F12 /* 2007 N. Elevation@2x.jpg */; };
+		54D87AD5171843B500179F12 /* 2007 N. Elevation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AD1171843B500179F12 /* 2007 N. Elevation.jpg */; };
+		54D87AD6171843B500179F12 /* 2007 N. Elevation thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AD2171843B500179F12 /* 2007 N. Elevation thumbnail@2x.jpg */; };
 		54E6E7741701E1C300A9EF42 /* square-placeholder-8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E6E7711701E1C300A9EF42 /* square-placeholder-8.jpg */; };
 		54E6E7751701E1C300A9EF42 /* square-placeholder-9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E6E7721701E1C300A9EF42 /* square-placeholder-9.jpg */; };
 		54E6E7761701E1C300A9EF42 /* square-placeholder-10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54E6E7731701E1C300A9EF42 /* square-placeholder-10.jpg */; };
@@ -224,6 +232,14 @@
 		54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon.png"; sourceTree = "<group>"; };
 		54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon@2x.png"; sourceTree = "<group>"; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPadStoryboard.storyboard; path = ARSSReader/iPadStoryboard.storyboard; sourceTree = "<group>"; };
+		54D87AC71718425000179F12 /* 2007 S. Elevation thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 S. Elevation thumbnail.jpg"; sourceTree = "<group>"; };
+		54D87AC81718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 S. Elevation thumbnail@2x.jpg"; sourceTree = "<group>"; };
+		54D87AC91718425000179F12 /* 2007 S. Elevation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 S. Elevation.jpg"; sourceTree = "<group>"; };
+		54D87ACA1718425000179F12 /* 2007 S. Elevation@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 S. Elevation@2x.jpg"; sourceTree = "<group>"; };
+		54D87ACF171843B500179F12 /* 2007 N. Elevation thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 N. Elevation thumbnail.jpg"; sourceTree = "<group>"; };
+		54D87AD0171843B500179F12 /* 2007 N. Elevation@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 N. Elevation@2x.jpg"; sourceTree = "<group>"; };
+		54D87AD1171843B500179F12 /* 2007 N. Elevation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 N. Elevation.jpg"; sourceTree = "<group>"; };
+		54D87AD2171843B500179F12 /* 2007 N. Elevation thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 N. Elevation thumbnail@2x.jpg"; sourceTree = "<group>"; };
 		54E6E7711701E1C300A9EF42 /* square-placeholder-8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-8.jpg"; sourceTree = "<group>"; };
 		54E6E7721701E1C300A9EF42 /* square-placeholder-9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-9.jpg"; sourceTree = "<group>"; };
 		54E6E7731701E1C300A9EF42 /* square-placeholder-10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "square-placeholder-10.jpg"; sourceTree = "<group>"; };
@@ -338,6 +354,14 @@
 				549B17EF1717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg */,
 				549B17F01717D0280061F393 /* 2006 Free Trade Zones.jpg */,
 				549B17F11717D0280061F393 /* 2006 Free Trade Zones@2x.jpg */,
+				54D87ACF171843B500179F12 /* 2007 N. Elevation thumbnail.jpg */,
+				54D87AD2171843B500179F12 /* 2007 N. Elevation thumbnail@2x.jpg */,
+				54D87AD1171843B500179F12 /* 2007 N. Elevation.jpg */,
+				54D87AD0171843B500179F12 /* 2007 N. Elevation@2x.jpg */,
+				54D87AC71718425000179F12 /* 2007 S. Elevation thumbnail.jpg */,
+				54D87AC81718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg */,
+				54D87AC91718425000179F12 /* 2007 S. Elevation.jpg */,
+				54D87ACA1718425000179F12 /* 2007 S. Elevation@2x.jpg */,
 				549B181E1717ED0C0061F393 /* 2010 Korea thumbnail.jpg */,
 				549B181F1717ED0C0061F393 /* 2010 Korea thumbnail@2x.jpg */,
 				549B18201717ED0C0061F393 /* 2010 Korea.jpg */,
@@ -704,6 +728,14 @@
 				549B182B1717EEC80061F393 /* 2011 Korea thumbnail@2x.jpg in Resources */,
 				549B182C1717EEC80061F393 /* 2011 Korea.jpg in Resources */,
 				549B182D1717EEC80061F393 /* 2011 Korea@2x.jpg in Resources */,
+				54D87ACB1718425000179F12 /* 2007 S. Elevation thumbnail.jpg in Resources */,
+				54D87ACC1718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg in Resources */,
+				54D87ACD1718425000179F12 /* 2007 S. Elevation.jpg in Resources */,
+				54D87ACE1718425000179F12 /* 2007 S. Elevation@2x.jpg in Resources */,
+				54D87AD3171843B500179F12 /* 2007 N. Elevation thumbnail.jpg in Resources */,
+				54D87AD4171843B500179F12 /* 2007 N. Elevation@2x.jpg in Resources */,
+				54D87AD5171843B500179F12 /* 2007 N. Elevation.jpg in Resources */,
+				54D87AD6171843B500179F12 /* 2007 N. Elevation thumbnail@2x.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

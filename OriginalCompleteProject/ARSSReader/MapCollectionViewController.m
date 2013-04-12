@@ -22,9 +22,9 @@
     self.title = [App inAlternateReality] ? @"MAPS" : @"Maps";
     mapNames = @[
                  @"1969 DMZ",
-                 @"2005 Administrative Divisions",
+                 @"2005 Admin. Divisions",
                  @"2006 Free Trade Zones",
-                 @"2011 Korean Peninsula"
+                 @"2011 Peninsula"
                  ];
 }
 

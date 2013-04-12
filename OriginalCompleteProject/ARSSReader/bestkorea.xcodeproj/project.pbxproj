@@ -50,6 +50,10 @@
 		549B180B1717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B18071717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg */; };
 		549B180C1717DD010061F393 /* 2005 Admin. Divisions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B18081717DD010061F393 /* 2005 Admin. Divisions.jpg */; };
 		549B180D1717DD010061F393 /* 2005 Admin. Divisions@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B18091717DD010061F393 /* 2005 Admin. Divisions@2x.jpg */; };
+		549B18121717DF270061F393 /* 2010 S. Pop. Density@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B180E1717DF270061F393 /* 2010 S. Pop. Density@2x.jpg */; };
+		549B18131717DF270061F393 /* 2010 S. Pop. Density.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B180F1717DF270061F393 /* 2010 S. Pop. Density.jpg */; };
+		549B18141717DF270061F393 /* 2010 S. Pop. Density thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B18101717DF270061F393 /* 2010 S. Pop. Density thumbnail@2x.jpg */; };
+		549B18151717DF270061F393 /* 2010 S. Pop. Density thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 549B18111717DF270061F393 /* 2010 S. Pop. Density thumbnail.jpg */; };
 		54A3A00316FFFDF500E8B908 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A39FFE16FFFDF500E8B908 /* TFHpple.m */; };
 		54A3A00416FFFDF500E8B908 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00016FFFDF500E8B908 /* TFHppleElement.m */; };
 		54A3A00516FFFDF500E8B908 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3A00216FFFDF500E8B908 /* XPathQuery.m */; };
@@ -168,6 +172,10 @@
 		549B18071717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Admin. Divisions thumbnail@2x.jpg"; sourceTree = "<group>"; };
 		549B18081717DD010061F393 /* 2005 Admin. Divisions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Admin. Divisions.jpg"; sourceTree = "<group>"; };
 		549B18091717DD010061F393 /* 2005 Admin. Divisions@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2005 Admin. Divisions@2x.jpg"; sourceTree = "<group>"; };
+		549B180E1717DF270061F393 /* 2010 S. Pop. Density@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2010 S. Pop. Density@2x.jpg"; sourceTree = "<group>"; };
+		549B180F1717DF270061F393 /* 2010 S. Pop. Density.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2010 S. Pop. Density.jpg"; sourceTree = "<group>"; };
+		549B18101717DF270061F393 /* 2010 S. Pop. Density thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2010 S. Pop. Density thumbnail@2x.jpg"; sourceTree = "<group>"; };
+		549B18111717DF270061F393 /* 2010 S. Pop. Density thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2010 S. Pop. Density thumbnail.jpg"; sourceTree = "<group>"; };
 		54A39FFD16FFFDF500E8B908 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
 		54A39FFE16FFFDF500E8B908 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
 		54A39FFF16FFFDF500E8B908 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
@@ -314,22 +322,26 @@
 		5469DB661716B70A0025A0C6 /* Contemporary Maps */ = {
 			isa = PBXGroup;
 			children = (
-				549B18061717DD010061F393 /* 2005 Admin. Divisions thumbnail.jpg */,
-				549B18071717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg */,
-				549B18081717DD010061F393 /* 2005 Admin. Divisions.jpg */,
-				549B18091717DD010061F393 /* 2005 Admin. Divisions@2x.jpg */,
-				549B17FE1717DCB70061F393 /* 2011 Peninsula thumbnail.jpg */,
-				549B17FF1717DCB70061F393 /* 2011 Peninsula thumbnail@2x.jpg */,
-				549B18001717DCB70061F393 /* 2011 Peninsula.jpg */,
-				549B18011717DCB70061F393 /* 2011 Peninsula@2x.jpg */,
-				549B17EE1717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg */,
-				549B17EF1717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg */,
-				549B17F01717D0280061F393 /* 2006 Free Trade Zones.jpg */,
-				549B17F11717D0280061F393 /* 2006 Free Trade Zones@2x.jpg */,
 				5469DB821716BCBC0025A0C6 /* 1969 DMZ thumbnail.jpg */,
 				5469DB831716BCBC0025A0C6 /* 1969 DMZ thumbnail@2x.jpg */,
 				5478A61C17178FFD001E76B9 /* 1969 DMZ.jpg */,
 				5478A61E1717A666001E76B9 /* 1969 DMZ@2x.jpg */,
+				549B18061717DD010061F393 /* 2005 Admin. Divisions thumbnail.jpg */,
+				549B18071717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg */,
+				549B18081717DD010061F393 /* 2005 Admin. Divisions.jpg */,
+				549B18091717DD010061F393 /* 2005 Admin. Divisions@2x.jpg */,
+				549B17EE1717D0280061F393 /* 2006 Free Trade Zones thumbnail.jpg */,
+				549B17EF1717D0280061F393 /* 2006 Free Trade Zones thumbnail@2x.jpg */,
+				549B17F01717D0280061F393 /* 2006 Free Trade Zones.jpg */,
+				549B17F11717D0280061F393 /* 2006 Free Trade Zones@2x.jpg */,
+				549B18111717DF270061F393 /* 2010 S. Pop. Density thumbnail.jpg */,
+				549B18101717DF270061F393 /* 2010 S. Pop. Density thumbnail@2x.jpg */,
+				549B180F1717DF270061F393 /* 2010 S. Pop. Density.jpg */,
+				549B180E1717DF270061F393 /* 2010 S. Pop. Density@2x.jpg */,
+				549B17FE1717DCB70061F393 /* 2011 Peninsula thumbnail.jpg */,
+				549B17FF1717DCB70061F393 /* 2011 Peninsula thumbnail@2x.jpg */,
+				549B18001717DCB70061F393 /* 2011 Peninsula.jpg */,
+				549B18011717DCB70061F393 /* 2011 Peninsula@2x.jpg */,
 			);
 			path = "Contemporary Maps";
 			sourceTree = "<group>";
@@ -672,6 +684,10 @@
 				549B180B1717DD010061F393 /* 2005 Admin. Divisions thumbnail@2x.jpg in Resources */,
 				549B180C1717DD010061F393 /* 2005 Admin. Divisions.jpg in Resources */,
 				549B180D1717DD010061F393 /* 2005 Admin. Divisions@2x.jpg in Resources */,
+				549B18121717DF270061F393 /* 2010 S. Pop. Density@2x.jpg in Resources */,
+				549B18131717DF270061F393 /* 2010 S. Pop. Density.jpg in Resources */,
+				549B18141717DF270061F393 /* 2010 S. Pop. Density thumbnail@2x.jpg in Resources */,
+				549B18151717DF270061F393 /* 2010 S. Pop. Density thumbnail.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

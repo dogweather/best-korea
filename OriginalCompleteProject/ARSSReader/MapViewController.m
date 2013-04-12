@@ -11,6 +11,7 @@
 @interface MapViewController ()
 {
     UIImageView *imageView;
+    float edge;
 }
 @end
 
@@ -24,12 +25,12 @@
     
     if ([App inAlternateReality])
         self.title = [self.title uppercaseString];
-    
-    
+        
     imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:self.mapFileName]];
+    imageView.hidden = YES;
+    edge = 16;
     
     // Enable gestures
-    float edge = 32.0;
     [self.scrollView setCanCancelContentTouches:NO];
     [self.scrollView setScrollEnabled:YES];
     self.scrollView.contentSize         = CGSizeMake(imageView.frame.size.width, imageView.frame.size.height);
@@ -37,9 +38,15 @@
     self.scrollView.minimumZoomScale    = 0.1;
     self.scrollView.maximumZoomScale    = 1.0;
     self.scrollView.delegate            = self;
-    self.scrollView.backgroundColor     = [UIColor blackColor];
-    
+    self.scrollView.backgroundColor     = [UIColor blackColor];    
     [self.scrollView addSubview:imageView];
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.scrollView.zoomScale = (self.scrollView.bounds.size.width - (edge * 2.0)) / imageView.bounds.size.width;
+    imageView.hidden = NO;
 }
 
 

@@ -59,7 +59,7 @@
 - (IBAction)startShare:(id)sender {
     RSSItem  *rss            = (RSSItem*)self.detailItem;
     NSString *url           = [rss.link absoluteString];
-    NSString *marketing     = [@"Via " stringByAppendingString:MARKETING_DN];
+    NSString *marketing     = [@"via " stringByAppendingString:MARKETING_DN];
     NSArray* dataToShare    = @[url, marketing];
     
     UIActivityViewController* activityViewController =

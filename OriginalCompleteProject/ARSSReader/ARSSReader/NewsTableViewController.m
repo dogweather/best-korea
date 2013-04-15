@@ -181,6 +181,8 @@
 
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    // This needs to happen here in order to set the background
+    // color of the disclosure indicator.
     cell.backgroundColor = [App colorForTableCellBg];
 }
 
@@ -188,14 +190,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
+    RSSItem *rss          = [[[sections objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row];
 
-    RSSItem *rss = [[[sections objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row];
+    // Some of the L&F setup needs to happen at this point.
+    cell.selectedBackgroundView     = [App inAlternateReality] ? alternateCellBg : normalCellBg;
+    cell.detailTextLabel.textColor  = [App colorForSubTitleOfResource:[rss.resolvedUrl absoluteString]];
+    cell.textLabel.textColor        = [App colorForTitleOfResource:[rss.resolvedUrl absoluteString]];
     
-    cell.textLabel.text                 = rss.title;
-    cell.detailTextLabel.textColor      = [App colorForSubTitleOfResource:[rss.resolvedUrl absoluteString]];
-    cell.detailTextLabel.text           = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];
+    // The cell's content
+    cell.textLabel.text       = rss.title;
+    cell.detailTextLabel.text = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];
     
+    // TODO: Refactor & cleanup this image logic.
     if (rss.image != nil) {
         cell.imageView.image = rss.image;
         return cell;

@@ -22,6 +22,12 @@
     NSString * proxyUrl = [self.link.absoluteString
                                stringByReplacingOccurrencesOfString:@"www.workers.org"
                                withString:@"proxy1.bestkoreaapp.com"];
+    proxyUrl = [proxyUrl
+                           stringByReplacingOccurrencesOfString:@"onecoreanetwork.blogspot.com"
+                           withString:@"proxy2.bestkoreaapp.com"];
+    proxyUrl = [proxyUrl
+                           stringByReplacingOccurrencesOfString:@"www.kfausa.org"
+                           withString:@"proxy3.bestkoreaapp.com"];
     return [NSURL URLWithString:proxyUrl];
 }
 

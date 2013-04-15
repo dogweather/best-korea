@@ -27,6 +27,7 @@
 +(UIColor *) colorForTitleOfResource:(NSString *)identifier;
 +(UIColor *) colorForSubTitleOfResource:(NSString *)identifier;
 +(UIColor *) colorForTableSeparator;
++(UIColor *) colorForTableCellBg;
 +(UIColor *) communistGold;
 
 @end

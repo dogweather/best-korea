@@ -14,7 +14,4 @@
         "selectedImageTintColor":   "$communistGold"
     },
     
-    "UITable": {
-        "separatorColor":           "$communistRed"
-    }
 }

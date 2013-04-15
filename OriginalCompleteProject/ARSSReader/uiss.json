@@ -11,10 +11,5 @@
     "UITabBar": {
         "tintColor": "black",
         "selectedImageTintColor": "$highlightColor"
-    },
-    
-    "UITable": {
-        "separatorColor": "black"
     }
-
 }

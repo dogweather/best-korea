@@ -24,7 +24,6 @@
 
 @implementation App
 
-
 //
 // Return a text color taking into account:
 // 1. Whether the resource has been seen, and
@@ -64,6 +63,12 @@
         return [UIColor colorWithWhite:(230/255.0) alpha:1];
 }
 
++(UIColor *) colorForTableCellBg {
+    if ([self inAlternateReality])
+        return [UIColor colorWithRed:(244/255.0) green:(239/255.0) blue:(238/255.0) alpha:1];
+    else
+        return [UIColor colorWithWhite:(250/255.0) alpha:1];
+}
 
 + (UIColor *) colorForUnseenSubTitle {
     return [self colorForSeenTitle];

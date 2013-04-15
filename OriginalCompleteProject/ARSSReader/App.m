@@ -40,6 +40,10 @@
     return [[self appDelegate] wasSeen:identifier] ? [self colorForSeenSubTitle] : [self colorForUnseenSubTitle];
 }
 
++ (UIColor *) colorForTitle {
+    return [self colorForUnseenTitle];
+}
+
 + (UIColor *) colorForUnseenTitle {
     if ([self inAlternateReality])
         // A blend between communist red, #89170F, and black.

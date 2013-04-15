@@ -184,6 +184,7 @@
     cell.backgroundColor = [App colorForTableCellBg];
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
@@ -191,7 +192,6 @@
 
     RSSItem *rss = [[[sections objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row];
     
-    cell.textLabel.textColor            = [App colorForTitleOfResource:[rss.resolvedUrl absoluteString]];
     cell.textLabel.text                 = rss.title;
     cell.detailTextLabel.textColor      = [App colorForSubTitleOfResource:[rss.resolvedUrl absoluteString]];
     cell.detailTextLabel.text           = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];

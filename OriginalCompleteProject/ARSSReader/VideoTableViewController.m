@@ -99,14 +99,21 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    cell.backgroundColor = [App colorForTableCellBg];
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Video *video = self.videos[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"aVideoCell" forIndexPath:indexPath];
-    cell.textLabel.textColor  = [[App appDelegate] wasSeen:video.url] ? [UIColor grayColor] : [UIColor blackColor];
-    cell.textLabel.text= video.title;
+    cell.textLabel.textColor       = [App colorForTitleOfResource:video.url];
+    cell.detailTextLabel.textColor = [App colorForSubTitleOfResource:video.url];
+    cell.selectedBackgroundView    = [App inAlternateReality] ? _alternateCellBg : _normalCellBg;
+    
+    cell.textLabel.text       = video.title;
     cell.detailTextLabel.text = video.source;
-    cell.selectedBackgroundView = [App inAlternateReality] ? _alternateCellBg : _normalCellBg;
 
    
     if (video.image == nil) {

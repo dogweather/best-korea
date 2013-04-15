@@ -24,9 +24,64 @@
 
 @implementation App
 
+
+//
+// Return a text color taking into account:
+// 1. Whether the resource has been seen, and
+// 2. Whether we're in reality or alternate reality.
++ (UIColor *) colorForTitleOfResource:(NSString *)identifier {
+    return [[self appDelegate] wasSeen:identifier] ? [self colorForSeenTitle] : [self colorForUnseenTitle];
+}
+
+//
+// Return a text color taking into account:
+// 1. Whether the resource has been seen, and
+// 2. Whether we're in reality or alternate reality.
++ (UIColor *) colorForSubTitleOfResource:(NSString *)identifier {
+    return [[self appDelegate] wasSeen:identifier] ? [self colorForSeenSubTitle] : [self colorForUnseenSubTitle];
+}
+
++ (UIColor *) colorForUnseenTitle {
+    if ([self inAlternateReality])
+        // A blend between communist red, #89170F, and black.
+        return [UIColor colorWithRed:(41/255.0) green:(7/255.0) blue:(5/255.0) alpha:1];
+    else
+        return [UIColor blackColor];
+}
+
++ (UIColor *) colorForSeenTitle {
+    if ([self inAlternateReality])
+        // A blend between communist red, #89170F, and light gray, #999.
+        return [UIColor colorWithRed:(150/255.0) green:(127/255.0) blue:(125/255.0) alpha:1];
+    else
+        return [UIColor grayColor];
+}
+
++(UIColor *) colorForTableSeparator {
+    if ([self inAlternateReality])
+        return [UIColor colorWithRed:(221/255.0) green:(209/255.0) blue:(209/255.0) alpha:1];
+    else
+        return [UIColor colorWithWhite:(230/255.0) alpha:1];
+}
+
+
++ (UIColor *) colorForUnseenSubTitle {
+    return [self colorForSeenTitle];
+}
+
++ (UIColor *) colorForSeenSubTitle {
+    return [self colorForSeenTitle];
+}
+
+
 + (UIColor *) communistGold {
     return [UIColor colorWithRed:(222/255.0) green:(172/255.0) blue:(0/255.0) alpha:1];
 }
+
+
+
+
+
 
 + (BOOL) inAlternateReality {
     return [[NSUserDefaults standardUserDefaults] boolForKey:PREF_ALTERNATE_REALITY];

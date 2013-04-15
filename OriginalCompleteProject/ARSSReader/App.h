@@ -22,6 +22,11 @@
 +(MainTabBarController *)tabController;
 +(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;
 
+
+// Global L&F services
++(UIColor *) colorForTitleOfResource:(NSString *)identifier;
++(UIColor *) colorForSubTitleOfResource:(NSString *)identifier;
++(UIColor *) colorForTableSeparator;
 +(UIColor *) communistGold;
 
 @end

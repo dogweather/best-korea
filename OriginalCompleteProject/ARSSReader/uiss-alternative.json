@@ -12,5 +12,9 @@
     "UITabBar": {
         "tintColor":                "$communistRed",
         "selectedImageTintColor":   "$communistGold"
+    },
+    
+    "UITable": {
+        "separatorColor":           "$communistRed"
     }
 }

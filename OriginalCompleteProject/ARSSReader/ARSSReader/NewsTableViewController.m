@@ -39,12 +39,15 @@
     
     normalCellBg = [[UIView alloc] init];
     normalCellBg.backgroundColor = [UIColor colorWithRed:(17/255.0) green:(118/255.0) blue:(223/255.0) alpha:1];
+    
+    [self.tableView setSeparatorColor:[App colorForTableSeparator]];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [App setMyTitle:self.navigationItem andFont:self];
+    [self.tableView setSeparatorColor:[App colorForTableSeparator]];
 }
 
 
@@ -183,9 +186,12 @@
     cell.selectedBackgroundView = [App inAlternateReality] ? alternateCellBg : normalCellBg;
 
     RSSItem *rss = [[[sections objectAtIndex:indexPath.section] objectForKey:@"items"] objectAtIndex:indexPath.row];
-    cell.textLabel.textColor  = [[App appDelegate] wasSeen:[rss.resolvedUrl absoluteString]] ? [UIColor grayColor] : [UIColor blackColor];
+    
+    cell.textLabel.textColor  = [App colorForTitleOfResource:[rss.resolvedUrl absoluteString]];
     cell.textLabel.text       = rss.title;
-    cell.detailTextLabel.text = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];
+    cell.detailTextLabel.textColor = [App colorForSubTitleOfResource:[rss.resolvedUrl absoluteString]];
+    cell.detailTextLabel.text      = [[rss.publication stringByAppendingString:@", "] stringByAppendingString:rss.shortRelativeTime];
+    
     if (rss.image != nil) {
         cell.imageView.image = rss.image;
         return cell;

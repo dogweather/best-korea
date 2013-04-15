@@ -12,4 +12,9 @@
         "tintColor": "black",
         "selectedImageTintColor": "$highlightColor"
     },
+    
+    "UITable": {
+        "separatorColor": "black"
+    }
+
 }

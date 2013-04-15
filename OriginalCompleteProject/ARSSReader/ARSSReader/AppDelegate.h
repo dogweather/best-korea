@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import "RNCachingURLProtocol.h"
 
 #define NORMAL_STYLE_FILE    @"uiss"
 #define ALTERNATE_STYLE_FILE @"uiss-alternative"

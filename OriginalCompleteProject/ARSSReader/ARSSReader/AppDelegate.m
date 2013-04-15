@@ -27,6 +27,11 @@
     NSDictionary *appDefaults;
     NSString *styleFile;
     
+    // Enables offline mode: web requests will work if they've
+    // already been visited.
+    // See http://robnapier.net/blog/offline-uiwebview-nsurlprotocol-588
+    [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
+    
     // Register the preference defaults
     appDefaults = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:PREF_ALTERNATE_REALITY];
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];

@@ -91,6 +91,9 @@
 		54D1CC6616F875E000691CEB /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC6516F875E000691CEB /* MainTabBarController.m */; };
 		54D1CC6A16F8FF7B00691CEB /* table-tabbar-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */; };
 		54D1CC6B16F8FF7B00691CEB /* table-tabbar-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */; };
+		54D242AB171BF6DA00BE49CF /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D242AA171BF6DA00BE49CF /* RNCachingURLProtocol.m */; };
+		54D242AE171BF74300BE49CF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D242AD171BF74300BE49CF /* Reachability.m */; };
+		54D242B0171BF7C800BE49CF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D242AF171BF7C800BE49CF /* SystemConfiguration.framework */; };
 		54D3D63D16F34F0900D89B66 /* iPadStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */; };
 		54D87ACB1718425000179F12 /* 2007 S. Elevation thumbnail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AC71718425000179F12 /* 2007 S. Elevation thumbnail.jpg */; };
 		54D87ACC1718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54D87AC81718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg */; };
@@ -239,6 +242,11 @@
 		54D1CC6716F884F400691CEB /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ARSSReader/Constants.h; sourceTree = "<group>"; };
 		54D1CC6816F8FF7B00691CEB /* table-tabbar-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon.png"; sourceTree = "<group>"; };
 		54D1CC6916F8FF7B00691CEB /* table-tabbar-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "table-tabbar-icon@2x.png"; sourceTree = "<group>"; };
+		54D242A9171BF6DA00BE49CF /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
+		54D242AA171BF6DA00BE49CF /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
+		54D242AC171BF74300BE49CF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		54D242AD171BF74300BE49CF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		54D242AF171BF7C800BE49CF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		54D3D63C16F34F0900D89B66 /* iPadStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPadStoryboard.storyboard; path = ARSSReader/iPadStoryboard.storyboard; sourceTree = "<group>"; };
 		54D87AC71718425000179F12 /* 2007 S. Elevation thumbnail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 S. Elevation thumbnail.jpg"; sourceTree = "<group>"; };
 		54D87AC81718425000179F12 /* 2007 S. Elevation thumbnail@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2007 S. Elevation thumbnail@2x.jpg"; sourceTree = "<group>"; };
@@ -302,6 +310,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D242B0171BF7C800BE49CF /* SystemConfiguration.framework in Frameworks */,
 				548C8BB71703FBF80099166D /* libsqlite3.dylib in Frameworks */,
 				544C2AD61701C44D0095E7B0 /* QuartzCore.framework in Frameworks */,
 				9C1806CC163E853B00A02D94 /* libz.dylib in Frameworks */,
@@ -492,6 +501,17 @@
 			name = hpple;
 			sourceTree = "<group>";
 		};
+		54D242A8171BF6B800BE49CF /* CachingURL */ = {
+			isa = PBXGroup;
+			children = (
+				54D242AC171BF74300BE49CF /* Reachability.h */,
+				54D242AD171BF74300BE49CF /* Reachability.m */,
+				54D242A9171BF6DA00BE49CF /* RNCachingURLProtocol.h */,
+				54D242AA171BF6DA00BE49CF /* RNCachingURLProtocol.m */,
+			);
+			name = CachingURL;
+			sourceTree = "<group>";
+		};
 		54E70951171400320060828D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -569,9 +589,11 @@
 		9C947B8C163E835500842C2F = {
 			isa = PBXGroup;
 			children = (
+				54D242AF171BF7C800BE49CF /* SystemConfiguration.framework */,
 				548C8BB61703FBF80099166D /* libsqlite3.dylib */,
 				540858F416FAC786003B9BB4 /* App Code */,
 				9C1806BE163E849B00A02D94 /* Assets */,
+				54D242A8171BF6B800BE49CF /* CachingURL */,
 				9C1806D5163E875300A02D94 /* RSSParser */,
 				54A39FF916FFFC5300E8B908 /* HTMLParser */,
 				9C947B9A163E835500842C2F /* Frameworks */,
@@ -815,6 +837,8 @@
 				5469DB641716B5560025A0C6 /* MapCollectionViewController.m in Sources */,
 				5469DB881716BEF60025A0C6 /* MapViewController.m in Sources */,
 				5404C4EC1716FA9700B00756 /* LibraryTableViewController.m in Sources */,
+				54D242AB171BF6DA00BE49CF /* RNCachingURLProtocol.m in Sources */,
+				54D242AE171BF74300BE49CF /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
